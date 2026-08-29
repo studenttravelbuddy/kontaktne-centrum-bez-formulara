@@ -96,11 +96,13 @@ export function Hero({ onOpenChat, onGoToForm }: Props) {
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {CARDS.map((card, index) => (
             <Reveal key={card.name} delay={index * 80}>
-              <article className="group flex h-full flex-col rounded-2xl border border-border bg-brand-teal-light p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_-30px_var(--brand-teal-deep)] motion-reduce:hover:translate-y-0">
-                <span className="text-3xl transition-transform duration-300 group-hover:scale-110 motion-reduce:transition-none">
-                  {card.emoji}
-                </span>
-                <h2 className="mt-3 font-display text-2xl">{card.name}</h2>
+              <article className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_-30px_var(--brand-teal-deep)] motion-reduce:hover:translate-y-0">
+                <img
+                  src={card.logo}
+                  alt={`Logo ${card.name}`}
+                  className="h-14 w-auto self-start object-contain transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none"
+                />
+                <h2 className="mt-4 font-display text-2xl">{card.name}</h2>
                 <p className="mt-2 font-medium">{card.who}</p>
                 <p className="mt-2 flex-1 text-sm text-brand-gray">{card.detail}</p>
                 <a
