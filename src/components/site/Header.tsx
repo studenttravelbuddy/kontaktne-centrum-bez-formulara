@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { Phone } from "lucide-react";
 
+import eycaLogo from "@/assets/eyca-logo.png.asset.json";
+import isicLogo from "@/assets/isic-logo.png.asset.json";
+import iticLogo from "@/assets/itic-logo.png.asset.json";
+
 const NAV = [
   { href: "#preukazy", label: "Preukazy" },
   { href: "#zlavy", label: "Naj zľavy" },
@@ -44,12 +48,14 @@ export function Header() {
         </a>
       </div>
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 border-b border-border px-4 py-3">
-        <a href="#preukazy" className="flex items-center gap-2">
-          <span className="font-display text-xl font-black text-brand-teal-deep">ISIC</span>
-          <span className="text-border">|</span>
-          <span className="font-display text-xl font-black text-brand-teal-deep">ITIC</span>
-          <span className="text-border">|</span>
-          <span className="font-display text-xl font-black text-brand-teal-deep">EURO&lt;26</span>
+        <a href="#preukazy" className="flex items-center gap-3">
+          <img src={isicLogo.url} alt="ISIC" className="h-9 w-auto object-contain" />
+          <img src={iticLogo.url} alt="ITIC" className="h-9 w-auto object-contain" />
+          <img
+            src={eycaLogo.url}
+            alt="European Youth Card / EURO&lt;26"
+            className="h-9 w-auto object-contain"
+          />
         </a>
         <nav className="flex flex-wrap items-center gap-1 text-sm md:gap-2">
           {NAV.map((item) => (
