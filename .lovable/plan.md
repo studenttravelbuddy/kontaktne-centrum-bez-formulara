@@ -1,6 +1,29 @@
 # Nová kontaktná stránka ISIC / ITIC / EURO<26
 
-Jednostránková náhrada za `isic.sk/kontaktny-formular/` v dizajne CKM SYTS (petrolejová #006666, žlté CTA #ffc805, Roboto Slab headings / Roboto text, svetlý režim, slovenčina, mobil ako primárny prípad).
+Jednostránková náhrada za `isic.sk/kontaktny-formular/` v dizajne CKM SYTS („Ambassador Connect"). Svetlý režim, slovenčina, mobil ako primárny prípad.
+
+## Farebné a typografické tokeny (presne podľa referencie)
+
+| Token | Hodnota | Použitie |
+|---|---|---|
+| `--primary` / `--brand-teal-deep` / `--brand-teal-dark` | `#006666` | nadpisy, hlavný text, primárne prvky |
+| `--brand-teal` (accent, ring) | `#40b8b8` | akcenty, focus ring |
+| `--brand-teal-light` / `--secondary` | `#e8f5f5` | pozadie sekcií a kariet |
+| `--muted` | `#f2f9f9` | jemné plochy |
+| `--border` | `#d5e9e9` | orámovanie |
+| `--brand-yellow` | `#ffc805` | hlavné CTA („Odoslať", „Poslať dopyt") |
+| `--brand-pink` / `--brand-pink-dark` | `#ec0578` / `#a80355` | badge, label |
+| `--brand-orange` / `--brand-orange-dark` | `#ff7314` / `#8c2f0d` | doplnkový akcent |
+| `--brand-gray` | `#6e6e6e` | sekundárny text |
+| pozadie stránky | `#ffffff` | karty biele alebo `#e8f5f5` |
+
+- Nadpisy H1–H3: `Roboto Slab`, váha 900, farba `#006666`.
+- Text, formulár, navigácia: `Roboto`.
+- Tlačidlá `border-radius: 14px`, karty/kontajnery `16px`.
+- Žiadny dark mode.
+
+Na referenčný preview link sa nedostanem (je za prihlásením), takže tokeny beriem 1:1 z hlavného promptu. Ak sa niektorá farba na tvojej stránke medzitým zmenila, pošli screenshot alebo hex a prepíšem tabuľku.
+
 
 ## Čo postavím
 
