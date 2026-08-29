@@ -18,7 +18,7 @@ const CARDS = [
   },
   {
     name: "ITIC",
-    emoji: "🍎",
+    logo: iticLogo.url,
     who: "Pre učiteľov, pedagogických a odborných zamestnancov škôl.",
     detail: "Viac ako 700 zliav na Slovensku a medzinárodné potvrdenie o statuse učiteľa.",
     linkLabel: "Zistiť nárok na ITIC",
