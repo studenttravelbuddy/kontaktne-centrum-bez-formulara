@@ -2,11 +2,14 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 
 import { CardWizard } from "@/components/site/CardWizard";
 import { Reveal } from "@/components/site/Reveal";
+import eycaLogo from "@/assets/eyca-logo.png.asset.json";
+import isicLogo from "@/assets/isic-logo.png.asset.json";
+import iticLogo from "@/assets/itic-logo.png.asset.json";
 
 const CARDS = [
   {
     name: "ISIC",
-    emoji: "🎓",
+    logo: isicLogo.url,
     who: "Pre študentov denného štúdia na ZŠ, SŠ a VŠ.",
     detail:
       "Medzinárodne uznávaný doklad o štatúte študenta, zľavy na Slovensku aj v zahraničí a zľavnené cestovné.",
