@@ -44,7 +44,7 @@ interface Props {
 
 export function Hero({ onOpenChat, onGoToForm }: Props) {
   return (
-    <section id="preukazy" className="relative border-b-2 border-foreground bg-background">
+    <section id="preukazy" className="relative border-b border-brand-teal/25 bg-background">
       <div className="relative overflow-hidden bg-brand-teal">
         <div
           aria-hidden="true"
@@ -108,7 +108,7 @@ export function Hero({ onOpenChat, onGoToForm }: Props) {
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {CARDS.map((card, index) => (
             <Reveal key={card.name} delay={index * 80}>
-              <article className={`group flex h-full flex-col rounded-lg border-2 border-foreground bg-card p-6 shadow-[8px_8px_0_var(--card-accent)] transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 ${card.accent}`}>
+              <article className={`group flex h-full flex-col rounded-lg border border-brand-teal/25 bg-card p-6 shadow-[8px_8px_0_var(--card-accent)] transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 ${card.accent}`}>
                 <img
                   src={card.logo}
                   alt={`Logo ${card.name}`}
@@ -131,7 +131,7 @@ export function Hero({ onOpenChat, onGoToForm }: Props) {
           ))}
         </div>
 
-        <p className="mt-10 rounded-lg border-2 border-foreground bg-brand-yellow p-5 text-sm shadow-[6px_6px_0_var(--brand-teal)]">
+        <p className="mt-10 rounded-lg border border-brand-teal/25 bg-brand-yellow p-5 text-sm shadow-[6px_6px_0_var(--brand-teal)]">
           <strong>Cena:</strong> preukaz aj známka na predĺženie stoja 13 €, doručenie kuriérom
           +3,15 €.{" "}
           <a className="font-medium text-brand-teal-deep underline" href="#faq">

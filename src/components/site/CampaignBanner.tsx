@@ -5,10 +5,10 @@ import { CAMPAIGN_URL } from "@/lib/discounts";
 
 export function CampaignBanner() {
   return (
-    <section id="kampan" className="border-b-2 border-foreground bg-background">
+    <section id="kampan" className="border-b border-brand-teal/25 bg-background">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24">
         <Reveal>
-          <div className="coupon relative overflow-hidden border-2 border-foreground bg-brand-teal p-7 shadow-[8px_8px_0_var(--brand-yellow)] md:p-10">
+          <div className="coupon relative overflow-hidden border border-brand-teal/25 bg-brand-teal p-7 shadow-[8px_8px_0_var(--brand-yellow)] md:p-10">
             <div
               aria-hidden="true"
               className="pointer-events-none absolute -top-20 -right-12 h-52 w-52 rounded-full border-[28px] border-brand-yellow"
@@ -36,14 +36,14 @@ export function CampaignBanner() {
                   </a>
                   <a
                     href="#formular"
-                    className="inline-flex h-12 items-center gap-2 rounded-lg border-2 border-foreground bg-background px-7 font-bold text-foreground transition-colors hover:bg-brand-yellow"
+                    className="inline-flex h-12 items-center gap-2 rounded-lg border border-brand-teal/25 bg-background px-7 font-bold text-foreground transition-colors hover:bg-brand-yellow"
                   >
                     Otázka ku kampani
                   </a>
                 </div>
               </div>
 
-              <div className="relative rounded-lg border-2 border-dashed border-foreground bg-background p-8 text-center">
+              <div className="relative rounded-lg border-2 border-dashed border-brand-teal/40 bg-background p-8 text-center">
                 <p className="font-display text-5xl text-brand-pink">MORE</p>
                 <p className="mt-2 text-sm text-foreground">
                   Kupóny platia s platným preukazom ISIC / ITIC / EURO&lt;26.

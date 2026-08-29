@@ -35,7 +35,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b-2 border-foreground bg-background">
+    <header className="sticky top-0 z-40 border-b border-brand-teal/25 bg-background">
       <div className="bg-brand-teal-deep px-4 py-2 text-center text-sm font-bold text-primary-foreground">
         Končí Vám platnosť preukazu? Pozrite si, ako si ju obnoviť —{" "}
         <a
