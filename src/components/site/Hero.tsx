@@ -26,7 +26,7 @@ const CARDS = [
   },
   {
     name: "EURO<26",
-    emoji: "🛹",
+    logo: eycaLogo.url,
     who: "Pre kohokoľvek od 6 do 27 rokov, aj keď neštuduje.",
     detail: "Vyše 2200 miest so zľavami na Slovensku, platí v 36 krajinách Európy.",
     linkLabel: "Objednať EURO<26",
