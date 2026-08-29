@@ -1,4 +1,4 @@
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle, Sparkles } from "lucide-react";
 
 import { CardWizard } from "@/components/site/CardWizard";
 import { Reveal } from "@/components/site/Reveal";
