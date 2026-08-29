@@ -106,3 +106,24 @@
 @utility btn-radius {
   border-radius: 14px;
 }
+
+@utility coupon {
+  border-radius: 24px;
+  --coupon-notch: radial-gradient(circle at center, transparent 14px, black 15px);
+  mask-image:
+    radial-gradient(circle 16px at 0 50%, transparent 98%, black 100%),
+    radial-gradient(circle 16px at 100% 50%, transparent 98%, black 100%);
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

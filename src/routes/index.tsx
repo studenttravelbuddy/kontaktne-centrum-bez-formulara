@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 
+import { CampaignBanner } from "@/components/site/CampaignBanner";
 import { ChatWidget } from "@/components/site/ChatWidget";
 import { ContactForm } from "@/components/site/ContactForm";
 import { Faq } from "@/components/site/Faq";
@@ -8,10 +9,11 @@ import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { Steps } from "@/components/site/Steps";
+import { TopDiscounts } from "@/components/site/TopDiscounts";
 
 const TITLE = "Kontakt a pomoc — preukazy ISIC, ITIC a EURO<26 | CKM SYTS";
 const DESCRIPTION =
-  "Kontaktný formulár, časté otázky a chat pre držiteľov preukazov ISIC, ITIC a EURO<26. Dopyt doručíme priamo kolegyniam z CKM SYTS.";
+  "Kontaktné centrum CKM SYTS: naj zľavy, kampaň Ready for More, časté otázky, chat a formulár pre držiteľov preukazov ISIC, ITIC a EURO<26.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -20,6 +22,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: DESCRIPTION },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
@@ -38,9 +42,11 @@ function Index() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <Hero />
+        <Hero onOpenChat={() => setChatOpen(true)} onGoToForm={() => goToForm()} />
+        <TopDiscounts />
+        <CampaignBanner />
         <Steps />
-        <Faq onOpenChat={() => setChatOpen(true)} />
+        <Faq onOpenChat={() => setChatOpen(true)} onGoToForm={() => goToForm()} />
         <ContactForm topicId={topicId} onTopicChange={setTopicId} />
       </main>
       <Footer />
