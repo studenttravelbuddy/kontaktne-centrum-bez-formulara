@@ -41,7 +41,7 @@ export function Faq({ onOpenChat }: { onOpenChat: () => void }) {
           >
             Opýtajte sa nášho chatu vpravo dole
           </button>
-          , alebo{" "}
+          , zavolajte nám alebo{" "}
           <a className="font-medium text-brand-teal-deep underline" href="#formular">
             vyplňte formulár nižšie
           </a>

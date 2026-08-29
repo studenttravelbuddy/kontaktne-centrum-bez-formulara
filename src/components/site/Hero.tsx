@@ -33,13 +33,13 @@ export function Hero() {
           Kontakt a pomoc
         </p>
         <h1 className="max-w-3xl text-3xl leading-tight md:text-5xl">
-          Preukaz ISIC, ITIC alebo EURO&lt;26 — na čo slúži a ako ho získate
+          Preukazy ISIC, ITIC a EURO&lt;26 — na čo slúžia, pre koho sú a ako ich získate?
         </h1>
         <p className="mt-4 max-w-3xl text-base text-brand-gray md:text-lg">
           Preukazy vydáva združenie CKM SYTS. Fungujú ako medzinárodne uznávaný doklad o štatúte
-          študenta či učiteľa, prinášajú zľavy na Slovensku aj v zahraničí a zľavnené cestovné vo
-          verejnej doprave. Nižšie nájdete odpovede na najčastejšie otázky, chat aj kontaktný
-          formulár.
+          študenta, mládého človeka či učiteľa. Prinášajú zľavy na Slovensku aj v zahraničí a pre
+          ISIC aj zľavnené cestovné vo verejnej doprave. Nižšie nájdete odpovede na najčastejšie
+          otázky, chat aj kontaktný formulár.
         </p>
 
         <div className="mt-10 grid gap-5 md:grid-cols-3">
