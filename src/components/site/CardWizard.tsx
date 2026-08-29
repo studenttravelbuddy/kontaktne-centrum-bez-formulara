@@ -84,9 +84,10 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
                 onClick={() => setChoice(answer.result)}
                 className="group flex items-center gap-3 rounded-lg border border-brand-teal/25 bg-card p-4 text-left text-sm font-bold transition-colors hover:bg-brand-yellow"
               >
-                <span className="text-2xl transition-transform group-hover:scale-110 motion-reduce:transition-none">
-                  {answer.emoji}
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-teal/15 text-brand-teal-deep transition-transform group-hover:scale-110 motion-reduce:transition-none">
+                  <answer.Icon className="h-5 w-5" aria-hidden="true" />
                 </span>
+
                 {answer.label}
               </button>
             ))}
