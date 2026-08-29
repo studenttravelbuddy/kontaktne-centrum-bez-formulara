@@ -60,7 +60,7 @@ export function Hero({ onOpenChat, onGoToForm }: Props) {
             <p className="mb-5 text-sm font-black tracking-wider text-brand-pink uppercase">
               Kontaktné centrum
             </p>
-            <h1 className="text-balance-tight max-w-4xl text-5xl leading-[0.98] font-black sm:text-7xl lg:text-8xl">
+            <h1 className="text-balance-tight max-w-4xl text-2xl leading-[0.98] font-black sm:text-4xl lg:text-5xl">
               Preukazy ISIC, ITIC a EURO&lt;26 — na čo slúžia, pre koho sú a ako ich získate?
             </h1>
             <p className="mt-6 max-w-2xl text-base text-muted-foreground md:text-lg">
