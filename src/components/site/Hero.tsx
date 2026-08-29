@@ -15,6 +15,7 @@ const CARDS = [
       "Medzinárodne uznávaný doklad o štatúte študenta, zľavy na Slovensku aj v zahraničí a zľavnené cestovné.",
     linkLabel: "Zistiť nárok na ISIC",
     href: "https://isic.sk/narok-na-preukaz-isic/",
+    accent: "card-isic",
   },
   {
     name: "ITIC",
@@ -23,6 +24,7 @@ const CARDS = [
     detail: "Viac ako 700 zliav na Slovensku a medzinárodné potvrdenie o statuse učiteľa.",
     linkLabel: "Zistiť nárok na ITIC",
     href: "https://itic.sk/narok-na-preukaz-itic/",
+    accent: "card-itic",
   },
   {
     name: "EURO<26",
@@ -31,6 +33,7 @@ const CARDS = [
     detail: "Vyše 2200 miest so zľavami na Slovensku, platí v 36 krajinách Európy.",
     linkLabel: "Objednať EURO<26",
     href: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/",
+    accent: "card-euro26",
   },
 ];
 
@@ -41,26 +44,26 @@ interface Props {
 
 export function Hero({ onOpenChat, onGoToForm }: Props) {
   return (
-    <section id="preukazy" className="relative overflow-hidden border-b border-border bg-background">
+    <section id="preukazy" className="relative overflow-hidden border-b-2 border-foreground bg-background">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-32 -left-24 h-80 w-80 rounded-full bg-brand-teal-light blur-3xl"
+        className="pointer-events-none absolute -right-20 top-24 h-44 w-44 rounded-full border-[28px] border-brand-yellow sm:h-64 sm:w-64"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-40 -right-20 h-64 w-64 rounded-full bg-[color-mix(in_oklab,var(--brand-yellow)_35%,white)] blur-3xl"
+        className="pointer-events-none absolute -left-16 bottom-48 h-32 w-32 rounded-full border-[20px] border-brand-pink"
       />
 
-      <div className="relative mx-auto max-w-6xl px-4 py-12 md:py-16">
+      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24">
         <div className="grid items-start gap-10 lg:grid-cols-[1.15fr_1fr]">
           <div>
-            <p className="mb-3 inline-block rounded-full bg-brand-pink px-3 py-1 text-xs font-bold tracking-wide text-white uppercase">
+            <p className="mb-5 text-sm font-black tracking-wider text-brand-pink uppercase">
               Kontaktné centrum
             </p>
-            <h1 className="max-w-3xl text-3xl leading-tight md:text-5xl">
+            <h1 className="text-balance-tight max-w-4xl text-5xl leading-[0.98] font-black sm:text-7xl lg:text-8xl">
               Preukazy ISIC, ITIC a EURO&lt;26 — na čo slúžia, pre koho sú a ako ich získate?
             </h1>
-            <p className="mt-4 max-w-2xl text-base text-brand-gray md:text-lg">
+            <p className="mt-6 max-w-2xl text-base text-muted-foreground md:text-lg">
               Preukazy vydáva združenie CKM SYTS. Fungujú ako medzinárodne uznávaný doklad o
               štatúte študenta, mladého človeka či učiteľa. Prinášajú zľavy na Slovensku aj v
               zahraničí a pre ISIC aj zľavnené cestovné vo verejnej doprave.
@@ -69,7 +72,7 @@ export function Hero({ onOpenChat, onGoToForm }: Props) {
               <button
                 type="button"
                 onClick={onOpenChat}
-                className="inline-flex items-center gap-2 rounded-[14px] bg-brand-teal-deep px-5 py-3 font-medium text-white transition-transform hover:-translate-y-0.5 motion-reduce:hover:translate-y-0"
+                className="inline-flex h-12 items-center gap-2 rounded-lg bg-brand-teal px-7 font-bold text-foreground transition-colors hover:bg-brand-yellow"
               >
                 <MessageCircle className="h-4 w-4" aria-hidden="true" />
                 Spýtať sa chatu
@@ -77,13 +80,13 @@ export function Hero({ onOpenChat, onGoToForm }: Props) {
               <button
                 type="button"
                 onClick={onGoToForm}
-                className="inline-flex items-center gap-2 rounded-[14px] bg-brand-yellow px-5 py-3 font-medium text-brand-teal-deep transition-transform hover:-translate-y-0.5 motion-reduce:hover:translate-y-0"
+                className="inline-flex h-12 items-center gap-2 rounded-lg bg-brand-yellow px-7 font-bold text-foreground transition-colors hover:bg-brand-teal"
               >
                 Napísať nám
               </button>
               <a
                 href="#zlavy"
-                className="inline-flex items-center gap-2 rounded-[14px] border border-border px-5 py-3 font-medium text-brand-teal-deep transition-colors hover:bg-brand-teal-light"
+                className="inline-flex h-12 items-center gap-2 rounded-lg border-2 border-foreground px-7 font-bold text-foreground transition-colors hover:bg-brand-teal-light"
               >
                 Naj zľavy
               </a>
@@ -96,20 +99,20 @@ export function Hero({ onOpenChat, onGoToForm }: Props) {
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {CARDS.map((card, index) => (
             <Reveal key={card.name} delay={index * 80}>
-              <article className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_-30px_var(--brand-teal-deep)] motion-reduce:hover:translate-y-0">
+              <article className={`group flex h-full flex-col rounded-lg border-2 border-foreground bg-card p-6 shadow-[8px_8px_0_var(--card-accent)] transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 ${card.accent}`}>
                 <img
                   src={card.logo}
                   alt={`Logo ${card.name}`}
-                  className="h-14 w-auto self-start object-contain transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none"
+                  className="h-16 w-28 self-start object-contain"
                 />
-                <h2 className="mt-4 font-display text-2xl">{card.name}</h2>
+                <h2 className="mt-4 font-display text-3xl text-card-accent-strong">{card.name}</h2>
                 <p className="mt-2 font-medium">{card.who}</p>
-                <p className="mt-2 flex-1 text-sm text-brand-gray">{card.detail}</p>
+                <p className="mt-2 flex-1 text-sm text-muted-foreground">{card.detail}</p>
                 <a
                   href={card.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 self-start rounded-[14px] bg-brand-teal-deep px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
+                  className="mt-5 inline-flex items-center gap-2 self-start text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
                 >
                   {card.linkLabel}
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -119,7 +122,7 @@ export function Hero({ onOpenChat, onGoToForm }: Props) {
           ))}
         </div>
 
-        <p className="mt-8 rounded-2xl bg-muted p-5 text-sm">
+        <p className="mt-10 rounded-lg border-2 border-foreground bg-brand-yellow p-5 text-sm shadow-[6px_6px_0_var(--brand-teal)]">
           <strong>Cena:</strong> preukaz aj známka na predĺženie stoja 13 €, doručenie kuriérom
           +3,15 €.{" "}
           <a className="font-medium text-brand-teal-deep underline" href="#faq">

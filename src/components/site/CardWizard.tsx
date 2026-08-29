@@ -56,12 +56,12 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
   const result = choice ? RESULTS[choice] : null;
 
   return (
-    <div className="rounded-3xl border border-border bg-card p-6 shadow-[0_18px_45px_-30px_var(--brand-teal-deep)] md:p-8">
-      <p className="inline-flex items-center gap-2 rounded-full bg-brand-teal-light px-3 py-1 text-xs font-bold tracking-wide text-brand-teal-deep uppercase">
+    <div className="rounded-lg border-2 border-foreground bg-brand-teal-light p-6 shadow-[8px_8px_0_var(--brand-teal)] md:p-8">
+      <p className="inline-flex items-center gap-2 text-sm font-black tracking-wider text-brand-pink uppercase">
         <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
         Sprievodca
       </p>
-      <h2 className="mt-3 text-xl md:text-2xl">Aký preukaz je pre mňa?</h2>
+      <h2 className="mt-3 text-3xl md:text-4xl">Aký preukaz je pre mňa?</h2>
 
       {!result ? (
         <>
@@ -72,7 +72,7 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
                 key={answer.id}
                 type="button"
                 onClick={() => setChoice(answer.result)}
-                className="group flex items-center gap-3 rounded-2xl border border-border bg-muted p-4 text-left text-sm font-medium transition-all hover:-translate-y-0.5 hover:border-brand-teal hover:bg-brand-teal-light motion-reduce:hover:translate-y-0"
+                className="group flex items-center gap-3 rounded-lg border-2 border-foreground bg-card p-4 text-left text-sm font-bold transition-colors hover:bg-brand-yellow"
               >
                 <span className="text-2xl transition-transform group-hover:scale-110 motion-reduce:transition-none">
                   {answer.emoji}
@@ -83,7 +83,7 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
           </div>
         </>
       ) : (
-        <div className="mt-5 rounded-2xl bg-brand-teal-light p-5">
+        <div className="mt-5 rounded-lg border-2 border-foreground bg-card p-5">
           <p className="font-display text-2xl text-brand-teal-deep">{result.card}</p>
           <p className="mt-1 font-medium">{result.title}</p>
           <p className="mt-2 text-sm text-brand-gray">{result.text}</p>
@@ -92,7 +92,7 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
               href={result.href}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-[14px] bg-brand-teal-deep px-4 py-2 text-sm font-medium text-white transition-transform hover:-translate-y-0.5 motion-reduce:hover:translate-y-0"
+              className="inline-flex items-center gap-2 rounded-lg bg-brand-teal px-4 py-2 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
             >
               {result.cta}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -100,7 +100,7 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
             <button
               type="button"
               onClick={onGoToForm}
-              className="inline-flex items-center gap-2 rounded-[14px] bg-brand-yellow px-4 py-2 text-sm font-medium text-brand-teal-deep transition-transform hover:-translate-y-0.5 motion-reduce:hover:translate-y-0"
+              className="inline-flex items-center gap-2 rounded-lg bg-brand-yellow px-4 py-2 text-sm font-bold text-foreground transition-colors hover:bg-brand-teal"
             >
               Mám otázku — napísať nám
             </button>
