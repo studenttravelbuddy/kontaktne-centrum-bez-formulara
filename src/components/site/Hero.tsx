@@ -1,4 +1,4 @@
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle, Sparkles } from "lucide-react";
 
 import { CardWizard } from "@/components/site/CardWizard";
 import { Reveal } from "@/components/site/Reveal";
@@ -44,57 +44,66 @@ interface Props {
 
 export function Hero({ onOpenChat, onGoToForm }: Props) {
   return (
-    <section id="preukazy" className="relative overflow-hidden border-b-2 border-foreground bg-background">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-20 top-24 h-44 w-44 rounded-full border-[28px] border-brand-yellow sm:h-64 sm:w-64"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-16 bottom-48 h-32 w-32 rounded-full border-[20px] border-brand-pink"
-      />
+    <section id="preukazy" className="relative border-b-2 border-foreground bg-background">
+      <div className="relative overflow-hidden bg-brand-teal">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full border-[24px] border-brand-yellow sm:h-96 sm:w-96 sm:border-[32px]"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -left-10 bottom-24 h-32 w-32 rotate-12 bg-brand-pink sm:h-40 sm:w-40"
+        />
 
-      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24">
-        <div className="grid items-start gap-10 lg:grid-cols-[1.15fr_1fr]">
-          <div>
-            <p className="mb-5 text-sm font-black tracking-wider text-brand-pink uppercase">
-              Kontaktné centrum
-            </p>
-            <h1 className="text-balance-tight max-w-4xl text-2xl leading-[0.98] font-black sm:text-4xl lg:text-5xl">
-              Preukazy ISIC, ITIC a EURO&lt;26 — na čo slúžia, pre koho sú a ako ich získate?
-            </h1>
-            <p className="mt-6 max-w-2xl text-base text-muted-foreground md:text-lg">
-              Preukazy vydáva združenie CKM SYTS. Fungujú ako medzinárodne uznávaný doklad o
-              štatúte študenta, mladého človeka či učiteľa. Prinášajú zľavy na Slovensku aj v
-              zahraničí a pre ISIC aj zľavnené cestovné vo verejnej doprave.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <button
-                type="button"
-                onClick={onOpenChat}
-                className="inline-flex h-12 items-center gap-2 rounded-lg bg-brand-teal px-7 font-bold text-foreground transition-colors hover:bg-brand-yellow"
-              >
-                <MessageCircle className="h-4 w-4" aria-hidden="true" />
-                Spýtať sa chatu
-              </button>
-              <button
-                type="button"
-                onClick={onGoToForm}
-                className="inline-flex h-12 items-center gap-2 rounded-lg bg-brand-yellow px-7 font-bold text-foreground transition-colors hover:bg-brand-teal"
-              >
-                Napísať nám
-              </button>
-              <a
-                href="#zlavy"
-                className="inline-flex h-12 items-center gap-2 rounded-lg border-2 border-foreground px-7 font-bold text-foreground transition-colors hover:bg-brand-teal-light"
-              >
-                Naj zľavy
-              </a>
-            </div>
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28">
+          <p className="mb-8 flex items-center gap-2 text-sm font-black tracking-[0.18em] uppercase text-foreground">
+            <Sparkles className="h-4 w-4" aria-hidden="true" />
+            Kontaktné centrum
+          </p>
+          <h1 className="text-balance-tight max-w-5xl font-display text-4xl leading-[0.95] font-black sm:text-6xl lg:text-7xl">
+            <span className="block text-brand-yellow">Preukazy ISIC, ITIC a EURO&lt;26.</span>
+            <span className="block text-brand-teal-deep">
+              Na čo slúžia, pre koho sú a ako ich získate?
+            </span>
+          </h1>
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            Preukazy vydáva združenie CKM SYTS. Fungujú ako medzinárodne uznávaný doklad o
+            štatúte študenta, mladého človeka či učiteľa. Prinášajú zľavy na Slovensku aj v
+            zahraničí a pre ISIC aj zľavnené cestovné vo verejnej doprave.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center gap-6">
+            <button
+              type="button"
+              onClick={onOpenChat}
+              className="inline-flex h-14 items-center gap-2 rounded-full bg-brand-yellow px-8 font-bold text-foreground transition-transform hover:-translate-y-0.5 motion-reduce:hover:translate-y-0"
+            >
+              <MessageCircle className="h-4 w-4" aria-hidden="true" />
+              Spýtať sa chatu
+            </button>
+            <button
+              type="button"
+              onClick={onGoToForm}
+              className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-8"
+            >
+              Napísať nám
+            </button>
+            <a
+              href="#zlavy"
+              className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-8"
+            >
+              Naj zľavy
+            </a>
           </div>
 
-          <CardWizard onGoToForm={onGoToForm} />
+          <p className="mt-14 text-sm font-black tracking-[0.18em] uppercase text-foreground">
+            ISIC · ITIC · EURO&lt;26
+          </p>
         </div>
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6">
+        <CardWizard onGoToForm={onGoToForm} />
+
 
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {CARDS.map((card, index) => (
