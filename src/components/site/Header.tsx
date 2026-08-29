@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { Phone } from "lucide-react";
 
+import eycaLogo from "@/assets/eyca-logo.png.asset.json";
+import isicLogo from "@/assets/isic-logo.png.asset.json";
+import iticLogo from "@/assets/itic-logo.png.asset.json";
+
 const NAV = [
   { href: "#preukazy", label: "Preukazy" },
   { href: "#zlavy", label: "Naj zľavy" },
