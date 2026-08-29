@@ -43,7 +43,7 @@ export function CampaignBanner() {
                 </div>
               </div>
 
-              <div className="relative rounded-lg border-2 border-dashed border-foreground bg-background p-8 text-center">
+              <div className="relative rounded-lg border-2 border-dashed border-brand-teal/40 bg-background p-8 text-center">
                 <p className="font-display text-5xl text-brand-pink">MORE</p>
                 <p className="mt-2 text-sm text-foreground">
                   Kupóny platia s platným preukazom ISIC / ITIC / EURO&lt;26.
