@@ -145,8 +145,8 @@ export function ContactForm({ topicId, onTopicChange }: Props) {
     return (
       <section id="formular" className="bg-brand-teal-light">
         <div className="mx-auto max-w-2xl px-4 py-16 text-center">
-          <CheckCircle2 className="mx-auto h-12 w-12 text-brand-teal-deep" aria-hidden="true" />
-          <h2 className="mt-4 text-2xl md:text-3xl">Ďakujeme, ozveme sa Vám čo najskôr.</h2>
+           <CheckCircle2 className="mx-auto h-16 w-16 text-brand-teal-deep" aria-hidden="true" />
+           <h2 className="mt-4 text-4xl md:text-5xl">Ďakujeme, ozveme sa Vám čo najskôr.</h2>
           <p className="mt-3 text-brand-gray">
             Váš dopyt sme prijali a posunuli kolegyniam, ktoré danú oblasť riešia. Odpoveď Vám
             pošleme na {email}.
@@ -158,15 +158,16 @@ export function ContactForm({ topicId, onTopicChange }: Props) {
 
   return (
     <section id="formular" className="bg-brand-teal-light">
-      <div className="mx-auto max-w-3xl px-4 py-12 md:py-16">
-        <h2 className="text-2xl md:text-3xl">Kontaktný formulár</h2>
-        <p className="mt-2 text-brand-gray">
+      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 md:py-24">
+        <p className="text-sm font-black tracking-wider text-brand-pink uppercase">Napíšte nám</p>
+        <h2 className="text-balance-tight mt-3 text-4xl sm:text-5xl">Kontaktný formulár</h2>
+        <p className="mt-4 text-muted-foreground">
           Vyplňte formulár a Váš dopyt automaticky doručíme kolegyniam, ktoré danú oblasť riešia.
         </p>
 
         <form onSubmit={handleSubmit} className="mt-8 space-y-8" noValidate>
-          <fieldset className="rounded-2xl border border-border bg-card p-6">
-            <legend className="px-2 font-display text-lg">Vaše údaje</legend>
+          <fieldset className="rounded-lg border-2 border-foreground bg-card p-6 shadow-[8px_8px_0_var(--brand-teal)]">
+            <legend className="px-2 font-display text-xl font-black">Vaše údaje</legend>
             <div className="space-y-4">
               <div>
                 <Label htmlFor="fullName">Meno a priezvisko *</Label>
@@ -239,8 +240,8 @@ export function ContactForm({ topicId, onTopicChange }: Props) {
             </div>
           </fieldset>
 
-          <fieldset className="rounded-2xl border border-border bg-card p-6">
-            <legend className="px-2 font-display text-lg">Čoho sa dopyt týka</legend>
+          <fieldset className="rounded-lg border-2 border-foreground bg-card p-6 shadow-[8px_8px_0_var(--brand-teal)]">
+            <legend className="px-2 font-display text-xl font-black">Čoho sa dopyt týka</legend>
             <div className="space-y-4">
               <div>
                 <Label htmlFor="topic">Oblasť dopytu *</Label>
@@ -253,7 +254,7 @@ export function ContactForm({ topicId, onTopicChange }: Props) {
                     setCardType("");
                     setFile(null);
                   }}
-                  className="mt-1 h-11 w-full rounded-[14px] border border-input bg-background px-3 text-sm"
+                   className="mt-1 h-12 w-full border-2 border-brand-teal bg-background px-3 text-sm"
                 >
                   <option value="">— vyberte oblasť —</option>
                   {TOPIC_GROUPS.map((group) => (
@@ -276,7 +277,7 @@ export function ContactForm({ topicId, onTopicChange }: Props) {
                     required
                     value={cardType}
                     onChange={(e) => setCardType(e.target.value as CardType)}
-                    className="mt-1 h-11 w-full rounded-[14px] border border-input bg-background px-3 text-sm"
+                     className="mt-1 h-12 w-full border-2 border-brand-teal bg-background px-3 text-sm"
                   >
                     <option value="">— vyberte typ preukazu —</option>
                     {CARD_TYPES.filter((c) => topic?.cardTypes.includes(c.id)).map((c) => (
@@ -391,7 +392,7 @@ export function ContactForm({ topicId, onTopicChange }: Props) {
           <button
             type="submit"
             disabled={sending}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-[14px] bg-brand-yellow px-6 py-3 font-bold text-brand-teal-deep transition-opacity hover:opacity-90 disabled:opacity-60 md:w-auto"
+            className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-brand-yellow px-7 font-bold text-foreground transition-colors hover:bg-brand-teal disabled:opacity-60 md:w-auto"
           >
             {sending && <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />}
             Poslať dopyt
