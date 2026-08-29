@@ -56,7 +56,7 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
   const result = choice ? RESULTS[choice] : null;
 
   return (
-    <div className="rounded-lg border-2 border-foreground bg-brand-teal-light p-6 shadow-[8px_8px_0_var(--brand-teal)] md:p-8">
+    <div className="rounded-lg border border-brand-teal/25 bg-brand-teal-light p-6 shadow-[8px_8px_0_var(--brand-teal)] md:p-8">
       <p className="inline-flex items-center gap-2 text-sm font-black tracking-wider text-brand-pink uppercase">
         <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
         Sprievodca
@@ -72,7 +72,7 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
                 key={answer.id}
                 type="button"
                 onClick={() => setChoice(answer.result)}
-                className="group flex items-center gap-3 rounded-lg border-2 border-foreground bg-card p-4 text-left text-sm font-bold transition-colors hover:bg-brand-yellow"
+                className="group flex items-center gap-3 rounded-lg border border-brand-teal/25 bg-card p-4 text-left text-sm font-bold transition-colors hover:bg-brand-yellow"
               >
                 <span className="text-2xl transition-transform group-hover:scale-110 motion-reduce:transition-none">
                   {answer.emoji}
@@ -83,7 +83,7 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
           </div>
         </>
       ) : (
-        <div className="mt-5 rounded-lg border-2 border-foreground bg-card p-5">
+        <div className="mt-5 rounded-lg border border-brand-teal/25 bg-card p-5">
           <p className="font-display text-2xl text-brand-teal-deep">{result.card}</p>
           <p className="mt-1 font-medium">{result.title}</p>
           <p className="mt-2 text-sm text-brand-gray">{result.text}</p>

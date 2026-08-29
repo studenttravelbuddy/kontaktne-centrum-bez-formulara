@@ -24,7 +24,7 @@ function DiscountCard({ discount }: { discount: Discount }) {
       href={discount.href}
       target="_blank"
       rel="noreferrer"
-      className={`group flex h-full flex-col rounded-lg border-2 border-foreground p-6 transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 ${TONES[discount.tone]}`}
+      className={`group flex h-full flex-col rounded-lg border border-brand-teal/25 p-6 transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 ${TONES[discount.tone]}`}
     >
       <h3 className="font-display text-lg">{discount.name}</h3>
       <p className="mt-2 flex-1 text-sm text-muted-foreground">{discount.perk}</p>
@@ -43,7 +43,7 @@ export function TopDiscounts() {
   const fullList = DISCOUNTS.filter((d) => active === "all" || d.category === active);
 
   return (
-    <section id="zlavy" className="relative overflow-hidden border-b-2 border-foreground bg-brand-teal-light">
+    <section id="zlavy" className="relative overflow-hidden border-b border-brand-teal/25 bg-brand-teal-light">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-16 top-14 h-36 w-36 rounded-full border-[22px] border-brand-pink"
@@ -85,7 +85,7 @@ export function TopDiscounts() {
             href={ALL_DISCOUNTS_URL}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex h-12 items-center gap-2 rounded-lg border-2 border-foreground bg-background px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
+            className="inline-flex h-12 items-center gap-2 rounded-lg border border-brand-teal/25 bg-background px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
           >
             Katalóg zliav na isic.sk
             <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
@@ -103,7 +103,7 @@ export function TopDiscounts() {
                     type="button"
                     onClick={() => setActive(chip.id)}
                     aria-pressed={isActive}
-                    className={`rounded-full border-2 border-foreground px-4 py-2 text-sm font-bold transition-colors ${
+                    className={`rounded-full border border-brand-teal/25 px-4 py-2 text-sm font-bold transition-colors ${
                       isActive
                         ? "bg-brand-yellow text-foreground"
                         : "bg-card text-foreground hover:bg-brand-teal"

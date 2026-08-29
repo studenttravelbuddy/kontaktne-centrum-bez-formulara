@@ -25,7 +25,7 @@ const STEPS = [
 
 export function Steps() {
   return (
-    <section className="relative overflow-hidden border-b-2 border-foreground bg-background">
+    <section className="relative overflow-hidden border-b border-brand-teal/25 bg-background">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24">
         <Reveal>
           <p className="text-sm font-black tracking-wider text-brand-pink uppercase">Tri jednoduché kroky</p>
@@ -40,8 +40,8 @@ export function Steps() {
             const Icon = step.icon;
             return (
               <Reveal key={step.number} delay={index * 120}>
-                <article className="relative h-full rounded-lg border-2 border-foreground bg-card p-6 shadow-[8px_8px_0_var(--brand-teal)] transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0">
-                  <span className="inline-flex size-12 items-center justify-center rounded-full border-2 border-foreground bg-brand-yellow font-display text-lg font-black text-foreground">
+                <article className="relative h-full rounded-lg border border-brand-teal/25 bg-card p-6 shadow-[8px_8px_0_var(--brand-teal)] transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0">
+                  <span className="inline-flex size-12 items-center justify-center rounded-full border border-brand-teal/25 bg-brand-yellow font-display text-lg font-black text-foreground">
                     {step.number}
                   </span>
                   <h3 className="mt-4 flex items-center gap-2 font-display text-xl">
