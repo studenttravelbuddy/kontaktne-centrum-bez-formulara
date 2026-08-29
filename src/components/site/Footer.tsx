@@ -63,11 +63,11 @@ const SITES = [
 export function Footer() {
   return (
     <footer className="bg-brand-teal-deep text-white">
-      <div className="mx-auto max-w-6xl px-4 py-12">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <h2 className="font-display text-xl text-white">CKM SYTS</h2>
-            <address className="mt-3 text-sm not-italic text-white/80">
+            <h2 className="font-display text-3xl text-primary-foreground">CKM SYTS</h2>
+            <address className="mt-3 text-sm not-italic text-primary-foreground">
               Vysoká 32, 811 06 Bratislava
               <br />
               <a className="underline" href="tel:+421222119963">
@@ -82,17 +82,17 @@ export function Footer() {
               ].map((logo) => (
                 <span
                   key={logo.alt}
-                  className="inline-flex items-center rounded-xl bg-white px-3 py-2"
+                  className="inline-flex h-16 w-28 items-center bg-background p-2"
                 >
-                  <img src={logo.src} alt={logo.alt} className="h-7 w-auto object-contain" />
+                  <img src={logo.src} alt={logo.alt} className="h-full w-full object-contain" />
                 </span>
               ))}
             </div>
           </div>
 
           <div>
-            <h2 className="font-display text-lg text-white">Naše weby</h2>
-            <ul className="mt-3 space-y-1 text-sm text-white/80">
+            <h2 className="font-display text-xl text-primary-foreground">Naše weby</h2>
+            <ul className="mt-3 space-y-2 text-sm text-primary-foreground">
               {SITES.map((site) => (
                 <li key={site.href}>
                   <a className="hover:underline" href={site.href} target="_blank" rel="noreferrer">
@@ -104,11 +104,11 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="font-display text-lg text-white">Sociálne siete</h2>
-            <div className="mt-3 space-y-3 text-sm text-white/80">
+            <h2 className="font-display text-xl text-primary-foreground">Sociálne siete</h2>
+            <div className="mt-3 space-y-3 text-sm text-primary-foreground">
               {SOCIAL_GROUPS.map((group) => (
                 <div key={group.brand}>
-                  <p className="font-medium text-white">{group.brand}</p>
+                   <p className="font-bold text-primary-foreground">{group.brand}</p>
                   <ul className="mt-1.5 flex flex-wrap gap-2">
                     {group.links.map((link) => {
                       const Icon = link.icon;
@@ -120,7 +120,7 @@ export function Footer() {
                             rel="noreferrer"
                             aria-label={link.label}
                             title={link.label}
-                            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/25 text-white transition-all hover:-translate-y-0.5 hover:border-brand-yellow hover:bg-brand-yellow hover:text-brand-teal-deep motion-reduce:hover:translate-y-0"
+                             className="inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary-foreground text-primary-foreground transition-colors hover:bg-brand-yellow hover:text-foreground"
                           >
                             <Icon className="h-4 w-4" />
                           </a>
@@ -134,7 +134,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-white/20 pt-6 text-xs text-white/70">
+        <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t-2 border-brand-teal pt-6 text-xs text-primary-foreground">
           <p>© {new Date().getFullYear()} CKM SYTS. Všetky práva vyhradené.</p>
           <a className="hover:underline" href="https://isic.sk/cookies/" target="_blank" rel="noreferrer">
             Cookies policy

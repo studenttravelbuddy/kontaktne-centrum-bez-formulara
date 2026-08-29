@@ -39,7 +39,7 @@ function Index() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="ambassador-playful min-h-screen bg-background text-foreground">
       <Header />
       <main>
         <Hero onOpenChat={() => setChatOpen(true)} onGoToForm={() => goToForm()} />

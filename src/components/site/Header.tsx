@@ -35,8 +35,8 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 bg-background/95 backdrop-blur">
-      <div className="bg-brand-teal-deep px-4 py-2 text-center text-sm text-white">
+    <header className="sticky top-0 z-40 border-b-2 border-foreground bg-background">
+      <div className="bg-brand-teal-deep px-4 py-2 text-center text-sm font-bold text-primary-foreground">
         Končí Vám platnosť preukazu? Pozrite si, ako si ju obnoviť —{" "}
         <a
           className="underline underline-offset-2"
@@ -47,14 +47,14 @@ export function Header() {
           isic.sk/ako-si-obnovit-platnost-preukazu
         </a>
       </div>
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 border-b border-border px-4 py-3">
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
         <a href="#preukazy" className="flex items-center gap-3">
-          <img src={isicLogo.url} alt="ISIC" className="h-9 w-auto object-contain" />
-          <img src={iticLogo.url} alt="ITIC" className="h-9 w-auto object-contain" />
+          <img src={isicLogo.url} alt="ISIC" className="h-10 w-auto object-contain" />
+          <img src={iticLogo.url} alt="ITIC" className="h-10 w-auto object-contain" />
           <img
             src={eycaLogo.url}
             alt="European Youth Card / EURO&lt;26"
-            className="h-9 w-auto object-contain"
+            className="h-10 w-auto object-contain"
           />
         </a>
         <nav className="flex flex-wrap items-center gap-1 text-sm md:gap-2">
@@ -63,10 +63,10 @@ export function Header() {
               key={item.href}
               href={item.href}
               aria-current={active === item.href ? "true" : undefined}
-              className={`rounded-full px-3 py-1.5 transition-colors ${
+              className={`rounded-full px-3 py-1.5 font-bold transition-colors ${
                 active === item.href
-                  ? "bg-brand-teal-light font-medium text-brand-teal-deep"
-                  : "hover:bg-muted hover:text-brand-teal"
+                  ? "bg-brand-yellow text-foreground"
+                  : "hover:bg-brand-teal-light"
               }`}
             >
               {item.label}
@@ -74,7 +74,7 @@ export function Header() {
           ))}
           <a
             href="tel:+421222119963"
-            className="inline-flex items-center gap-2 rounded-[14px] bg-brand-yellow px-4 py-2 font-medium text-brand-teal-deep transition-transform hover:-translate-y-0.5 motion-reduce:hover:translate-y-0"
+            className="inline-flex items-center gap-2 rounded-lg bg-brand-teal px-4 py-2 font-bold text-foreground transition-colors hover:bg-brand-yellow"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
             02 2211 9963
