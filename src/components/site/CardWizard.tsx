@@ -1,21 +1,31 @@
 import { useState } from "react";
-import { ArrowRight, RotateCcw, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  Backpack,
+  GraduationCap,
+  Presentation,
+  RotateCcw,
+  Sparkles,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
 
 interface Answer {
   id: string;
   label: string;
-  emoji: string;
+  Icon: LucideIcon;
   result: ResultKey;
 }
 
 type ResultKey = "isic-zs-ss" | "isic-vs" | "itic" | "euro26";
 
 const ANSWERS: Answer[] = [
-  { id: "zs-ss", label: "Chodím na ZŠ alebo SŠ", emoji: "🎒", result: "isic-zs-ss" },
-  { id: "vs", label: "Študujem na vysokej škole", emoji: "🎓", result: "isic-vs" },
-  { id: "ucitel", label: "Učím / pracujem v škole", emoji: "🍎", result: "itic" },
-  { id: "mlady", label: "Mám do 27 rokov a neštudujem", emoji: "🛹", result: "euro26" },
+  { id: "zs-ss", label: "Chodím na ZŠ alebo SŠ", Icon: Backpack, result: "isic-zs-ss" },
+  { id: "vs", label: "Študujem na vysokej škole", Icon: GraduationCap, result: "isic-vs" },
+  { id: "ucitel", label: "Učím / pracujem v škole", Icon: Presentation, result: "itic" },
+  { id: "mlady", label: "Mám do 27 rokov a neštudujem", Icon: Zap, result: "euro26" },
 ];
+
 
 const RESULTS: Record<
   ResultKey,
