@@ -30,11 +30,12 @@ export function Faq({
   }, [query]);
 
   return (
-    <section id="faq" className="bg-background">
-      <div className="mx-auto max-w-4xl px-4 py-12 md:py-16">
+    <section id="faq" className="border-b-2 border-foreground bg-brand-teal-light">
+      <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 md:py-24">
         <Reveal>
-          <h2 className="text-2xl md:text-3xl">Pýtate sa? Odpovedáme.</h2>
-          <p className="mt-2 text-brand-gray">
+          <p className="text-sm font-black tracking-wider text-brand-pink uppercase">Časté otázky</p>
+          <h2 className="text-balance-tight mt-3 text-4xl sm:text-5xl">Pýtate sa? Odpovedáme.</h2>
+          <p className="mt-4 text-muted-foreground">
             Najčastejšie otázky držiteľov preukazov ISIC, ITIC a EURO&lt;26.
           </p>
         </Reveal>
@@ -49,12 +50,12 @@ export function Faq({
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Hľadajte v otázkach — napríklad doprava, predĺženie, platba…"
             aria-label="Hľadať v častých otázkach"
-            className="rounded-[14px] pl-9"
+            className="h-12 bg-background pl-10"
           />
         </div>
 
         {items.length === 0 ? (
-          <p className="mt-8 rounded-2xl bg-muted p-5 text-sm">
+          <p className="mt-8 rounded-lg border-2 border-foreground bg-background p-5 text-sm">
             Na „{query}" sme nič nenašli.{" "}
             <button
               type="button"
@@ -79,18 +80,18 @@ export function Faq({
               <AccordionItem
                 key={item.question}
                 value={`faq-${index}`}
-                className="mb-3 rounded-2xl border border-border bg-card px-5 transition-colors hover:border-brand-teal"
+                 className="mb-4 rounded-lg border-2 border-foreground bg-card px-5 shadow-[5px_5px_0_var(--brand-teal)]"
               >
-                <AccordionTrigger className="text-left font-display text-base hover:no-underline md:text-lg">
+                 <AccordionTrigger className="text-left font-display text-lg font-bold hover:no-underline">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-sm text-brand-gray">
+                 <AccordionContent className="text-sm text-muted-foreground">
                   {item.answer}
                   <div className="mt-3">
                     <button
                       type="button"
                       onClick={onGoToForm}
-                      className="rounded-full bg-brand-teal-light px-3 py-1 text-xs font-medium text-brand-teal-deep transition-colors hover:bg-brand-teal hover:text-white"
+                       className="text-xs font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
                     >
                       Nepomohlo? Napíšte nám →
                     </button>
@@ -101,7 +102,7 @@ export function Faq({
           </Accordion>
         )}
 
-        <p className="mt-8 rounded-2xl bg-brand-teal-light p-5 text-sm">
+        <p className="mt-8 rounded-lg border-2 border-foreground bg-brand-yellow p-5 text-sm shadow-[6px_6px_0_var(--brand-teal)]">
           Nenašli ste odpoveď?{" "}
           <button
             type="button"
