@@ -15,7 +15,7 @@ const CARDS = [
       "Medzinárodne uznávaný doklad o štatúte študenta, zľavy na Slovensku aj v zahraničí a zľavnené cestovné. Čipový (co-brand) preukaz vydáva škola, ISIC klasik kúpite u nás.",
     linkLabel: "Zistiť nárok na ISIC",
     href: "https://isic.sk/narok-na-preukaz-isic/",
-    shopLabel: "Objednať ISIC klasik",
+    shopLabel: "Objednať ISIC",
     shopHref: "https://objednaj-preukaz.sk/produkt/isic-klasik/",
     accent: "card-isic",
   },
