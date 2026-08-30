@@ -85,9 +85,11 @@ const TABS: Tab[] = [
   },
 ];
 
+const FIRST_TAB = TABS[0] as Tab;
+
 export function RenewSection() {
-  const [activeId, setActiveId] = useState(TABS[0].id);
-  const active = TABS.find((tab) => tab.id === activeId) ?? TABS[0];
+  const [activeId, setActiveId] = useState(FIRST_TAB.id);
+  const active: Tab = TABS.find((tab) => tab.id === activeId) ?? FIRST_TAB;
   const ActiveIcon = active.icon;
 
   return (
