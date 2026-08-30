@@ -1,8 +1,8 @@
 import { Facebook, Instagram, Linkedin, Youtube, type LucideIcon } from "lucide-react";
 
-import eycaLogo from "@/assets/eyca-logo.png.asset.json";
-import isicLogo from "@/assets/isic-logo.png.asset.json";
-import iticLogo from "@/assets/itic-logo.png.asset.json";
+import eycaLogo from "@/assets/eyca-logo.svg.asset.json";
+import isicLogo from "@/assets/isic-logo.svg.asset.json";
+import iticLogo from "@/assets/itic-logo.svg.asset.json";
 
 function TikTokIcon({ className }: { className?: string }) {
   return (
