@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
-import { CheckCircle2, Loader2, Paperclip } from "lucide-react";
+import { CheckCircle2, Loader2, Paperclip, Phone } from "lucide-react";
 import { toast } from "sonner";
 
 import { Input } from "@/components/ui/input";
@@ -164,6 +164,23 @@ export function ContactForm({ topicId, onTopicChange }: Props) {
         <p className="mt-4 text-muted-foreground">
           Vyplňte formulár a Váš dopyt automaticky doručíme kolegyniam, ktoré danú oblasť riešia.
         </p>
+
+        <div className="mt-6 flex flex-col gap-3 rounded-2xl bg-brand-yellow p-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-start gap-3">
+            <Phone className="mt-0.5 h-5 w-5 shrink-0 text-brand-teal-deep" aria-hidden="true" />
+            <div>
+              <p className="font-display text-lg font-black text-brand-teal-deep">Radšej zavolať?</p>
+              <p className="text-sm text-brand-teal-deep/90">Naše kolegyne Vám poradia aj po telefóne.</p>
+            </div>
+          </div>
+          <a
+            href="tel:+421222119963"
+            className="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-teal-deep px-5 py-2.5 font-bold text-white transition-colors hover:bg-brand-teal-dark"
+          >
+            <Phone className="h-4 w-4" aria-hidden="true" />
+            02 2211 9963
+          </a>
+        </div>
 
         <form onSubmit={handleSubmit} className="mt-8 space-y-8" noValidate>
           <fieldset className="rounded-2xl bg-card p-6">

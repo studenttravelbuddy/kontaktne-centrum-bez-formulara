@@ -114,14 +114,18 @@ export function Faq({
           >
             Opýtajte sa nášho chatu vpravo dole
           </button>
-          , zavolajte nám alebo{" "}
+          , vyplňte{" "}
           <button
             type="button"
             onClick={onGoToForm}
             className="font-medium text-brand-teal-deep underline"
           >
-            vyplňte formulár nižšie
+            formulár nižšie
           </button>
+          , alebo nám rovno zavolajte na{" "}
+          <a href="tel:+421222119963" className="font-medium text-brand-teal-deep underline">
+            02 2211 9963
+          </a>
           .
         </p>
       </div>
