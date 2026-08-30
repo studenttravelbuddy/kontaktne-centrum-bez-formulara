@@ -76,7 +76,7 @@ export function TopDiscounts() {
             type="button"
             onClick={() => setShowAll((v) => !v)}
             aria-expanded={showAll}
-            className="inline-flex h-12 items-center gap-2 rounded-lg bg-brand-teal px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
+            className="inline-flex h-12 items-center gap-2 rounded-full bg-brand-teal px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
           >
             {showAll ? "Skryť kompletný prehľad" : "Zobraziť všetky zľavy podľa kategórií"}
             <ChevronDown
@@ -88,7 +88,7 @@ export function TopDiscounts() {
             href={ALL_DISCOUNTS_URL}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex h-12 items-center gap-2 rounded-lg border border-brand-teal/25 bg-background px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
+            className="inline-flex h-12 items-center gap-2 rounded-full bg-background px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
           >
             Katalóg zliav na isic.sk
             <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
