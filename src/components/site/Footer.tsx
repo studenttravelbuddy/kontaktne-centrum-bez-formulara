@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, type LucideIcon } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube, type LucideIcon } from "lucide-react";
 
 import eycaLogo from "@/assets/eyca-logo.png.asset.json";
 import isicLogo from "@/assets/isic-logo.png.asset.json";
@@ -12,42 +12,60 @@ function TikTokIcon({ className }: { className?: string }) {
   );
 }
 
-type SocialLink = { label: string; href: string; icon: LucideIcon | typeof TikTokIcon };
+type SocialIcon = LucideIcon | typeof TikTokIcon;
 
-const SOCIAL_GROUPS: { brand: string; links: SocialLink[] }[] = [
+type SocialLink = {
+  label: string;
+  name: string;
+  href: string;
+  icon: SocialIcon;
+};
+
+type SocialGroup = {
+  brand: string;
+  links: SocialLink[];
+};
+
+const SOCIAL_GROUPS: SocialGroup[] = [
   {
-    brand: "ISIC",
+    brand: "ISIC VŠ",
     links: [
-      { label: "Instagram ISIC", href: "https://www.instagram.com/isic.slovakia/", icon: Instagram },
-      { label: "TikTok ISIC", href: "https://www.tiktok.com/@isic_slovakia", icon: TikTokIcon },
+      { name: "Instagram", label: "Instagram ISIC VŠ", href: "https://www.instagram.com/isic.slovakia/", icon: Instagram },
+      { name: "TikTok", label: "TikTok ISIC VŠ", href: "https://www.tiktok.com/@isic_slovakia", icon: TikTokIcon },
     ],
   },
   {
-    brand: "ISIC / EURO<26 — ZŠ a SŠ",
+    brand: "ISIC / EURO<26 — ZŠ",
     links: [
-      { label: "Facebook SŠ a ZŠ", href: "https://www.facebook.com/preukazisiceuro26", icon: Facebook },
-      { label: "Facebook ZŠ", href: "https://www.facebook.com/ISICEURO26/", icon: Facebook },
-      { label: "Instagram ZŠ", href: "https://www.instagram.com/isic.sk_zs/", icon: Instagram },
-      { label: "Instagram SŠ", href: "https://www.instagram.com/isic_euro26/", icon: Instagram },
+      { name: "Facebook", label: "Facebook ISIC/EURO<26 ZŠ", href: "https://www.facebook.com/ISICEURO26/", icon: Facebook },
+      { name: "Instagram", label: "Instagram ISIC/EURO<26 ZŠ", href: "https://www.instagram.com/isic.sk_zs/", icon: Instagram },
+    ],
+  },
+  {
+    brand: "ISIC / EURO<26 — SŠ",
+    links: [
+      { name: "Facebook", label: "Facebook ISIC/EURO<26 SŠ", href: "https://www.facebook.com/preukazisiceuro26", icon: Facebook },
+      { name: "Instagram", label: "Instagram ISIC/EURO<26 SŠ", href: "https://www.instagram.com/isic_euro26/", icon: Instagram },
     ],
   },
   {
     brand: "EURO<26",
     links: [
-      { label: "Facebook EURO<26", href: "https://www.facebook.com/Kartamladycheuro26/", icon: Facebook },
-      { label: "Instagram EURO<26", href: "https://www.instagram.com/euro_26/", icon: Instagram },
+      { name: "Facebook", label: "Facebook EURO<26", href: "https://www.facebook.com/Kartamladycheuro26/", icon: Facebook },
+      { name: "Instagram", label: "Instagram EURO<26", href: "https://www.instagram.com/euro_26/", icon: Instagram },
     ],
   },
   {
     brand: "ITIC",
     links: [
-      { label: "Facebook ITIC", href: "https://www.facebook.com/ITICSlovakia/", icon: Facebook },
+      { name: "Facebook", label: "Facebook ITIC", href: "https://www.facebook.com/ITICSlovakia/", icon: Facebook },
     ],
   },
   {
     brand: "CKM SYTS",
     links: [
-      { label: "LinkedIn CKM SYTS", href: "https://sk.linkedin.com/company/isic-slovakia", icon: Linkedin },
+      { name: "LinkedIn", label: "LinkedIn CKM SYTS", href: "https://sk.linkedin.com/company/isic-slovakia", icon: Linkedin },
+      { name: "YouTube", label: "YouTube CKM SYTS", href: "https://www.youtube.com/@isiciticeuro26preukazy81", icon: Youtube },
     ],
   },
 ];
@@ -105,24 +123,27 @@ export function Footer() {
 
           <div>
             <h2 className="font-display text-xl text-primary-foreground">Sociálne siete</h2>
-            <div className="mt-3 space-y-3 text-sm text-primary-foreground">
+            <div className="mt-3 grid grid-cols-2 gap-3 lg:grid-cols-3">
               {SOCIAL_GROUPS.map((group) => (
-                <div key={group.brand}>
-                   <p className="font-bold text-primary-foreground">{group.brand}</p>
+                <div key={group.brand} className="min-w-0">
+                  <p className="truncate text-xs font-bold uppercase tracking-wide text-primary-foreground">
+                    {group.brand}
+                  </p>
                   <ul className="mt-1.5 flex flex-wrap gap-2">
                     {group.links.map((link) => {
                       const Icon = link.icon;
                       return (
-                        <li key={link.href + link.label}>
+                        <li key={link.href} className="min-w-0">
                           <a
                             href={link.href}
                             target="_blank"
                             rel="noreferrer"
                             aria-label={link.label}
                             title={link.label}
-                             className="inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary-foreground text-primary-foreground transition-colors hover:bg-brand-yellow hover:text-foreground"
+                            className="inline-flex min-w-0 items-center gap-1.5 rounded-full border-2 border-primary-foreground px-2.5 py-1 text-sm text-primary-foreground transition-colors hover:bg-brand-yellow hover:text-foreground"
                           >
-                            <Icon className="h-4 w-4" />
+                            <Icon className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                            <span className="truncate">{link.name}</span>
                           </a>
                         </li>
                       );
