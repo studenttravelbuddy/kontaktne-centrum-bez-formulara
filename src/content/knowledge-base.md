@@ -358,7 +358,7 @@ Ako sa pýtajú
 Odpoveď
 Kľúčová vec, ktorú si klienti mýlia: známka a doprava sú dve samostatné veci. Zakúpená známka dopravnú zľavu nepredĺži.
 Dobrý deň,
-radi Vám poradíme — známka slúži na predĺženie platnosti preukazu a na komerčné zľavy, doprava sa však predlžuje samostatne, a sú na to dva kroky:
+radi Vám poradíme — známka predlžuje platnosť licencie pre komerčné zľavy aj zľavu v doprave, platnosť čipu a aktiváciu zľavy v doprave však predlžujete samostatne, a sú na to dva kroky:
 1. zaplatíte poplatok 3,69 € cez Ubian alebo SMS,
 2. priložíte preukaz k UNIterminálu — až tým sa zľava aktivuje.
 Postup nájdete tu: https://www.ubian.sk/preukaz-studenta#renew
