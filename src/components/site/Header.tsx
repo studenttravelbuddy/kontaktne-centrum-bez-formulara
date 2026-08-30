@@ -48,18 +48,18 @@ export function Header() {
         </a>
       </div>
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
-        <a href="#preukazy" className="flex items-center gap-3">
+        <a href="#preukazy" className="flex items-center gap-3" aria-label="Preukazy ISIC, ITIC a EYC">
           {[
             { src: isicLogo.url, alt: "ISIC" },
             { src: iticLogo.url, alt: "ITIC" },
             { src: eycaLogo.url, alt: "European Youth Card / EURO<26" },
           ].map((logo) => (
-            <span
+            <img
               key={logo.alt}
-              className="inline-flex h-12 w-24 items-center justify-center rounded-2xl bg-card px-3 py-2 shadow-sm"
-            >
-              <img src={logo.src} alt={logo.alt} className="h-full w-full object-contain" />
-            </span>
+              src={logo.src}
+              alt={logo.alt}
+              className="h-auto w-24 shrink-0 sm:w-28"
+            />
           ))}
         </a>
         <nav className="flex flex-wrap items-center gap-1 text-sm md:gap-2">
