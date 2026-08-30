@@ -60,5 +60,5 @@ Komentár je otázka, nie zmena – logá sú v hlavičke aj v pätke presne v d
 - `src/lib/discounts.ts` – úprava textov (`perk`), `href` na isic.sk, nové voliteľné pole `cards?: ("ISIC"|"ITIC"|"EURO<26")[]` pre štítky platnosti; výmena položky „ISIC aplikácia" za „NAY".
 - `src/components/site/TopDiscounts.tsx` – zobrazenie štítkov platnosti na karte.
 - `src/components/site/CampaignBanner.tsx` – doplnenie názvu kampane.
-- `src/components/site/Hero.tsx` – text sekcie Preukazy.
+- `src/components/site/Hero.tsx` – bez zmeny textu sekcie Preukazy.
 - Po zmenách overím všetky nové odkazy (HTTP status) a skontrolujem sekciu v prehliadači; do každého vlákna komentárov napíšem odpoveď.
