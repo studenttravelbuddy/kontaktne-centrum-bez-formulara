@@ -29,7 +29,7 @@ Sociálne siete v pätičke doplniť podľa dodaného zoznamu odkazov, rozdeliť
 - LinkedIn: https://sk.linkedin.com/company/isic-slovakia
 - YouTube: https://www.youtube.com/@isiciticeuro26preukazy81
 
-Vynechané (v podklade neúplné/chýbajúce): Campsite bio odkaz, YouTube kanál, ITIC Instagram, EURO<26 TikTok. Doplníme, keď pošleš správne URL.
+Vynechané (v podklade neúplné/chýbajúce): Campsite bio odkaz, ITIC Instagram, EURO<26 TikTok. Doplníme, keď pošleš správne URL.
 
 ## Zmeny
 
