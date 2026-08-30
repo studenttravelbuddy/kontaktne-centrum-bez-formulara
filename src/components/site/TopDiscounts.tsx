@@ -149,6 +149,7 @@ function TopCard({ discount }: { discount: Discount }) {
       <p className="mt-2 flex-1 text-sm opacity-90">{discount.name}</p>
       <CardBadges cards={discount.cards} className="mt-4" />
       <p className="mt-4 text-xs opacity-80">Zľavu uplatníte v aplikácii:</p>
+
       <AppLinks discount={discount} />
     </div>
   );
