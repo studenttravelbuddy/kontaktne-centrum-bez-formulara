@@ -1,23 +1,13 @@
-# Oprava myEYC Android odkazu
+# Zmazanie tlačidla "Otázka ku kampani"
 
 ## Cieľ
-Nahradiť všetky výskyty myEYC Android odkazu v projekte za správnu URL:
-`https://play.google.com/store/apps/details?id=com.eyca.mobileapp&hl=en`
+Odstrániť druhé tlačidlo s textom **"Otázka ku kampani"** z kampanového bannera, aby zostalo len primárne CTA **"Získať kupóny"**.
 
-## Zmeny
-
-1. `src/lib/discounts.ts` riadok 78
-   - Stará hodnota: `https://play.google.com/store/apps/details?id=com.eyca.mobileapp`
-   - Nová hodnota: `https://play.google.com/store/apps/details?id=com.eyca.mobileapp&hl=en`
-
-2. `src/data/zlavy.ts` riadok 2393
-   - Stará hodnota: `https://play.google.com/store/apps/details?id=com.eyca.mobileapp`
-   - Nová hodnota: `https://play.google.com/store/apps/details?id=com.eyca.mobileapp&hl=en`
-
-3. `src/data/zlavy.ts` riadok 2415
-   - Stará hodnota: `https://play.google.com/store/apps/details?id=com.eyca.mobileapp`
-   - Nová hodnota: `https://play.google.com/store/apps/details?id=com.eyca.mobileapp&hl=en`
+## Súbor a zmena
+- **Súbor:** `src/components/site/CampaignBanner.tsx`
+- **Zmena:** Zmazať `<a href="#formular">...</a>` blok (riadky 39–44), ktorý obsahuje text "Otázka ku kampani".
+- **Vplyv:** Zostane len jedno CTA tlačidlo vedľa seba vľavo, layout sa automaticky prispôsobí.
 
 ## Overenie
-- Po úprave spustiť typecheck.
-- Skontrolovať náhľad, že tlačidlo Google Play pri EURO<26/EYCA zľavách smeruje na novú URL.
+- Typecheck prejde bez zmien v importoch (použité komponenty zostanú).
+- V náhľade sa v kampanovej sekcii zobrazí iba tlačidlo "Získať kupóny".
