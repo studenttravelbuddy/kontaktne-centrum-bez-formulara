@@ -75,7 +75,7 @@ export const ZLAVY: Zlava[] = [
   },
   {
     top: true,
-    partner: 'GOLEM CLUB Tower 115 Bratislava, Žilina, Košice, Martin',
+    partner: 'GOLEM CLUB ',
     nazov: '10% zľava na mesačný one pass a off peak one pass',
     kategoria: 'Šport',
     preukazy: 'ISIC | ITIC | EYCA',
