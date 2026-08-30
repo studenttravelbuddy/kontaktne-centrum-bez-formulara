@@ -44,6 +44,7 @@ function Index() {
       <Header />
       <main>
         <Hero onOpenChat={() => setChatOpen(true)} onGoToForm={() => goToForm()} />
+        <RenewSection />
         <TopDiscounts />
         <CampaignBanner />
         <Steps />
