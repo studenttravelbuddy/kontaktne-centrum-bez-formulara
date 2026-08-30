@@ -38,13 +38,8 @@ export function Header() {
     <header className="sticky top-0 z-40 bg-background/95 backdrop-blur">
       <div className="bg-brand-teal-deep px-4 py-2 text-center text-sm font-bold text-primary-foreground">
         Končí Vám platnosť preukazu? Pozrite si, ako si ju obnoviť —{" "}
-        <a
-          className="underline underline-offset-2"
-          href="https://isic.sk/ako-si-obnovit-platnost-preukazu/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          isic.sk/ako-si-obnovit-platnost-preukazu
+        <a className="underline underline-offset-2" href="#obnovit-preukaz">
+          ako si obnoviť platnosť preukazu
         </a>
       </div>
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">

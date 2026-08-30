@@ -8,6 +8,7 @@ import { Faq } from "@/components/site/Faq";
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
+import { RenewSection } from "@/components/site/RenewSection";
 import { Steps } from "@/components/site/Steps";
 import { TopDiscounts } from "@/components/site/TopDiscounts";
 
@@ -43,6 +44,7 @@ function Index() {
       <Header />
       <main>
         <Hero onOpenChat={() => setChatOpen(true)} onGoToForm={() => goToForm()} />
+        <RenewSection />
         <TopDiscounts />
         <CampaignBanner />
         <Steps />
