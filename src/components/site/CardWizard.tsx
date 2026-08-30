@@ -64,7 +64,7 @@ const RESULTS: Record<
 // Farby zodpovedajú preukazom v kartách nižšie: ISIC tyrkysová/žltá, ITIC oranžová, EURO<26 magenta
 const ANSWER_TONES: Record<string, string> = {
   "zs-ss": "bg-brand-teal text-brand-teal-deep",
-  vs: "bg-brand-yellow text-foreground",
+  vs: "bg-[#FEEF00] text-foreground",
   ucitel: "bg-brand-orange text-primary-foreground",
   mlady: "bg-brand-pink text-primary-foreground",
 };
