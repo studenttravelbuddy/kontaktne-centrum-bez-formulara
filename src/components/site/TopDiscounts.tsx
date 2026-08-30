@@ -106,7 +106,7 @@ export function TopDiscounts() {
                     type="button"
                     onClick={() => setActive(chip.id)}
                     aria-pressed={isActive}
-                    className={`rounded-full border border-brand-teal/25 px-4 py-2 text-sm font-bold transition-colors ${
+                    className={`rounded-full px-4 py-2 text-sm font-bold transition-colors ${
                       isActive
                         ? "bg-brand-yellow text-foreground"
                         : "bg-card text-foreground hover:bg-brand-teal"
