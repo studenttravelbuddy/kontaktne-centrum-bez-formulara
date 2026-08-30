@@ -113,51 +113,51 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-sm text-primary-foreground">
               {SITES.map((site) => (
                 <li key={site.href}>
-                  <a className="hover:underline" href={site.href} target="_blank" rel="noreferrer">
+                  <a className="hover:underline" href={site.href} target="_blank" rel="noopener noreferrer">
                     {site.label}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
+        </div>
 
-          <div>
-            <h2 className="font-display text-xl text-primary-foreground">Sociálne siete</h2>
-            <div className="mt-3 grid grid-cols-2 gap-3 lg:grid-cols-3">
-              {SOCIAL_GROUPS.map((group) => (
-                <div key={group.brand} className="min-w-0">
-                  <p className="truncate text-xs font-bold uppercase tracking-wide text-primary-foreground">
-                    {group.brand}
-                  </p>
-                  <ul className="mt-1.5 flex flex-wrap gap-2">
-                    {group.links.map((link) => {
-                      const Icon = link.icon;
-                      return (
-                        <li key={link.href} className="min-w-0">
-                          <a
-                            href={link.href}
-                            target="_blank"
-                            rel="noreferrer"
-                            aria-label={link.label}
-                            title={link.label}
-                            className="inline-flex min-w-0 items-center gap-1.5 rounded-full border-2 border-primary-foreground px-2.5 py-1 text-sm text-primary-foreground transition-colors hover:bg-brand-yellow hover:text-foreground"
-                          >
-                            <Icon className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-                            <span className="truncate">{link.name}</span>
-                          </a>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              ))}
-            </div>
+        <div className="mt-12 text-left">
+          <h2 className="font-display text-xl text-primary-foreground">Sociálne siete</h2>
+          <div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-3 lg:grid-cols-6">
+            {SOCIAL_GROUPS.map((group) => (
+              <div key={group.brand}>
+                <p className="text-xs font-bold uppercase tracking-wide text-brand-yellow">
+                  {group.brand}
+                </p>
+                <ul className="mt-2 flex flex-col items-start gap-2">
+                  {group.links.map((link) => {
+                    const Icon = link.icon;
+                    return (
+                      <li key={link.href}>
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={link.label}
+                          title={link.label}
+                          className="inline-flex items-center gap-2 rounded-full border-2 border-primary-foreground px-3 py-1 text-sm whitespace-nowrap text-primary-foreground transition-colors hover:bg-brand-yellow hover:text-foreground"
+                        >
+                          <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
+                          <span>{link.name}</span>
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t-2 border-brand-teal pt-6 text-xs text-primary-foreground">
           <p>© {new Date().getFullYear()} CKM SYTS. Všetky práva vyhradené.</p>
-          <a className="hover:underline" href="https://isic.sk/cookies/" target="_blank" rel="noreferrer">
+          <a className="hover:underline" href="https://isic.sk/cookies-policy/" target="_blank" rel="noopener noreferrer">
             Cookies policy
           </a>
         </div>
