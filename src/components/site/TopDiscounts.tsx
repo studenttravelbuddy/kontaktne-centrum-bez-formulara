@@ -209,11 +209,11 @@ export function TopDiscounts() {
         <Reveal>
           <p className="kicker text-brand-pink">Naj zľavy</p>
           <h2 className="text-balance-tight mt-3 font-display text-4xl sm:text-5xl">
-            Top zľava z každej kategórie
+             Zľava z každej kategórie
           </h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            Deväť najlepších výhod pre držiteľov ISIC, ITIC a EURO&lt;26 — jedna z každej
-            kategórie. Zľavy uplatníte cez našu aplikáciu, kompletný katalóg si rozbalíte nižšie.
+             Výhody pre držiteľov ISIC, ITIC a EURO&lt;26 — jedna z každej kategórie. Zľavy
+             uplatníte cez naše aplikácie, kompletný katalóg si rozbalíte nižšie.
           </p>
         </Reveal>
 
