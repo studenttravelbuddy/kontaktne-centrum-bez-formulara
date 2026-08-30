@@ -35,7 +35,7 @@ const SOCIAL_GROUPS: SocialGroup[] = [
     ],
   },
   {
-    brand: "ISIC / EURO<26 — ZŠ",
+    brand: "ISIC ZŠ",
     links: [
       { name: "Facebook", label: "Facebook ISIC/EURO<26 ZŠ", href: "https://www.facebook.com/ISICEURO26/", icon: Facebook },
       { name: "Instagram", label: "Instagram ISIC/EURO<26 ZŠ", href: "https://www.instagram.com/isic.sk_zs/", icon: Instagram },
