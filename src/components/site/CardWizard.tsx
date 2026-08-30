@@ -104,10 +104,11 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
                 <span className="font-display text-2xl leading-tight font-black uppercase">
                   {answer.label}
                 </span>
-                <span className="chip mt-auto bg-background/85 text-foreground">
+                <span className={`chip mt-auto ${ANSWER_CHIPS[answer.id]}`}>
                   Zistiť viac
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </span>
+
               </button>
             ))}
           </div>
