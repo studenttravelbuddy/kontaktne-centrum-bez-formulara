@@ -18,6 +18,8 @@ import {
 import { Reveal } from "@/components/site/Reveal";
 import {
   ALL_DISCOUNTS_URL,
+  ITIC_DISCOUNTS_URL,
+  EURO26_DISCOUNTS_URL,
   CARD_FILTERS,
   CATEGORY_COUNTS,
   DISCOUNTS,
