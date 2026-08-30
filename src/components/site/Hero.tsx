@@ -126,15 +126,26 @@ export function Hero({ onOpenChat, onGoToForm }: Props) {
                 <h2 className="mt-4 font-display text-3xl text-card-accent-strong">{card.name}</h2>
                 <p className="mt-2 font-medium">{card.who}</p>
                 <p className="mt-2 flex-1 text-sm text-muted-foreground">{card.detail}</p>
-                <a
-                  href={card.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 self-start text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
-                >
-                  {card.linkLabel}
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </a>
+                <div className="mt-5 flex flex-col items-start gap-2">
+                  <a
+                    href={card.shopHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-brand-yellow px-4 py-2 text-sm font-bold text-foreground transition-colors hover:bg-brand-teal"
+                  >
+                    {card.shopLabel}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                  <a
+                    href={card.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+                  >
+                    {card.linkLabel}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                </div>
               </article>
             </Reveal>
           ))}
