@@ -10,7 +10,7 @@ Spájame dve veci naraz: nový dataset 235 zliav (`zlavy.ts`) so zadaním z `LOV
 
 ## 2. Orange → O2
 
-Vo všetkých textoch a odkazoch na webe (nielen v katalógu) nahradíme Orange za O2. V dátach je 5 O2 ponúk kampane „Ready for more?" (Maxx, Základný, Pohodový, Bezstarostný, Junior). Ich `partnerUrl` je zatiaľ `TBD` — dovtedy pri nich zobrazíme len CTA na aplikáciu a odkaz na kampaňovú sekciu na našom webe; hneď po publikovaní O2 stránky doplníme reálnu URL.
+Vo všetkých textoch a odkazoch na webe (nielen v katalógu) nahradíme Orange za O2. V dátach je 5 O2 ponúk kampane „Ready for more?" (Maxx, Základný, Pohodový, Bezstarostný, Junior). Ich `partnerUrl` je zatiaľ `TBD` — dovtedy pri nich zobrazíme len CTA na aplikáciu a odkaz na kampaňovú sekciu na našom webe. Reálnu URL kampaňovej stránky doplníme až po spustení stránky 1. 9. 2026.
 
 ## 3. „Naj zľavy" = 9 top pickov podľa kategórií
 
