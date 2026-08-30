@@ -35,8 +35,7 @@ Do sekcie kampane doplníme presné pomenovanie: „Kupónová Back to School ka
 
 ## 7. Sekcia Preukazy – text
 
-Odsek pod nadpisom prepíšeme na schválené znenie:
-„Preukazy vydáva združenie CKM SYTS. Fungujú ako medzinárodne uznávaný doklad o štatúte denného študenta (ISIC), mladého človeka (EURO<26) a učiteľa na hlavný úväzok (ITIC)."
+Text ostáva bez zmeny (komentár berieme ako potvrdenie súčasného znenia).
 
 ## 8. Logo EYCA
 
