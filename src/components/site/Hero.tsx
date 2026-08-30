@@ -12,30 +12,39 @@ const CARDS = [
     logo: isicLogo.url,
     who: "Pre študentov denného štúdia na ZŠ, SŠ a VŠ.",
     detail:
-      "Medzinárodne uznávaný doklad o štatúte študenta, zľavy na Slovensku aj v zahraničí a zľavnené cestovné.",
+      "Medzinárodne uznávaný doklad o štatúte študenta, zľavy na Slovensku aj v zahraničí a zľavnené cestovné. Čipový (co-brand) preukaz vydáva škola, ISIC klasik kúpite u nás.",
     linkLabel: "Zistiť nárok na ISIC",
     href: "https://isic.sk/narok-na-preukaz-isic/",
+    shopLabel: "Objednať ISIC klasik",
+    shopHref: "https://objednaj-preukaz.sk/produkt/isic-klasik/",
     accent: "card-isic",
   },
   {
     name: "ITIC",
     logo: iticLogo.url,
     who: "Pre učiteľov, pedagogických a odborných zamestnancov škôl.",
-    detail: "Viac ako 700 zliav na Slovensku a medzinárodné potvrdenie o statuse učiteľa.",
+    detail:
+      "Viac ako 700 zliav na Slovensku a medzinárodné potvrdenie o statuse učiteľa. Zapojené školy vydávajú co-brand preukaz, inak objednávate klasik.",
     linkLabel: "Zistiť nárok na ITIC",
     href: "https://itic.sk/narok-na-preukaz-itic/",
+    shopLabel: "Objednať ITIC",
+    shopHref: "https://objednaj-preukaz.sk/kategoria-produktu/som-ucitel/",
     accent: "card-itic",
   },
   {
     name: "EURO<26",
     logo: eycaLogo.url,
     who: "Pre kohokoľvek od 6 do 27 rokov, aj keď neštuduje.",
-    detail: "Vyše 2200 miest so zľavami na Slovensku, platí v 36 krajinách Európy.",
-    linkLabel: "Objednať EURO<26",
-    href: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/",
+    detail:
+      "Vyše 2200 miest so zľavami na Slovensku, platí v 36 krajinách Európy. Po skončení štúdia naň z ISIC prejdete plynulo — platnosť nadväzuje na súčasnú.",
+    linkLabel: "Viac o EURO<26",
+    href: "https://isic.sk/euro26/",
+    shopLabel: "Objednať EURO<26",
+    shopHref: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/",
     accent: "card-euro26",
   },
 ];
+
 
 interface Props {
   onOpenChat: () => void;
