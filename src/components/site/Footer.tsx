@@ -137,8 +137,7 @@ export function Footer() {
                       <li key={link.href}>
                         <a
                           href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          target="_top"
                           aria-label={link.label}
                           title={link.label}
                           className="inline-flex items-center gap-2 rounded-full border-2 border-primary-foreground px-3 py-1 text-sm whitespace-nowrap text-primary-foreground transition-colors hover:bg-brand-yellow hover:text-foreground"
