@@ -100,11 +100,20 @@ const RESULTS: Record<ResultKey, ResultInfo> = {
     text: "Pre kohokoľvek od 6 do 27 rokov aj bez štúdia — externisti, absolventi aj pracujúci. Vyše 2 200 miest so zľavami na Slovensku a platnosť v 36 krajinách Európy.",
     href: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/",
     cta: "Objednať preukaz",
-    shop: {
-      label: "Prejsť z ISIC na EURO<26",
-      href: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/",
-      text: "Skončili ste štúdium a mali ste ISIC? Na EURO<26 prejdete plynulo — nová karta dostane nové číslo a jej platnosť nadväzuje na tú súčasnú, takže nevzniká medzera v zľavách.",
-    },
+    options: [
+      {
+        kicker: "Plynulý prechod",
+        label: "Prejsť z ISIC na EURO<26",
+        href: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/",
+        text: "Skončili ste štúdium a mali ste ISIC? Na EURO<26 prejdete plynulo — nová karta dostane nové číslo a jej platnosť nadväzuje na tú súčasnú, takže nevzniká medzera v zľavách.",
+      },
+      {
+        kicker: "Nový držiteľ s nárokom na preukaz",
+        label: "Objednať EURO<26",
+        href: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/",
+        text: "Máte 6–27 rokov? Objednajte si EURO<26 priamo v našom e-shope a využívajte tisíce zliav na Slovensku aj v zahraničí.",
+      },
+    ],
     note: "EURO<26 nemá čip, takže nenahrádza dopravnú funkciu školského preukazu.",
   },
 };
