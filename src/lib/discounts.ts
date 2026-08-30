@@ -72,6 +72,11 @@ export const CATEGORY_COUNTS: Record<string, number> = DISCOUNT_CATEGORIES.reduc
 
 export const CARD_FILTERS: CardType[] = ["ISIC", "ITIC", "EURO<26"];
 
+export const EYC_APP_APPLE_URL =
+  "https://apps.apple.com/app/myeyc-european-youth-card/id6478585702";
+export const EYC_APP_ANDROID_URL =
+  "https://play.google.com/store/apps/details?id=com.eyca.mobileapp";
+
 export const ALL_DISCOUNTS_URL = "https://isic.sk/zlavy-na-slovensku/";
 export const ITIC_DISCOUNTS_URL = "https://itic.sk/vsetky-zlavy/";
 export const EURO26_DISCOUNTS_URL = "https://euro26.sk/zlavy-na-slovensku/";
