@@ -1,31 +1,47 @@
-# Prehľad komentárov a návrh dokončenia
+# Oprava chatu: kde a ako sa kupuje preukaz
 
-Máme 11 otvorených vlákien. Väčšina už je v kóde zapracovaná (odpovedané, len neuzavreté), tri veci reálne chýbajú.
+## Problém
 
-## Už zapracované (stačí uzavrieť)
+Chat klientovi odporučil kúpiť si ISIC „cez UBIAN alebo svoju školu“. To je nesprávne:
+UBIAN/škola nie sú predajný kanál CKM — riešia iba čipové preukazy vydávané školou.
+V dátovej banke je táto formulácia priamo v texte (napr. vetva o EURO<26 a doprave:
+„môžete si požiadať o preukaz ISIC klasik na objednaj-preukaz.sk alebo ak máte záujem
+o preukaz ISIC s čipom cez UBIAN alebo svoju školu“), takže model ju len zopakoval.
 
-- Dopravný čip sa nikde v UI nepromuje — texty hovoria o platnom ISIC preukaze (fyzickom aj v mobile).
-- Odkaz na UBIAN je z UI odstránený; doprava smeruje na `isic.sk/akceptacia-isic-vo-verejnej-doprave/`.
-- Top karty už nemajú prekliky na partnerov ani na sezónny (jarný) príspevok — majú len odkazy na appky.
-- Kampaň je pomenovaná „Kupónová Back to School kampaň“, CTA vedie na `isic.sk/readyformore`.
-- Katalógové tlačidlá vedú do našich databáz: isic.sk, itic.sk, euro26.sk.
-- Overenie platnosti preukazu sa nepromuje ako partnerská zľava.
+## Ako to má fungovať
 
-## Čo ešte treba upraviť
+1. Pri každej otázke typu „kde/ako si kúpim preukaz“ sa chat najprv spýta:
+   máte preukaz vydávaný školou (čipový), alebo chcete náš preukaz klasik?
+2. Ak klient chce klasik, primárne ponúkame **digitálny preukaz do mobilu** (13 €)
+   z e-shopu objednaj-preukaz.sk; plastová karta sa spomenie len ako alternatíva
+   (13 € + 3,15 € kuriér) alebo keď o ňu klient výslovne požiada.
+3. UBIAN/škola sa spomínajú výhradne ako miesto, kde sa rieši čipový školský preukaz
+   a jeho dopravná funkcionalita — nikdy ako odporúčanie, kde si preukaz kúpiť.
+4. Chat nikdy neposiela klienta „kúpiť si ISIC do Ubianu“.
 
-1. **Prekliky v katalógu zliav** (komentáre „Nedávajme preklik na stránku partnera, ale k nám do databázy“ a RegioJet)
-   V rozbalenom katalógu je pri každej zľave odkaz „web partnera“ smerujúci napr. na `regiojet.sk`.
-   Návrh: tento odkaz nahradiť odkazom „detail zľavy“ do našej databázy — podľa typu preukazu na isic.sk / itic.sk / euro26.sk katalóg (s predvyplneným hľadaním partnera, ak sa dá), takže používateľ nikdy neodchádza na web partnera.
+## Úpravy v dátovej banke (`src/content/knowledge-base.md`)
 
-2. **Znenie v sekcii Preukazy** (komentár Michala)
-   Perex zjednotiť presne na: „Preukazy vydáva združenie CKM SYTS. Fungujú ako medzinárodne uznávaný doklad o štatúte denného študenta (ISIC), mladého človeka (EURO<26) a učiteľa na hlavný úväzok (ITIC).“ (dnes je tam voľnejšia formulácia bez spresnení „denného“ a „na hlavný úväzok“).
+- Nová krátka sekcia „Kde sa preukaz kupuje — predajné kanály“ hneď pri cenníku:
+  CKM predáva len cez objednaj-preukaz.sk (primárne digitálna karta do mobilu);
+  škola/UBIAN len vydáva čipové školské preukazy; klient si ich sám cez UBIAN neobjednáva.
+- Vetva o EURO<26 a doprave: odstrániť „cez UBIAN alebo svoju školu“ ako nákupnú možnosť;
+  nahradiť vysvetlením, že čipový preukaz vydáva výhradne škola pri zápise, a ponukou
+  preukazu ISIC v mobile / klasik z e-shopu.
+- Vetvy o preukaze s vizuálom Ubian (bez loga ISIC): odkaz na e-shop zmeniť z generického
+  objednaj-preukaz.sk na konkrétny produkt ISIC v mobile s poznámkou o plaste ako alternatíve.
+- Zjednotiť poradie ponuky všade, kde sa spomína kúpa: mobil → plast.
 
-3. **Logo EYCA/EURO<26 v hlavičke** (komentár Michala)
-   Otvorená otázka — či logo ostáva v aktuálnej podobe, alebo čakáme na finálnu verziu z EYCA. Bez rozhodnutia to nechávam tak, ako je.
+## Úpravy v prompte chatu (`src/routes/api/chat.ts`)
 
-## Technické detaily
+Doplniť do `BASE_RULES` dve pravidlá:
+- Pri otázke o kúpe/získaní preukazu sa vždy najprv spýtaj, či ide o preukaz zo školy
+  (čipový) alebo o preukaz klasik od CKM; bez tejto odpovede neponúkaj konkrétny nákup.
+- Preukaz sa kupuje výhradne v našom e-shope objednaj-preukaz.sk a primárne ponúkaš
+  digitálny preukaz do mobilu. UBIAN ani školu nikdy neuvádzaj ako miesto na kúpu ISIC —
+  škola preukaz vydáva pri zápise a UBIAN rieši dopravnú/čipovú časť.
 
-- `src/components/site/TopDiscounts.tsx` — `CatalogCard`: nahradiť blok `discount.partnerUrl` odkazom do našej databázy podľa `discount.cards` (ISIC/ITIC → isic.sk resp. itic.sk, EURO<26 → euro26.sk), s `target="_blank" rel="noreferrer"`.
-- `src/lib/discounts.ts` — pomocná funkcia `catalogUrlFor(discount)`; `partnerUrl` sa v UI prestane používať.
-- `src/components/site/Hero.tsx` — úprava perexu v sekcii `#preukazy`.
-- Po zmenách odpoveď a uzavretie príslušných vlákien.
+## Overenie
+
+Po zmene otestujem chat reálnymi otázkami („kde si kúpim ISIC“, „chcem ISIC s čipom“,
+„nemám preukaz zo školy“) a skontrolujem, že nikde nepadne odporúčanie kúpiť preukaz
+cez Ubian a že prvá ponuka je preukaz do mobilu.
