@@ -35,6 +35,7 @@ interface ResultInfo {
   cta: string;
   school?: { label: string; href: string; text: string };
   shop?: { label: string; href: string; text: string };
+  options?: { kicker: string; label: string; href: string; text: string }[];
   note?: string;
 }
 
