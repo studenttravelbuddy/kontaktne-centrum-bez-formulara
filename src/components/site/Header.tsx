@@ -73,7 +73,7 @@ export function Header() {
             </a>
           ))}
           <a
-            href="tel:+421222119963"
+            href="tel:+421222119963" target="_top"
             className="inline-flex items-center gap-2 rounded-full bg-brand-teal px-5 py-2 font-bold text-foreground transition-colors hover:bg-brand-yellow"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />

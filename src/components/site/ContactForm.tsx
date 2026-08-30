@@ -174,7 +174,7 @@ export function ContactForm({ topicId, onTopicChange }: Props) {
             </div>
           </div>
           <a
-            href="tel:+421222119963"
+            href="tel:+421222119963" target="_top"
             className="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-teal-deep px-5 py-2.5 font-bold text-white transition-colors hover:bg-brand-teal-dark"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />

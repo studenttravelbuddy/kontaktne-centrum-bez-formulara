@@ -123,7 +123,7 @@ export function Faq({
             formulár nižšie
           </button>
           , alebo nám rovno zavolajte na{" "}
-          <a href="tel:+421222119963" className="font-medium text-brand-teal-deep underline">
+          <a href="tel:+421222119963" target="_top" className="font-medium text-brand-teal-deep underline">
             02 2211 9963
           </a>
           .
