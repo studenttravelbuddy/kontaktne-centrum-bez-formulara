@@ -61,12 +61,21 @@ const RESULTS: Record<
   },
 };
 
+// Farby zodpovedajú preukazom v kartách nižšie: ISIC tyrkysová/žltá, ITIC oranžová, EURO<26 magenta
 const ANSWER_TONES: Record<string, string> = {
-  "zs-ss": "bg-brand-teal text-foreground",
-  vs: "bg-brand-orange text-primary-foreground",
-  ucitel: "bg-brand-pink text-primary-foreground",
-  mlady: "bg-brand-yellow text-foreground",
+  "zs-ss": "bg-brand-teal text-brand-teal-deep",
+  vs: "bg-brand-yellow text-foreground",
+  ucitel: "bg-brand-orange text-primary-foreground",
+  mlady: "bg-brand-pink text-primary-foreground",
 };
+
+const ANSWER_CHIPS: Record<string, string> = {
+  "zs-ss": "bg-background/90 text-brand-teal-deep",
+  vs: "bg-background/90 text-foreground",
+  ucitel: "bg-background/95 text-brand-orange-dark",
+  mlady: "bg-background/95 text-brand-pink-dark",
+};
+
 
 export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
   const [choice, setChoice] = useState<ResultKey | null>(null);
@@ -95,10 +104,11 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
                 <span className="font-display text-2xl leading-tight font-black uppercase">
                   {answer.label}
                 </span>
-                <span className="chip mt-auto bg-background/85 text-foreground">
+                <span className={`chip mt-auto ${ANSWER_CHIPS[answer.id]}`}>
                   Zistiť viac
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </span>
+
               </button>
             ))}
           </div>
