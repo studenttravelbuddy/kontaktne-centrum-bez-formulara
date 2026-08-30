@@ -99,7 +99,7 @@ export function Footer() {
                 02 2211 9963
               </a>
             </address>
-            <div className="mt-5 flex flex-wrap items-center gap-3">
+            <div className="mt-5 flex flex-nowrap items-center gap-3">
               {[
                 { src: isicLogo.url, alt: "ISIC" },
                 { src: iticLogo.url, alt: "ITIC" },
@@ -112,7 +112,7 @@ export function Footer() {
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-auto w-24 shrink-0 sm:w-28"
+                    className="h-auto w-20 shrink-0 sm:w-24"
                   />
                 </div>
               ))}
