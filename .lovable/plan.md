@@ -18,8 +18,8 @@ Katalóg zliav na isic.sk nemá verejné URL pre jednotlivých partnerov (je to 
 
 Komentáre pri kartách „Vlaky a autobusy" a „MHD v mestách" žiadajú nespomínať dopravný čip.
 
-- „Vlaky a autobusy" – text: „Zľavnené cestovné pre žiakov a študentov s platným ISIC preukazom — fyzickým aj virtuálnym v mobile." Odkaz: https://isic.sk/doprava-mhd-vlaky-autobusy-isic-euro26/
-- „MHD v mestách" – text: „Zľavy v mestskej doprave s platným ISIC preukazom, fyzickým alebo v mobile." Odkaz: https://isic.sk/doprava-mhd-vlaky-autobusy-isic-euro26/
+- „Vlaky a autobusy" – text: „Zľavnené cestovné pre žiakov a študentov s platným ISIC preukazom — fyzickým aj virtuálnym v mobile." Odkaz: https://isic.sk/akceptacia-isic-vo-verejnej-doprave/
+- „MHD v mestách" – text: „Zľavy v mestskej doprave s platným ISIC preukazom, fyzickým alebo v mobile." Odkaz: https://isic.sk/akceptacia-isic-vo-verejnej-doprave/
 - Odkazy na ubian.sk odstránime úplne (aj z TOP karty).
 
 ## 2. Zľavy: všetky prekliky do našej databázy
