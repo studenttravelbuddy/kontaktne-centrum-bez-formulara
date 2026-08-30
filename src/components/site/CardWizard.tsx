@@ -35,6 +35,7 @@ interface ResultInfo {
   cta: string;
   school?: { label: string; href: string; text: string };
   shop?: { label: string; href: string; text: string };
+  options?: { kicker: string; label: string; href: string; text: string }[];
   note?: string;
 }
 
@@ -99,11 +100,20 @@ const RESULTS: Record<ResultKey, ResultInfo> = {
     text: "Pre kohokoľvek od 6 do 27 rokov aj bez štúdia — externisti, absolventi aj pracujúci. Vyše 2 200 miest so zľavami na Slovensku a platnosť v 36 krajinách Európy.",
     href: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/",
     cta: "Objednať preukaz",
-    shop: {
-      label: "Prejsť z ISIC na EURO<26",
-      href: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/",
-      text: "Skončili ste štúdium a mali ste ISIC? Na EURO<26 prejdete plynulo — nová karta dostane nové číslo a jej platnosť nadväzuje na tú súčasnú, takže nevzniká medzera v zľavách.",
-    },
+    options: [
+      {
+        kicker: "Plynulý prechod",
+        label: "Prejsť z ISIC na EURO<26",
+        href: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/",
+        text: "Skončili ste štúdium a mali ste ISIC? Na EURO<26 prejdete plynulo — nová karta dostane nové číslo a jej platnosť nadväzuje na tú súčasnú, takže nevzniká medzera v zľavách.",
+      },
+      {
+        kicker: "Nový držiteľ s nárokom na preukaz",
+        label: "Objednať EURO<26",
+        href: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/",
+        text: "Máte 6–27 rokov? Objednajte si EURO<26 priamo v našom e-shope a využívajte tisíce zliav na Slovensku aj v zahraničí.",
+      },
+    ],
     note: "EURO<26 nemá čip, takže nenahrádza dopravnú funkciu školského preukazu.",
   },
 };
@@ -203,6 +213,26 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
                   </a>
                 </div>
               )}
+            </div>
+          )}
+
+          {result.options && (
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              {result.options.map((option) => (
+                <div key={option.label} className="rounded-2xl bg-brand-teal-light p-4">
+                  <p className="kicker text-brand-teal-deep">{option.kicker}</p>
+                  <p className="mt-2 text-sm text-brand-gray">{option.text}</p>
+                  <a
+                    href={option.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-brand-teal-deep underline decoration-brand-pink decoration-2 underline-offset-4"
+                  >
+                    {option.label}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                </div>
+              ))}
             </div>
           )}
 
