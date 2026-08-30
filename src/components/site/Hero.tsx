@@ -12,30 +12,39 @@ const CARDS = [
     logo: isicLogo.url,
     who: "Pre študentov denného štúdia na ZŠ, SŠ a VŠ.",
     detail:
-      "Medzinárodne uznávaný doklad o štatúte študenta, zľavy na Slovensku aj v zahraničí a zľavnené cestovné.",
+      "Medzinárodne uznávaný doklad o štatúte študenta, zľavy na Slovensku aj v zahraničí a zľavnené cestovné. Čipový (co-brand) preukaz vydáva škola, ISIC klasik kúpite u nás.",
     linkLabel: "Zistiť nárok na ISIC",
     href: "https://isic.sk/narok-na-preukaz-isic/",
+    shopLabel: "Objednať ISIC klasik",
+    shopHref: "https://objednaj-preukaz.sk/produkt/isic-klasik/",
     accent: "card-isic",
   },
   {
     name: "ITIC",
     logo: iticLogo.url,
     who: "Pre učiteľov, pedagogických a odborných zamestnancov škôl.",
-    detail: "Viac ako 700 zliav na Slovensku a medzinárodné potvrdenie o statuse učiteľa.",
+    detail:
+      "Viac ako 700 zliav na Slovensku a medzinárodné potvrdenie o statuse učiteľa. Zapojené školy vydávajú co-brand preukaz, inak objednávate klasik.",
     linkLabel: "Zistiť nárok na ITIC",
     href: "https://itic.sk/narok-na-preukaz-itic/",
+    shopLabel: "Objednať ITIC",
+    shopHref: "https://objednaj-preukaz.sk/kategoria-produktu/som-ucitel/",
     accent: "card-itic",
   },
   {
     name: "EURO<26",
     logo: eycaLogo.url,
     who: "Pre kohokoľvek od 6 do 27 rokov, aj keď neštuduje.",
-    detail: "Vyše 2200 miest so zľavami na Slovensku, platí v 36 krajinách Európy.",
-    linkLabel: "Objednať EURO<26",
-    href: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/",
+    detail:
+      "Vyše 2200 miest so zľavami na Slovensku, platí v 36 krajinách Európy. Po skončení štúdia naň z ISIC prejdete plynulo — platnosť nadväzuje na súčasnú.",
+    linkLabel: "Viac o EURO<26",
+    href: "https://euro26.sk/",
+    shopLabel: "Objednať EURO<26",
+    shopHref: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/",
     accent: "card-euro26",
   },
 ];
+
 
 interface Props {
   onOpenChat: () => void;
@@ -117,15 +126,26 @@ export function Hero({ onOpenChat, onGoToForm }: Props) {
                 <h2 className="mt-4 font-display text-3xl text-card-accent-strong">{card.name}</h2>
                 <p className="mt-2 font-medium">{card.who}</p>
                 <p className="mt-2 flex-1 text-sm text-muted-foreground">{card.detail}</p>
-                <a
-                  href={card.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 self-start text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
-                >
-                  {card.linkLabel}
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </a>
+                <div className="mt-5 flex flex-col items-start gap-2">
+                  <a
+                    href={card.shopHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-brand-yellow px-4 py-2 text-sm font-bold text-foreground transition-colors hover:bg-brand-teal"
+                  >
+                    {card.shopLabel}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                  <a
+                    href={card.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+                  >
+                    {card.linkLabel}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                </div>
               </article>
             </Reveal>
           ))}
