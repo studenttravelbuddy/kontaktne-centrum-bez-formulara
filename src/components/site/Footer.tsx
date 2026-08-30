@@ -74,7 +74,7 @@ const SITES = [
   { label: "isic.sk", href: "https://isic.sk" },
   { label: "itic.sk", href: "https://itic.sk" },
   { label: "euro26.sk", href: "https://euro26.sk" },
-  { label: "ubian.sk — doprava a čip", href: "https://www.ubian.sk/preukaz-studenta" },
+  { label: "Zľavy v doprave s ISIC", href: "https://isic.sk/akceptacia-isic-vo-verejnej-doprave" },
   { label: "objednaj-preukaz.sk — eshop", href: "https://objednaj-preukaz.sk" },
 ];
 
