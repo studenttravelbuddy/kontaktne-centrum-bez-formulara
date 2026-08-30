@@ -207,7 +207,7 @@ export function TopDiscounts() {
       />
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24">
         <Reveal>
-          <p className="kicker text-brand-pink">Naj zľavy</p>
+           <p className="kicker text-brand-pink">NAŠE ZĽAVY</p>
           <h2 className="text-balance-tight mt-3 font-display text-4xl sm:text-5xl">
              Zľava z každej kategórie
           </h2>
