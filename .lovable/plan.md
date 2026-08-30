@@ -35,8 +35,7 @@ Do systémového promptu doplním: odpovedať len keď otázka jasne sedí na je
 ## 4. Telefonické kontakty na stránke
 
 - Nový blok **„Radšej zavolať?"** nad kontaktným formulárom s tromi klikateľnými `tel:` číslami:
-  - Preukazy VŠ, ITIC, EURO<26 — +421 948 827 097
-  - Preukazy SŠ a ZŠ — +421 948 884 304
+  - Všeobecná linka — 02 2211 9963
   - Všeobecná linka — 02 2211 9963
 - V pätke FAQ doplním klikateľný telefón: „…vyplňte formulár nižšie, alebo nám rovno zavolajte na 02 2211 9963." (dnes je tam len text „zavolajte nám" bez odkazu).
 - Chat pri odovzdaní ďalej ponúkne formulár aj telefón spolu; ak nevie typ preukazu, uvedie všeobecnú linku aj obe priame čísla.
