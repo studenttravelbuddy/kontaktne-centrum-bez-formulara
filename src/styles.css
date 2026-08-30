@@ -151,12 +151,39 @@
 }
 
 @utility btn-radius {
-  border-radius: 14px;
+  border-radius: 999px;
 }
 
 @utility coupon {
-  border-radius: 1rem;
+  border-radius: 2rem;
 }
+
+/* Kampaňový štýl: malý farebný nadpisový štítok nad hlavným nadpisom */
+@utility kicker {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Pill chip používaný na kartách a filtroch */
+@utility chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Plnofarebná kampaňová karta */
+@utility surface-card {
+  border-radius: 1.75rem;
+  border: 0;
+}
+
 
 @keyframes playful-route-flow {
   from { stroke-dashoffset: 0; }
