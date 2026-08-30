@@ -30,7 +30,7 @@ const SOCIAL_GROUPS: SocialGroup[] = [
   {
     brand: "ISIC VŠ",
     links: [
-      { name: "Instagram", label: "Instagram ISIC VŠ", href: "https://www.instagram.com/isic.slovakia/", icon: Instagram },
+      { name: "Instagram", label: "Instagram ISIC VŠ", href: "https://www.instagram.com/isic.slovakia", icon: Instagram },
       { name: "TikTok", label: "TikTok ISIC VŠ", href: "https://www.tiktok.com/@isic_slovakia", icon: TikTokIcon },
     ],
   },
@@ -38,27 +38,27 @@ const SOCIAL_GROUPS: SocialGroup[] = [
     brand: "ISIC SŠ",
     links: [
       { name: "Facebook", label: "Facebook ISIC SŠ", href: "https://www.facebook.com/preukazisiceuro26", icon: Facebook },
-      { name: "Instagram", label: "Instagram ISIC SŠ", href: "https://www.instagram.com/isic_euro26/", icon: Instagram },
+      { name: "Instagram", label: "Instagram ISIC SŠ", href: "https://www.instagram.com/isic_euro26", icon: Instagram },
     ],
   },
   {
     brand: "ISIC ZŠ",
     links: [
-      { name: "Facebook", label: "Facebook ISIC ZŠ", href: "https://www.facebook.com/ISICEURO26/", icon: Facebook },
-      { name: "Instagram", label: "Instagram ISIC ZŠ", href: "https://www.instagram.com/isic.sk_zs/", icon: Instagram },
+      { name: "Facebook", label: "Facebook ISIC ZŠ", href: "https://www.facebook.com/ISICEURO26", icon: Facebook },
+      { name: "Instagram", label: "Instagram ISIC ZŠ", href: "https://www.instagram.com/isic.sk_zs", icon: Instagram },
     ],
   },
   {
     brand: "EURO<26",
     links: [
-      { name: "Facebook", label: "Facebook EURO<26", href: "https://www.facebook.com/Kartamladycheuro26/", icon: Facebook },
-      { name: "Instagram", label: "Instagram EURO<26", href: "https://www.instagram.com/euro_26/", icon: Instagram },
+      { name: "Facebook", label: "Facebook EURO<26", href: "https://www.facebook.com/Kartamladycheuro26", icon: Facebook },
+      { name: "Instagram", label: "Instagram EURO<26", href: "https://www.instagram.com/euro_26", icon: Instagram },
     ],
   },
   {
     brand: "ITIC",
     links: [
-      { name: "Facebook", label: "Facebook ITIC", href: "https://www.facebook.com/ITICSlovakia/", icon: Facebook },
+      { name: "Facebook", label: "Facebook ITIC", href: "https://www.facebook.com/ITICSlovakia", icon: Facebook },
     ],
   },
   {
