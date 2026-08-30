@@ -3,7 +3,7 @@
 ## Cieľ
 V sekcii „Kto si?“ po výbere „Mám do 27 rokov a neštudujem“ zobraziť v EURO<26 výsledkovej karte dve samostatné možnosti vedľa seba:
 1. **Plynulý prechod** — pre držiteľov ISIC, ktorým končí platnosť.
-2. **Nový držiteľ s nárokom na preukaz** — pre osoby 6–27 rokov, ktoré zatiaľ ISIC nemali.
+2. **Nový držiteľ s nárokom na preukaz** — pre osoby 6–27 rokov, bez ohľadu na to, či predtým mali ISIC.
 
 ## Technické detaily
 - Upraviť `src/components/site/CardWizard.tsx`.
