@@ -1,40 +1,32 @@
-# Smerovanie nákupu preukazov do eshopu objednaj-preukaz.sk
+# Doplnenie info o školských (co-brand) a klasik preukazoch + EURO<26
 
-Cieľ: všetky hlavné CTA tlačidlá, ktoré dnes vedú na informačné stránky isic.sk / itic.sk, upraviť tak, aby používateľov primárne smerovali do nášho eshopu `objednaj-preukaz.sk`. Informačné stránky o nároku zostanú dostupné v znalostnej báze chatu a vo footeri, ale hlavné nákupné cesty povedú do eshopu.
+Do sekcie s preukazmi a do sprievodcu „Kto si?" doplníme jasné vysvetlenie dvoch ciest k preukazu a prechodu z ISIC na EURO<26.
 
-## 1. Hero sekcia — tri karty preukazov
+## Čo sa zmení
 
-V `src/components/site/Hero.tsx` zmením odkazy a texty tlačidiel v poli `CARDS`:
+### 1. Dve cesty k preukazu (ISIC a ITIC)
+Pri každom výsledku sprievodcu a pri kartách ISIC/ITIC pribudne krátke rozlíšenie:
+- **Školský (co-brand) preukaz s čipom** — vydáva ho škola, slúži aj na dopravu, stravu a vstupy. Odkaz na zoznam zapojených škôl:
+  - ZŠ/SŠ: https://isic.sk/zoznam-skol-ss-a-zs/
+  - VŠ: https://isic.sk/zoznam-vs-kde-vybavis-isic/
+  - ITIC ZŠ/SŠ: https://itic.sk/zapojene-stredne-skoly-itic/
+  - ITIC VŠ: https://itic.sk/zapojene-vysoke-skoly-itic/
+- **Klasik (bez čipu) z nášho e-shopu** — ak škola v zozname nie je alebo klient chce preukaz hneď. Odkaz priamo na e-shop:
+  - ISIC klasik: https://objednaj-preukaz.sk/produkt/isic-klasik/
+  - ISIC do mobilu: https://objednaj-preukaz.sk/produkt/preukaz-isic-v-mobile/
+  - ITIC: https://objednaj-preukaz.sk/kategoria-produktu/som-ucitel/
+  Krátka poznámka: klasik nemá čip (nedá sa naň nabiť kredit/električenka), ale je plnohodnotným dokladom o statuse študenta a platia s ním všetky komerčné zľavy.
 
-| Karta | Teraz | Nové |
-|---|---|---|
-| ISIC | „Zistiť nárok na ISIC“ → `isic.sk/narok-na-preukaz-isic/` | „Objednať ISIC“ → `objednaj-preukaz.sk/kategoria-produktu/som-student/` |
-| ITIC | „Zistiť nárok na ITIC“ → `itic.sk/narok-na-preukaz-itic/` | „Objednať ITIC“ → `objednaj-preukaz.sk/kategoria-produktu/som-ucitel/` |
-| EURO<26 | „Objednať EURO<26“ → `objednaj-preukaz.sk/kategoria-produktu/som-mlady/` | zostáva rovnaké (už vedie do eshopu) |
+### 2. EURO<26 pre neštudentov a prechod z ISIC
+Pri karte EURO<26 aj vo výsledku sprievodcu doplníme:
+- EURO<26 je pre kohokoľvek od 6 do 27 rokov aj bez štúdia (externisti, absolventi, pracujúci).
+- Kto skončil štúdium a mal ISIC, môže plynulo prejsť na EURO<26 — nová karta dostane nové číslo a jej platnosť nadväzuje na súčasnú, takže nevzniká medzera v zľavách.
+- EURO<26 nemá čip, takže nenahrádza dopravnú funkciu školského preukazu.
+- CTA: https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/
 
-Poznámka: ISIC karta v hero zastrepuje ZŠ, SŠ aj VŠ. Pre jednotnú nákupnú cestu použijem kategóriu „som študent", ktorá je hlavným vstupom do ISIC ponuky v eshope.
-
-## 2. Sprievodca „Kto si?" — výsledkové karty
-
-V `src/components/site/CardWizard.tsx` zmením `href` vo výsledkovom objekte `RESULTS`:
-
-| Výsledok | Teraz | Nové |
-|---|---|---|
-| ISIC žiak ZŠ/SŠ | `isic.sk/preukaz-ziaka-ss-a-zs-isic-euro/` | `objednaj-preukaz.sk/kategoria-produktu/som-ziak/` |
-| ISIC študent VŠ | `isic.sk/univerzitny-vysokoskolsky-preukaz-studenta-isic/` | `objednaj-preukaz.sk/kategoria-produktu/som-student/` |
-| ITIC učiteľ | `itic.sk/narok-na-preukaz-itic/` | `objednaj-preukaz.sk/kategoria-produktu/som-ucitel/` |
-| EURO<26 | `objednaj-preukaz.sk/kategoria-produktu/som-mlady/` | zostáva rovnaké |
-
-Text tlačidiel „Ako ho získať“ / „Zistiť nárok“ zmením na „Objednať preukaz" pre ISIC, ITIC a EURO<26, aby to zodpovedalo novej cieľovej stránke.
-
-## 3. Čo sa nemení
-
-- Footer odkazy na `isic.sk`, `itic.sk`, `euro26.sk` a `objednaj-preukaz.sk` zostávajú — sú to sekundárne informačné odkazy.
-- Header top-bar odkaz na obnovu platnosti (`isic.sk/ako-si-obnovit-platnost-preukazu/`) zostáva, lebo nejde o nákup nového preukazu.
-- Znalostná báza chatu si ponecháva všetky informačné odkazy; chat naďalej môže vysvetliť nárok a až potom ponúknuť eshop.
-- Vizuálny štýl, farby, logá a rozloženie zostávajú.
+### 3. Drobnosť v hero kartách
+Karty ISIC/ITIC/EURO<26 dostanú okrem existujúceho odkazu „Zistiť nárok" aj druhý odkaz „Objednať v e-shope" (ISIC klasik / ITIC / EURO<26), aby bol nákup vždy na dosah.
 
 ## Technické detaily
-
-- Upravím iba `src/components/site/Hero.tsx` (pole `CARDS`) a `src/components/site/CardWizard.tsx` (pole `RESULTS`).
-- Overenie: typecheck, klikateľnosť nových odkazov v prehliadači a kontrola, že žiadny nákupný CTA nevedie mimo eshop.
+- Upraví sa `src/components/site/CardWizard.tsx` (rozšírenie objektu `RESULTS` o polia pre co-brand zoznam škôl, klasik e-shop odkaz a poznámku) a `src/components/site/Hero.tsx` (druhý odkaz v kartách + krátky text).
+- Žiadne zmeny v chate, formulári, routingu e-mailov ani v databáze; texty vychádzajú z existujúcej znalostnej bázy.
