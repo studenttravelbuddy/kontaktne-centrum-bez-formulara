@@ -33,7 +33,7 @@ const TABS: Tab[] = [
     notes: [
       "V čase kupónovej kampane dostanete pri predĺžení aj kupónovú knižku — fyzicky alebo elektronicky.",
       "Zľavu v doprave máte ako držiteľ ISIC zo zákona. Známka nepredlžuje dopravu, ale funkciu čipu — tú si predĺžite samostatne na ubian.sk.",
-      "Preukaz žiaka s vizuálom Ubian (bez loga ISIC) známku zakúpiť nevie. Zľavy doplníte preukazom ISIC klasik z nášho e-shopu.",
+      "Žiacke preukazy ISIC/EURO<26 na ZŠ a SŠ s vizuálom Ubian (bez loga ISIC) známku zakúpiť nevedia. Zľavy doplníte preukazom ISIC klasik z nášho e-shopu.",
     ],
     ctas: [
       { label: "Známka ISIC/EURO<26", href: "https://objednaj-preukaz.sk/produkt/znamka-isiceuro/" },
