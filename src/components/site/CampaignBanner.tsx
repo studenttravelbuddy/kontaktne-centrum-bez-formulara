@@ -17,7 +17,7 @@ export function CampaignBanner() {
               <div>
                 <p className="kicker inline-flex items-center gap-2 text-foreground">
                   <Ticket className="h-3.5 w-3.5" aria-hidden="true" />
-                  Kampaň
+                  Kupónová Back to School kampaň
                 </p>
                 <h2 className="mt-4 font-display text-5xl uppercase text-foreground sm:text-6xl">
                   Ready for More
