@@ -95,7 +95,7 @@ export function Footer() {
             <address className="mt-3 text-sm not-italic text-primary-foreground">
               Vysoká 32, 811 06 Bratislava
               <br />
-              <a className="underline" href="tel:+421222119963">
+              <a className="underline" href="tel:+421222119963" target="_top">
                 02 2211 9963
               </a>
             </address>
