@@ -216,6 +216,26 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
             </div>
           )}
 
+          {result.options && (
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              {result.options.map((option) => (
+                <div key={option.label} className="rounded-2xl bg-brand-teal-light p-4">
+                  <p className="kicker text-brand-teal-deep">{option.kicker}</p>
+                  <p className="mt-2 text-sm text-brand-gray">{option.text}</p>
+                  <a
+                    href={option.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-brand-teal-deep underline decoration-brand-pink decoration-2 underline-offset-4"
+                  >
+                    {option.label}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                </div>
+              ))}
+            </div>
+          )}
+
           {result.note && <p className="mt-4 text-xs text-brand-gray">{result.note}</p>}
           <div className="mt-6 flex flex-wrap gap-3">
             <a
