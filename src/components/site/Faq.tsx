@@ -30,14 +30,17 @@ export function Faq({
   }, [query]);
 
   return (
-    <section id="faq" className="border-b border-brand-teal/25 bg-brand-teal-light">
+    <section id="faq" className="bg-brand-teal-light">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 md:py-24">
         <Reveal>
-          <p className="text-sm font-black tracking-wider text-brand-pink uppercase">Časté otázky</p>
-          <h2 className="text-balance-tight mt-3 text-4xl sm:text-5xl">Pýtate sa? Odpovedáme.</h2>
+          <p className="kicker text-brand-pink">Časté otázky</p>
+          <h2 className="text-balance-tight mt-3 font-display text-4xl sm:text-5xl">
+            Pýtate sa? Odpovedáme.
+          </h2>
           <p className="mt-4 text-muted-foreground">
             Najčastejšie otázky držiteľov preukazov ISIC, ITIC a EURO&lt;26.
           </p>
+
         </Reveal>
 
         <div className="relative mt-6">
