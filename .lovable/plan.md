@@ -9,7 +9,7 @@ Nahradiť externý odkaz v hornej lište (`isic.sk/ako-si-obnovit-platnost-preuk
    - Sekcia s ID `obnovit-preukaz`.
    - Nadpis „Ako si obnoviť platnosť preukazu".
    - Karty/taby podľa typu preukazu a spôsobu vydania:
-     - ISIC/ITIC vydaný školou (čipový) – prolongačná známka cez školu/esko/UBIAN.
+     - ISIC/ITIC vydaný školou (čipový) – predlžuje sa prolongačnou známkou (13 €), nie novým preukazom. Známka ISIC/EURO<26: `https://objednaj-preukaz.sk/produkt/znamka-isiceuro/`, známka ITIC (vlastná sezóna, platnosť do 12/2027): `https://objednaj-preukaz.sk/produkt/znamka-itic/`. Elektronické predĺženie platí ihneď po zakúpení, fyzická známka sa distribuuje koncom augusta / začiatkom septembra spolu s kupónovou knižkou alebo sa vyzdvihne na škole. Upozornenie: známka predlžuje len komerčné zľavy — zľava v doprave sa predlžuje samostatne cez `https://www.ubian.sk/preukaz-studenta`; na preukaz žiaka s vizuálom Ubian (bez loga ISIC) sa známka kúpiť nedá.
      - ISIC/ITIC klasik z eshopu – predĺženie online v `objednaj-preukaz.sk`.
      - EURO<26 – predĺženie/plynulý prechod z ISIC.
    - Klikateľné CTA na `objednaj-preukaz.sk` a prípadne na konkrétne podstránky predĺženia.
