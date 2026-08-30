@@ -84,7 +84,11 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <h2 className="font-display text-3xl text-primary-foreground">CKM SYTS</h2>
+            <h2 className="font-display text-3xl text-primary-foreground">
+              CKM SYTS - student, youth and teacher servises&nbsp;
+              <br />
+              CKM združenie pre mládež, študentov a učiteľov
+            </h2>
             <address className="mt-3 text-sm not-italic text-primary-foreground">
               Vysoká 32, 811 06 Bratislava
               <br />
