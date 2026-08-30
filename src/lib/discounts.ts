@@ -73,5 +73,7 @@ export const CATEGORY_COUNTS: Record<string, number> = DISCOUNT_CATEGORIES.reduc
 export const CARD_FILTERS: CardType[] = ["ISIC", "ITIC", "EURO<26"];
 
 export const ALL_DISCOUNTS_URL = "https://isic.sk/zlavy-na-slovensku/";
+export const ITIC_DISCOUNTS_URL = "https://itic.sk/vsetky-zlavy/";
+export const EURO26_DISCOUNTS_URL = "https://euro26.sk/zlavy-na-slovensku/";
 export const TRANSPORT_INFO_URL = "https://isic.sk/akceptacia-isic-vo-verejnej-doprave/";
 export const CAMPAIGN_URL = "https://www.isic.sk/readyformore";

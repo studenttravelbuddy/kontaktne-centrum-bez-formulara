@@ -18,6 +18,8 @@ import {
 import { Reveal } from "@/components/site/Reveal";
 import {
   ALL_DISCOUNTS_URL,
+  ITIC_DISCOUNTS_URL,
+  EURO26_DISCOUNTS_URL,
   CARD_FILTERS,
   CATEGORY_COUNTS,
   DISCOUNTS,
@@ -215,6 +217,24 @@ export function TopDiscounts() {
             className="inline-flex h-12 items-center gap-2 rounded-full bg-background px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
           >
             Katalóg na isic.sk
+            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+          </a>
+          <a
+            href={ITIC_DISCOUNTS_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex h-12 items-center gap-2 rounded-full bg-background px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
+          >
+            Katalóg na itic.sk
+            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+          </a>
+          <a
+            href={EURO26_DISCOUNTS_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex h-12 items-center gap-2 rounded-full bg-background px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
+          >
+            Katalóg na euro26.sk
             <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
           </a>
         </div>
