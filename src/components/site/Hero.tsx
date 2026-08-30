@@ -38,7 +38,7 @@ const CARDS = [
     detail:
       "Vyše 2200 miest so zľavami na Slovensku, platí v 36 krajinách Európy. Po skončení štúdia naň z ISIC prejdete plynulo — platnosť nadväzuje na súčasnú.",
     linkLabel: "Viac o EURO<26",
-    href: "https://isic.sk/euro26/",
+    href: "https://euro26.sk/",
     shopLabel: "Objednať EURO<26",
     shopHref: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/",
     accent: "card-euro26",
