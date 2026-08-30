@@ -18,6 +18,8 @@ import {
 import { Reveal } from "@/components/site/Reveal";
 import {
   ALL_DISCOUNTS_URL,
+  EYC_APP_APPLE_URL,
+  EYC_APP_ANDROID_URL,
   ITIC_DISCOUNTS_URL,
   EURO26_DISCOUNTS_URL,
   CARD_FILTERS,
@@ -51,14 +53,22 @@ const CATEGORY_ICONS: Record<string, typeof Bus> = {
 
 const PAGE_SIZE = 24;
 
-function AppLinks({ discount, subtle }: { discount: Discount; subtle?: boolean }) {
-  const base = subtle
-    ? "bg-card text-foreground hover:bg-brand-yellow"
-    : "bg-background/85 text-foreground hover:bg-background";
+function AppRow({
+  label,
+  appleUrl,
+  androidUrl,
+  base,
+}: {
+  label: string;
+  appleUrl: string;
+  androidUrl: string;
+  base: string;
+}) {
   return (
-    <div className="mt-5 flex flex-wrap gap-2">
+    <div className="mt-3 flex flex-wrap items-center gap-2">
+      <span className="text-xs font-bold opacity-80">{label}</span>
       <a
-        href={discount.appleUrl}
+        href={appleUrl}
         target="_blank"
         rel="noreferrer"
         className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-bold transition-colors ${base}`}
@@ -67,7 +77,7 @@ function AppLinks({ discount, subtle }: { discount: Discount; subtle?: boolean }
         App Store
       </a>
       <a
-        href={discount.androidUrl}
+        href={androidUrl}
         target="_blank"
         rel="noreferrer"
         className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-bold transition-colors ${base}`}
@@ -75,6 +85,34 @@ function AppLinks({ discount, subtle }: { discount: Discount; subtle?: boolean }
         <Smartphone className="h-3.5 w-3.5" aria-hidden="true" />
         Google Play
       </a>
+    </div>
+  );
+}
+
+function AppLinks({ discount, subtle }: { discount: Discount; subtle?: boolean }) {
+  const base = subtle
+    ? "bg-card text-foreground hover:bg-brand-yellow"
+    : "bg-background/85 text-foreground hover:bg-background";
+  const hasIsic = discount.cards.includes("ISIC") || discount.cards.includes("ITIC");
+  const hasEyc = discount.cards.includes("EURO<26");
+  return (
+    <div className="mt-2">
+      {hasIsic || !hasEyc ? (
+        <AppRow
+          label="ISIC appka:"
+          appleUrl={discount.appleUrl}
+          androidUrl={discount.androidUrl}
+          base={base}
+        />
+      ) : null}
+      {hasEyc ? (
+        <AppRow
+          label="myEYC appka:"
+          appleUrl={EYC_APP_APPLE_URL}
+          androidUrl={EYC_APP_ANDROID_URL}
+          base={base}
+        />
+      ) : null}
     </div>
   );
 }
@@ -111,6 +149,7 @@ function TopCard({ discount }: { discount: Discount }) {
       <p className="mt-2 flex-1 text-sm opacity-90">{discount.name}</p>
       <CardBadges cards={discount.cards} className="mt-4" />
       <p className="mt-4 text-xs opacity-80">Zľavu uplatníte v aplikácii:</p>
+
       <AppLinks discount={discount} />
     </div>
   );
