@@ -1,7 +1,9 @@
 // ---------------------------------------------------------------------------
 // Smerovanie dopytov z kontaktného formulára.
-// Všetky e-mailové adresy sú na jednom mieste — ak CKM SYTS zjednotí schránky
-// pod klientskyservis@ckmsyts.sk, stačí prepísať hodnoty v EMAILS.
+// E-mailové adresy sú finálne podľa interného dokumentu CKM SYTS z 29. 8. 2026:
+// reklamacia@, sspreukazy@ a vspreukazy@ zostávajú samostatné; neprebieha žiadne
+// zjednotenie pod klientskyservis@ckmsyts.sk. Všetky adresy sú tu na jednom mieste
+// pre jednoduchú budúcu údržbu.
 // ---------------------------------------------------------------------------
 
 export const EMAILS = {
