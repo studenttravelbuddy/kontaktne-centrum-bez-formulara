@@ -21,11 +21,11 @@ const TABS: Tab[] = [
     label: "Preukaz zo školy (čipový)",
     kicker: "Predlžuje sa známkou",
     icon: Ticket,
-    title: "ISIC / EURO<26 alebo ITIC vydaný školou",
+    title: "ISIC (VŠ), ISIC / EURO<26 (ZŠ a SŠ) alebo ITIC vydaný školou",
     intro:
-      "Čipový preukaz vydaný školou sa nekupuje nanovo — jeho platnosť predĺžite prolongačnou známkou za 13 €. ITIC má vlastnú známku s vlastnou sezónou.",
+      "Čipový preukaz zo školy sa nekupuje nanovo — jeho platnosť predĺžite prolongačnou známkou. ISIC na VŠ, ISIC/EURO<26 na ZŠ a SŠ aj ITIC môžu byť čipové; ITIC má vlastnú známku s vlastnou sezónou.",
     steps: [
-      "Zvoľte správnu známku: ISIC/EURO<26, alebo ITIC.",
+      "Zvoľte správnu známku podľa typu preukazu: ISIC (VŠ), ISIC/EURO<26 (ZŠ a SŠ) alebo ITIC.",
       "V objednávke zadajte priezvisko a číslo preukazu (ITIC v tvare T421… aj s koncovým písmenom).",
       "Zaplaťte — elektronické predĺženie platí ihneď po zakúpení, ešte pred doručením fyzickej známky.",
       "Fyzická známka sa distribuuje koncom augusta a začiatkom septembra, prípadne si ju vyzdvihnete na svojej škole.",
@@ -33,7 +33,7 @@ const TABS: Tab[] = [
     notes: [
       "V čase kupónovej kampane dostanete pri predĺžení aj kupónovú knižku — fyzicky alebo elektronicky.",
       "Zľavu v doprave máte ako držiteľ ISIC zo zákona. Známka nepredlžuje dopravu, ale funkciu čipu — tú si predĺžite samostatne na ubian.sk.",
-      "Preukaz žiaka s vizuálom Ubian (bez loga ISIC) známku zakúpiť nevie. Zľavy doplníte preukazom ISIC klasik z nášho e-shopu.",
+      "Žiacke preukazy ISIC/EURO<26 na ZŠ a SŠ s vizuálom Ubian (bez loga ISIC) známku zakúpiť nevedia. Zľavy doplníte preukazom ISIC klasik z nášho e-shopu.",
     ],
     ctas: [
       { label: "Známka ISIC/EURO<26", href: "https://objednaj-preukaz.sk/produkt/znamka-isiceuro/" },
