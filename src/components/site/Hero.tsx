@@ -61,7 +61,7 @@ export function Hero({ onOpenChat, onGoToForm }: Props) {
             Kontaktné centrum
           </p>
           <h1 className="text-balance-tight max-w-4xl font-display text-5xl leading-[0.92] font-black text-brand-teal-deep sm:text-7xl lg:text-8xl">
-            Ready to help?
+            Ready to help
           </h1>
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
             <span className="font-bold text-brand-yellow">
