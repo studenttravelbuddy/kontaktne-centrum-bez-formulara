@@ -27,23 +27,53 @@ const ANSWERS: Answer[] = [
 ];
 
 
-const RESULTS: Record<
-  ResultKey,
-  { card: string; title: string; text: string; href: string; cta: string }
-> = {
+interface ResultInfo {
+  card: string;
+  title: string;
+  text: string;
+  href: string;
+  cta: string;
+  school?: { label: string; href: string; text: string };
+  shop?: { label: string; href: string; text: string };
+  note?: string;
+}
+
+const RESULTS: Record<ResultKey, ResultInfo> = {
   "isic-zs-ss": {
     card: "ISIC / EURO<26",
     title: "Preukaz žiaka ZŠ a SŠ",
-    text: "Slúži ako doklad o štúdiu, prináša zľavnené cestovné vo vlakoch a autobusoch a tisíce zliav na Slovensku aj v zahraničí. Vydáva ho Vaša škola.",
+    text: "Slúži ako doklad o štúdiu, prináša zľavnené cestovné vo vlakoch a autobusoch a tisíce zliav na Slovensku aj v zahraničí.",
     href: "https://isic.sk/preukaz-ziaka-ss-a-zs-isic-euro/",
     cta: "Ako ho získať",
+    school: {
+      label: "Zoznam zapojených ZŠ a SŠ",
+      href: "https://isic.sk/zoznam-skol-ss-a-zs/",
+      text: "Školský (co-brand) preukaz s čipom vydáva Vaša škola — slúži aj na dopravu, stravu a vstupy. Overte si, či je škola zapojená.",
+    },
+    shop: {
+      label: "Objednať ISIC klasik",
+      href: "https://objednaj-preukaz.sk/produkt/isic-klasik/",
+      text: "Ak škola v zozname nie je alebo chcete preukaz hneď, objednajte si ISIC klasik z nášho e-shopu.",
+    },
+    note: "Klasik nemá čip (nedá sa naň nabiť kredit ani električenka), no je plnohodnotným dokladom o statuse študenta a platia s ním všetky komerčné zľavy.",
   },
   "isic-vs": {
     card: "ISIC",
     title: "Preukaz študenta VŠ",
-    text: "Medzinárodný doklad o štatúte študenta, zľavnené cestovné a zľavy v 130 krajinách. Vydáva ho Vaša vysoká škola, platnosť si predlžujete známkou.",
+    text: "Medzinárodný doklad o štatúte študenta, zľavnené cestovné a zľavy v 130 krajinách.",
     href: "https://isic.sk/univerzitny-vysokoskolsky-preukaz-studenta-isic/",
     cta: "Ako ho získať",
+    school: {
+      label: "Zoznam VŠ vydávajúcich ISIC",
+      href: "https://isic.sk/zoznam-vs-kde-vybavis-isic/",
+      text: "Školský (co-brand) preukaz s čipom vydáva Vaša vysoká škola a platnosť si predlžujete známkou.",
+    },
+    shop: {
+      label: "Objednať ISIC klasik",
+      href: "https://objednaj-preukaz.sk/produkt/isic-klasik/",
+      text: "Nie ste na zapojenej škole? ISIC klasik alebo ISIC do mobilu kúpite priamo v našom e-shope.",
+    },
+    note: "Klasik nemá čip (bez kreditu a električenky), ale je plnohodnotným dokladom o statuse študenta so všetkými komerčnými zľavami.",
   },
   itic: {
     card: "ITIC",
@@ -51,15 +81,33 @@ const RESULTS: Record<
     text: "Pre pedagogických a odborných zamestnancov škôl. Viac ako 700 zliav na Slovensku a medzinárodné potvrdenie statusu učiteľa.",
     href: "https://itic.sk/narok-na-preukaz-itic/",
     cta: "Zistiť nárok",
+    school: {
+      label: "Zapojené stredné školy ITIC",
+      href: "https://itic.sk/zapojene-stredne-skoly-itic/",
+      text: "Školský (co-brand) preukaz ITIC vydávajú zapojené školy. Zoznam vysokých škôl nájdete tu: itic.sk/zapojene-vysoke-skoly-itic.",
+    },
+    shop: {
+      label: "Objednať ITIC",
+      href: "https://objednaj-preukaz.sk/kategoria-produktu/som-ucitel/",
+      text: "Ak škola preukazy nevydáva, ITIC klasik alebo ITIC do mobilu objednáte v našom e-shope.",
+    },
+    note: "ITIC klasik nemá čip, no všetky komerčné zľavy a medzinárodné potvrdenie statusu učiteľa platia rovnako.",
   },
   euro26: {
     card: "EURO<26",
     title: "Preukaz mladého človeka",
-    text: "Pre kohokoľvek od 6 do 27 rokov, aj bez štúdia. Vyše 2 200 miest so zľavami na Slovensku a platnosť v 36 krajinách Európy.",
+    text: "Pre kohokoľvek od 6 do 27 rokov aj bez štúdia — externisti, absolventi aj pracujúci. Vyše 2 200 miest so zľavami na Slovensku a platnosť v 36 krajinách Európy.",
     href: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/",
     cta: "Objednať preukaz",
+    shop: {
+      label: "Prejsť z ISIC na EURO<26",
+      href: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/",
+      text: "Skončili ste štúdium a mali ste ISIC? Na EURO<26 prejdete plynulo — nová karta dostane nové číslo a jej platnosť nadväzuje na tú súčasnú, takže nevzniká medzera v zľavách.",
+    },
+    note: "EURO<26 nemá čip, takže nenahrádza dopravnú funkciu školského preukazu.",
   },
 };
+
 
 // Farby zodpovedajú preukazom v kartách nižšie: ISIC tyrkysová/žltá, ITIC oranžová, EURO<26 magenta
 const ANSWER_TONES: Record<string, string> = {
