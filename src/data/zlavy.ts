@@ -307,7 +307,7 @@ export const ZLAVY: Zlava[] = [
   {
     top: false,
     partner: 'O2',
-    nazov: 'O2 Paušál Bezstarostný so zľavou vďaka preukazu (najobľúbenejší) — 33 €/mesiac namiesto 44 € (neobmedzené dáta, volania a správy, cashback 5 €/mesiac do 15 GB, bonus na zariadenie, 1 predplatné v cene, 1 SIM navyše zdarma)',
+    nazov: 'O2 Paušál Bezstarostný so zľavou vďaka preukazu (najobľúbenejší) — 38 €/mesiac namiesto 44 € (neobmedzené dáta, volania a správy, cashback 5 €/mesiac do 15 GB, bonus na zariadenie, 1 predplatné v cene, 1 SIM navyše zdarma)',
     kategoria: 'Tech a mobil',
     preukazy: 'ISIC | ITIC | EYCA',
     ctaApple: 'https://apps.apple.com/app/isic/id886109982',
