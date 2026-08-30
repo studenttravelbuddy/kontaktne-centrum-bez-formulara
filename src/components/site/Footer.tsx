@@ -35,17 +35,17 @@ const SOCIAL_GROUPS: SocialGroup[] = [
     ],
   },
   {
-    brand: "ISIC ZŠ",
+    brand: "ISIC SŠ",
     links: [
-      { name: "Facebook", label: "Facebook ISIC/EURO<26 ZŠ", href: "https://www.facebook.com/ISICEURO26/", icon: Facebook },
-      { name: "Instagram", label: "Instagram ISIC/EURO<26 ZŠ", href: "https://www.instagram.com/isic.sk_zs/", icon: Instagram },
+      { name: "Facebook", label: "Facebook ISIC SŠ", href: "https://www.facebook.com/preukazisiceuro26", icon: Facebook },
+      { name: "Instagram", label: "Instagram ISIC SŠ", href: "https://www.instagram.com/isic_euro26/", icon: Instagram },
     ],
   },
   {
-    brand: "ISIC SŠ",
+    brand: "ISIC ZŠ",
     links: [
-      { name: "Facebook", label: "Facebook ISIC/EURO<26 SŠ", href: "https://www.facebook.com/preukazisiceuro26", icon: Facebook },
-      { name: "Instagram", label: "Instagram ISIC/EURO<26 SŠ", href: "https://www.instagram.com/isic_euro26/", icon: Instagram },
+      { name: "Facebook", label: "Facebook ISIC ZŠ", href: "https://www.facebook.com/ISICEURO26/", icon: Facebook },
+      { name: "Instagram", label: "Instagram ISIC ZŠ", href: "https://www.instagram.com/isic.sk_zs/", icon: Instagram },
     ],
   },
   {
