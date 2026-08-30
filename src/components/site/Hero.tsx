@@ -121,7 +121,7 @@ export function Hero({ onOpenChat, onGoToForm }: Props) {
                 <img
                   src={card.logo}
                   alt={`Logo ${card.name}`}
-                  className="h-16 w-28 self-start object-contain"
+                  className="h-auto w-full self-start"
                 />
                 <h2 className="mt-4 font-display text-3xl text-card-accent-strong">{card.name}</h2>
                 <p className="mt-2 font-medium">{card.who}</p>
