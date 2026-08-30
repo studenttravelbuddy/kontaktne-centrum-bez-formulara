@@ -4,6 +4,7 @@ import {
   ArrowUpRight,
   Bus,
   ChevronDown,
+  Briefcase,
   Coffee,
   Dumbbell,
   GraduationCap,
