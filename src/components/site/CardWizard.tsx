@@ -61,49 +61,61 @@ const RESULTS: Record<
   },
 };
 
+const ANSWER_TONES: Record<string, string> = {
+  "zs-ss": "bg-brand-teal text-foreground",
+  vs: "bg-brand-orange text-primary-foreground",
+  ucitel: "bg-brand-pink text-primary-foreground",
+  mlady: "bg-brand-yellow text-foreground",
+};
+
 export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
   const [choice, setChoice] = useState<ResultKey | null>(null);
   const result = choice ? RESULTS[choice] : null;
 
   return (
-    <div className="rounded-lg border border-brand-teal/25 bg-brand-teal-light p-6 shadow-[8px_8px_0_var(--brand-teal)] md:p-8">
-      <p className="inline-flex items-center gap-2 text-sm font-black tracking-wider text-brand-pink uppercase">
+    <div className="rounded-[2rem] bg-brand-teal-light p-6 md:p-10">
+      <p className="kicker inline-flex items-center gap-2 text-brand-pink">
         <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
-        Sprievodca
+        Vyber si svoju výhodu
       </p>
-      <h2 className="mt-3 text-3xl md:text-4xl">Aký preukaz je pre mňa?</h2>
+      <h2 className="mt-3 font-display text-4xl sm:text-5xl">Kto si?</h2>
 
       {!result ? (
         <>
-          <p className="mt-2 text-sm text-brand-gray">Vyberte, čo o Vás platí:</p>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          <p className="mt-3 text-sm text-brand-gray">Vyberte, čo o Vás platí:</p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {ANSWERS.map((answer) => (
               <button
                 key={answer.id}
                 type="button"
                 onClick={() => setChoice(answer.result)}
-                className="group flex items-center gap-3 rounded-lg border border-brand-teal/25 bg-card p-4 text-left text-sm font-bold transition-colors hover:bg-brand-yellow"
+                className={`group flex h-full flex-col items-start gap-4 rounded-3xl p-6 text-left transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 ${ANSWER_TONES[answer.id]}`}
               >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-teal/15 text-brand-teal-deep transition-transform group-hover:scale-110 motion-reduce:transition-none">
-                  <answer.Icon className="h-5 w-5" aria-hidden="true" />
+                <answer.Icon className="h-7 w-7" aria-hidden="true" />
+                <span className="font-display text-2xl leading-tight font-black uppercase">
+                  {answer.label}
                 </span>
-
-                {answer.label}
+                <span className="chip mt-auto bg-background/85 text-foreground">
+                  Zistiť viac
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </span>
               </button>
             ))}
           </div>
         </>
       ) : (
-        <div className="mt-5 rounded-lg border border-brand-teal/25 bg-card p-5">
-          <p className="font-display text-2xl text-brand-teal-deep">{result.card}</p>
-          <p className="mt-1 font-medium">{result.title}</p>
-          <p className="mt-2 text-sm text-brand-gray">{result.text}</p>
-          <div className="mt-5 flex flex-wrap gap-3">
+        <div className="mt-6 rounded-3xl bg-card p-6">
+          <p className="kicker text-brand-pink">{result.card}</p>
+          <p className="mt-2 font-display text-3xl uppercase text-brand-teal-deep">
+            {result.title}
+          </p>
+          <p className="mt-3 text-sm text-brand-gray">{result.text}</p>
+          <div className="mt-6 flex flex-wrap gap-3">
             <a
               href={result.href}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-brand-teal px-4 py-2 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
+              className="chip bg-brand-teal px-5 py-2.5 text-foreground transition-colors hover:bg-brand-yellow"
             >
               {result.cta}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -111,14 +123,14 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
             <button
               type="button"
               onClick={onGoToForm}
-              className="inline-flex items-center gap-2 rounded-lg bg-brand-yellow px-4 py-2 text-sm font-bold text-foreground transition-colors hover:bg-brand-teal"
+              className="chip bg-brand-yellow px-5 py-2.5 text-foreground transition-colors hover:bg-brand-teal"
             >
               Mám otázku — napísať nám
             </button>
             <button
               type="button"
               onClick={() => setChoice(null)}
-              className="inline-flex items-center gap-2 rounded-[14px] px-3 py-2 text-sm text-brand-gray underline"
+              className="chip px-3 py-2.5 text-brand-gray underline underline-offset-4"
             >
               <RotateCcw className="h-4 w-4" aria-hidden="true" />
               Späť
@@ -129,3 +141,4 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
     </div>
   );
 }
+

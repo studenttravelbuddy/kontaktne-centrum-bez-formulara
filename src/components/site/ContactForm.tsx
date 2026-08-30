@@ -166,7 +166,7 @@ export function ContactForm({ topicId, onTopicChange }: Props) {
         </p>
 
         <form onSubmit={handleSubmit} className="mt-8 space-y-8" noValidate>
-          <fieldset className="rounded-lg border border-brand-teal/25 bg-card p-6 shadow-[8px_8px_0_var(--brand-teal)]">
+          <fieldset className="rounded-2xl bg-card p-6">
             <legend className="px-2 font-display text-xl font-black">Vaše údaje</legend>
             <div className="space-y-4">
               <div>
@@ -240,7 +240,7 @@ export function ContactForm({ topicId, onTopicChange }: Props) {
             </div>
           </fieldset>
 
-          <fieldset className="rounded-lg border border-brand-teal/25 bg-card p-6 shadow-[8px_8px_0_var(--brand-teal)]">
+          <fieldset className="rounded-2xl bg-card p-6">
             <legend className="px-2 font-display text-xl font-black">Čoho sa dopyt týka</legend>
             <div className="space-y-4">
               <div>
@@ -392,7 +392,7 @@ export function ContactForm({ topicId, onTopicChange }: Props) {
           <button
             type="submit"
             disabled={sending}
-            className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-brand-yellow px-7 font-bold text-foreground transition-colors hover:bg-brand-teal disabled:opacity-60 md:w-auto"
+            className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-2xl bg-brand-yellow px-7 font-bold text-foreground transition-colors hover:bg-brand-teal disabled:opacity-60 md:w-auto"
           >
             {sending && <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />}
             Poslať dopyt

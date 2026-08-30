@@ -30,14 +30,17 @@ export function Faq({
   }, [query]);
 
   return (
-    <section id="faq" className="border-b border-brand-teal/25 bg-brand-teal-light">
+    <section id="faq" className="bg-brand-teal-light">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 md:py-24">
         <Reveal>
-          <p className="text-sm font-black tracking-wider text-brand-pink uppercase">Časté otázky</p>
-          <h2 className="text-balance-tight mt-3 text-4xl sm:text-5xl">Pýtate sa? Odpovedáme.</h2>
+          <p className="kicker text-brand-pink">Časté otázky</p>
+          <h2 className="text-balance-tight mt-3 font-display text-4xl sm:text-5xl">
+            Pýtate sa? Odpovedáme.
+          </h2>
           <p className="mt-4 text-muted-foreground">
             Najčastejšie otázky držiteľov preukazov ISIC, ITIC a EURO&lt;26.
           </p>
+
         </Reveal>
 
         <div className="relative mt-6">
@@ -55,7 +58,7 @@ export function Faq({
         </div>
 
         {items.length === 0 ? (
-          <p className="mt-8 rounded-lg border border-brand-teal/25 bg-background p-5 text-sm">
+          <p className="mt-8 rounded-2xl bg-background p-5 text-sm">
             Na „{query}" sme nič nenašli.{" "}
             <button
               type="button"
@@ -80,7 +83,7 @@ export function Faq({
               <AccordionItem
                 key={item.question}
                 value={`faq-${index}`}
-                 className="mb-4 rounded-lg border border-brand-teal/25 bg-card px-5 shadow-[5px_5px_0_var(--brand-teal)]"
+                 className="mb-4 rounded-2xl bg-card px-5"
               >
                  <AccordionTrigger className="text-left font-display text-lg font-bold hover:no-underline">
                   {item.question}
@@ -102,7 +105,7 @@ export function Faq({
           </Accordion>
         )}
 
-        <p className="mt-8 rounded-lg border border-brand-teal/25 bg-brand-yellow p-5 text-sm shadow-[6px_6px_0_var(--brand-teal)]">
+        <p className="mt-8 rounded-2xl bg-brand-yellow p-5 text-sm">
           Nenašli ste odpoveď?{" "}
           <button
             type="button"

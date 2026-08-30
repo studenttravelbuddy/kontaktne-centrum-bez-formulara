@@ -25,30 +25,33 @@ const STEPS = [
 
 export function Steps() {
   return (
-    <section className="relative overflow-hidden border-b border-brand-teal/25 bg-background">
+    <section className="relative overflow-hidden bg-background">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24">
         <Reveal>
-          <p className="text-sm font-black tracking-wider text-brand-pink uppercase">Tri jednoduché kroky</p>
-          <h2 className="text-balance-tight mt-3 text-4xl sm:text-5xl">Ako sa k odpovedi dostanete najrýchlejšie</h2>
+          <p className="kicker text-brand-pink">Tri jednoduché kroky</p>
+          <h2 className="text-balance-tight mt-3 font-display text-4xl sm:text-5xl">
+            Ako sa k odpovedi dostanete najrýchlejšie
+          </h2>
         </Reveal>
         <div className="relative mt-8 grid gap-5 md:grid-cols-3">
           <div
             aria-hidden="true"
-            className="absolute top-12 right-6 left-6 hidden border-t-4 border-dashed border-brand-teal md:block"
+            className="absolute top-12 right-6 left-6 hidden border-t-4 border-dashed border-brand-teal/40 md:block"
           />
           {STEPS.map((step, index) => {
             const Icon = step.icon;
             return (
               <Reveal key={step.number} delay={index * 120}>
-                <article className="relative h-full rounded-lg border border-brand-teal/25 bg-card p-6 shadow-[8px_8px_0_var(--brand-teal)] transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0">
-                  <span className="inline-flex size-12 items-center justify-center rounded-full border border-brand-teal/25 bg-brand-yellow font-display text-lg font-black text-foreground">
+                <article className="relative h-full rounded-3xl bg-brand-teal-light p-7 transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0">
+                  <span className="inline-flex size-12 items-center justify-center rounded-full bg-brand-yellow font-display text-lg font-black text-foreground">
                     {step.number}
                   </span>
-                  <h3 className="mt-4 flex items-center gap-2 font-display text-xl">
-                    <Icon className="h-5 w-5 text-brand-teal" aria-hidden="true" />
+                  <h3 className="mt-5 flex items-center gap-2 font-display text-xl uppercase">
+                    <Icon className="h-5 w-5 text-brand-pink" aria-hidden="true" />
                     {step.title}
                   </h3>
                   <p className="mt-2 text-sm text-muted-foreground">{step.text}</p>
+
                 </article>
               </Reveal>
             );

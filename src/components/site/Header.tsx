@@ -35,7 +35,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-brand-teal/25 bg-background">
+    <header className="sticky top-0 z-40 bg-background/95 backdrop-blur">
       <div className="bg-brand-teal-deep px-4 py-2 text-center text-sm font-bold text-primary-foreground">
         Končí Vám platnosť preukazu? Pozrite si, ako si ju obnoviť —{" "}
         <a
@@ -49,13 +49,18 @@ export function Header() {
       </div>
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
         <a href="#preukazy" className="flex items-center gap-3">
-          <img src={isicLogo.url} alt="ISIC" className="h-10 w-auto object-contain" />
-          <img src={iticLogo.url} alt="ITIC" className="h-10 w-auto object-contain" />
-          <img
-            src={eycaLogo.url}
-            alt="European Youth Card / EURO&lt;26"
-            className="h-10 w-auto object-contain"
-          />
+          {[
+            { src: isicLogo.url, alt: "ISIC" },
+            { src: iticLogo.url, alt: "ITIC" },
+            { src: eycaLogo.url, alt: "European Youth Card / EURO<26" },
+          ].map((logo) => (
+            <span
+              key={logo.alt}
+              className="inline-flex h-12 w-24 items-center justify-center rounded-2xl bg-card px-3 py-2 shadow-sm"
+            >
+              <img src={logo.src} alt={logo.alt} className="h-full w-full object-contain" />
+            </span>
+          ))}
         </a>
         <nav className="flex flex-wrap items-center gap-1 text-sm md:gap-2">
           {NAV.map((item) => (
@@ -74,7 +79,7 @@ export function Header() {
           ))}
           <a
             href="tel:+421222119963"
-            className="inline-flex items-center gap-2 rounded-lg bg-brand-teal px-4 py-2 font-bold text-foreground transition-colors hover:bg-brand-yellow"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-teal px-5 py-2 font-bold text-foreground transition-colors hover:bg-brand-yellow"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
             02 2211 9963
@@ -84,3 +89,4 @@ export function Header() {
     </header>
   );
 }
+
