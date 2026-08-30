@@ -26,7 +26,7 @@ function DiscountCard({ discount }: { discount: Discount }) {
       rel="noreferrer"
       className={`group flex h-full flex-col rounded-3xl p-7 transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 ${TONES[discount.tone]}`}
     >
-      <h3 className="font-display text-2xl leading-tight font-black uppercase">
+      <h3 className="font-display text-2xl leading-tight font-black uppercase [color:inherit]">
         {discount.name}
       </h3>
       <p className="mt-3 flex-1 text-sm opacity-90">{discount.perk}</p>

@@ -19,7 +19,7 @@ export function CampaignBanner() {
                   <Ticket className="h-3.5 w-3.5" aria-hidden="true" />
                   Kampaň
                 </p>
-                <h2 className="mt-4 font-display text-5xl uppercase text-brand-teal-deep sm:text-6xl">
+                <h2 className="mt-4 font-display text-5xl uppercase text-foreground sm:text-6xl">
                   Ready for More
                 </h2>
                 <p className="mt-4 max-w-xl text-foreground">
