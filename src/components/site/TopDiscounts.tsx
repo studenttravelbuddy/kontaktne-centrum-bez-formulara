@@ -4,6 +4,7 @@ import {
   ArrowUpRight,
   Bus,
   ChevronDown,
+  Briefcase,
   Coffee,
   Dumbbell,
   GraduationCap,
@@ -49,6 +50,7 @@ const CATEGORY_ICONS: Record<string, typeof Bus> = {
   "Vzdelávanie": GraduationCap,
   "Zdravie a krása": Heart,
   "Jedlo a káva": Coffee,
+  "Služby": Briefcase,
 };
 
 const PAGE_SIZE = 24;
