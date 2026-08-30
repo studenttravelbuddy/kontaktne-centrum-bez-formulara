@@ -84,6 +84,11 @@ Známka (ISIC, ISIC/EURO26, ITIC — všetky druhy) | 13,00 €
 Duplikát / doobjednanie plastu k preukazu v mobile | 3,00 €
 --TABLE END--
 Cena 13 € platí pre všetkých 26 položiek eshopu okrem duplikátov — nový preukaz, preukaz do mobilu aj známka stoja rovnako.
+
+Dobierka (platba do rúk kuriéra): **na eshope táto možnosť nie je** — tam sú len platba kartou
+alebo bankovým prevodom, obe za 16,15 € (13 € + 3,15 € kuriér). Dobierka existuje výhradne pri
+telefonickom predaji (keď CKM klienta obvoláva) a vtedy je celková suma **18 €** (13 € preukaz +
+cca 5 € poštovné/dobierkový poplatok). Agent teda dobierku ako možnosť na eshope neponúka.
 Ceny — čo predáva škola / Ubian (nie CKM)
 Škola si objednáva cez UBIAN dva rôzne preukazy žiaka a ich cena aj rozsah sa líšia. Preukazy UBIAN majú čip ktorý používajú žiaci v škole a na dopravu a môžu byť doplnené o ISIC/EURO26 licenciu ktorá im pridá výhody/zľavy na Slovensku aj v zahraničí a zároveň je tiež od 1.7.26 v akejkoľvek forme licencia ISIC akceptovaná dopravcami na zľavu v doprave.  Ceny sú z ubian.sk/preukaz-studenta, overené 25. 8. 2026.
 --TABLE START--
@@ -908,6 +913,16 @@ Operátor mi zrušil študentský paušál
 Platí pre: Najčastejšie ISIC. Pri ITIC a EURO<26 platí to isté pravidlo, ale preukaz sa predlžuje inak — viď vetvu.
 Súvisiace: 02 (ako predĺžiť) — ak odpoveď vedie sem, načítaj aj tieto.
 Objem: ~30 odpovedí supportu. Sezónna téma — najviac na prelome augusta a septembra.
+
+⛔ KRITICKÉ — časovo podmienené pravidlo o Orangei a O2 (potvrdené CKM 29. 8. 2026, nadraďuje sa
+nad všetko nižšie): Spolupráca s Orangeom končí 31. 8. 2026 o 23:59, od 1. 9. 2026 CKM prechádza
+na O2. DO 31. 8. 2026 VRÁTANE agent o O2 ani o prechode z Orangeu NESMIE hovoriť vôbec — ani
+nepriamo, ani keď sa naň klient priamo spýta. Namiesto toho odpovie neutrálne: „Na paušále sa
+z našej strany nič nemení, o prípadných zmenách budeme informovať vopred." a ak treba, eskaluje.
+OD 1. 9. 2026 ráno sa už komunikuje voľne (landing page isic.sk/o2, e-maily o O2 idú v ten deň) a
+platí obsah nižšie. Ak nie si istá/istý, aký je dnešný dátum, over si ho a týmto pravidlom sa
+riaď doslovne — nejde o odporúčanie, je to embargo na komunikáciu.
+
 Ako sa pýtajú
 „Orange mi zrušil študentský paušál, lebo ISIC nie je platný" · „nepredĺžilo to Yoxo" · „keď mám kartu aktivovanú, nemusím s Orangeom nič riešiť?" · „chcem prejsť na yoxo paušál, ale karta ukazuje, že nie je overená"
 Odpoveď
@@ -915,25 +930,41 @@ Operátor kontroluje platnosť preukazu. Ak nie je predĺžený, paušál mu pre
 Dobrý deň,
 to rýchlo napravíme. Preukaz momentálne nie je platný na komerčné zľavy, preto ho Orange neuznáva. Známku si zakúpite tu: https://objednaj-preukaz.sk/produkt/znamka-isiceuro/
 Po úhrade bude preukaz platný a bude fungovať aj v Orangei. Odporúčame overiť informáciu u operátora na zákazníckej linke 905.
+Ak preukazu medzitým vyprší platnosť, operátor paušál automaticky preradí (downgraduje) na
+najnižšiu možnú tarifu; na obnovenie pôvodnej tarify treba po predĺžení preukazu o to u operátora
+požiadať — systém následne overí, že už držiteľ má platný preukaz.
 Vetvy
-Od 1. 9. 2027 CKM mení operátora. Spolupráca s Orangeom sa k tomuto dátumu končí, CKM prechádza na O2. Ak sa klient pýta na Orange, agent oznámi túto zmenu a odkáže na aktuálne podmienky na webe CKM.
+[OD 1. 9. 2026] Klient sa pýta na Orange/prechod na O2. Spolupráca s Orangeom sa skončila
+31. 8. 2026 o 23:59, CKM od 1. 9. 2026 spolupracuje s O2. Existujúce paušály Orange/Yoxo
+doterajším držiteľom dobehnú do konca ich platobného obdobia alebo viazanosti — CKM ich už
+nespravuje ani neruší, otázky k nim rieši priamo Orange. Po ich skončení už nie sú prepojené s
+preukazmi CKM. Platnosť preukazu ani ostatné benefity sa zmenou partnera nijako nemenia. Novú
+ponuku od O2 (O2 Paušál, O2 Maxx, O2 Junior) nájde držiteľ na isic.sk/o2.
+Orientačné ceny O2 paušálov so zľavou pre platný preukaz ISIC/ITIC/EURO<26 (bežná cena → cena s
+preukazom, platné od 1. 9. 2026): Bezstarostný 44 € → 33 €/mes. (neobmedzené dáta, volania aj
+správy, cashback 5 € späť, bonus na zariadenie 168 €), Pohodový 33 € → 28 €/mes. (15 GB dát,
+neobmedzené volania a správy, bonus na zariadenie 96 €), Základný 22 € → 18 €/mes. (10 GB dát,
+200 minút, neobmedzené správy, bonus na zariadenie 48 €) — všetky tri bez viazanosti. K tomu O2
+Maxx 20 €/mes. (100 GB, neobmedzené volania a SMS v EÚ) a O2 Junior 10,25 €/mes., kde bonus za
+preukaz nie je v cene, ale v objeme (10 GB namiesto 4 GB, 5 voľných čísel namiesto 3). Tieto
+konkrétne ceny agent uvádza až od 1. 9. 2026 a len ako orientačné, s odkazom na isic.sk/o2 pre
+záväzné znenie.
 Klient má ITIC alebo EURO<26. Pravidlo je rovnaké — operátor uzná len platný preukaz — ale odkaz na známku ISIC/EURO<26 mu neposielaj. ITIC má vlastnú známku, EURO<26 sa predlžuje kúpou novej karty. Postup je v článku Ako si predĺžim preukaz.
 Klient predĺžil preukaz a pýta sa, či má niečo hlásiť. Rozhoduje kedy si preukaz obnovil.
-Ak ste si platnosť obnovili ešte pred skončením platnosti súčasného preukazu, informácia sa do Orangeu prenesie automaticky a paušál Vám plynule pokračuje — nikam chodiť nemusíte.
-Toto je znenie z webu CKM (itic.sk aj euro26.sk, overené 25. 8. 2026). Podmienku „pred skončením platnosti" nikdy nevynechaj — je to celá pointa odpovede.
+Ak ste si platnosť obnovili ešte pred skončením platnosti súčasného preukazu, informácia sa do Orangeu (od 1. 9. 2026: do O2) prenesie automaticky a paušál Vám plynule pokračuje — nikam chodiť nemusíte.
+Toto CKM potvrdilo ako záväzné znenie. Podmienku „pred skončením platnosti" nikdy nevynechaj — je to celá pointa odpovede.
 Klient dostal nové číslo karty až po tom, čo mu starý preukaz vypršal, alebo ide o duplikát či nový plast mimo obnovy.
-V tomto prípade, po vypršaní platnosti, Orange informáciu automaticky nedostane. Treba mu nahlásiť nové číslo preukazu, aby Vám paušál mohol pokračovať.
-Archív hovorí, že nové číslo treba hlásiť vždy; web hovorí, že pri včasnej obnove sa prenesie samo. CKM toto znenie potvrdilo ako záväzné — viď „Otvorené otázky", otázka 16. Od 1. 9. 2027 CKM navyše prechádza na spoluprácu s operátorom O2 namiesto Orangeu — pri otázke na Orange agent oznámi túto zmenu a odkáže na aktuálne podmienky na webe CKM.
+V tomto prípade, po vypršaní platnosti, operátor informáciu automaticky nedostane. Treba mu nahlásiť nové číslo preukazu, aby Vám paušál mohol pokračovať.
 Klient má zahraničný ISIC.
-Orange poskytuje zľavy len na preukazy ISIC, ITIC a EURO<26 vydané na Slovensku. Ak máte do 27 rokov, môžete si zakúpiť kartu EURO<26 vydanú na Slovensku a paušál s ňou aktivovať: https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/
+Orange (od 1. 9. 2026: O2) poskytuje zľavy len na preukazy ISIC, ITIC a EURO<26 vydané na Slovensku. Ak máte do 27 rokov, môžete si zakúpiť kartu EURO<26 vydanú na Slovensku a paušál s ňou aktivovať: https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/
 Klient sa pýta, či má na Yoxo nárok, keď nie je študent. Áno — paušál je viazaný na platný preukaz, nie na štatút študenta.
 Yoxo paušál si viete aktivovať s ktorýmkoľvek platným preukazom ISIC, ITIC alebo kartou EURO<26 vydaným na Slovensku — študentom byť nemusíte.
-Rodič sa pýta, či môže paušál aktivovať dieťaťu. Žiadna veková hranica neplatí — údaj „od 16 rokov" v databáze zliav je nesprávny, rozhoduje len platný preukaz. Viď „Otvorené otázky", otázka 17.
-Yoxo paušál si viete aktivovať s ktorýmkoľvek platným preukazom ISIC (od 6 rokov), ITIC alebo kartou EURO<26 vydaným na Slovensku .Klient sa pýta, čo v paušáli je. Detaily určuje Orange, agent ich necituje ako záväzné — odkáž na isic.sk/yoxopausal/ alebo itic.sk/yoxo/.
+Rodič sa pýta, či môže paušál aktivovať dieťaťu. CKM potvrdilo: žiadna veková hranica neplatí — údaj „od 16 rokov" v databáze zliav je nesprávny, rozhoduje len platný preukaz (ISIC od 6 rokov).
+Klient sa pýta, čo presne v paušáli je. Detaily určuje operátor, agent ich necituje ako záväzné — odkáž na isic.sk/yoxopausal/ alebo itic.sk/yoxo/ (od 1. 9. 2026: isic.sk/o2).
 Klient si mýli číslo známky s číslom karty. Operátorovi sa hlási číslo preukazu v tvare S421…, nie označenie známky začínajúce na R.
-Počas štúdia ostáva to isté číslo preukazu S421…, v prípade že ide o čipový preukaz zo školy, a tento údaj používate aj pre Orange. Číslo v tvare R… je len označenie známky a na zľavy, ani na žiadnu inú evidenciu, sa nepoužíva.
+Počas štúdia ostáva to isté číslo preukazu S421…, v prípade že ide o čipový preukaz zo školy, a tento údaj používate aj pre operátora. Číslo v tvare R… je len označenie známky a na zľavy, ani na žiadnu inú evidenciu, sa nepoužíva.
 Kedy eskalovať
-Keď klient tvrdí, že preukaz platný je, a operátor ho aj tak neuznáva.
+Keď klient tvrdí, že preukaz platný je, a operátor ho aj tak neuznáva; a vždy, keď je dnešný dátum do 31. 8. 2026 vrátane a klient sa priamo pýta na Orange/O2/prechod — eskaluj namiesto podrobnej odpovede.
 Preverím platnosť Vášho preukazu a ozvem sa Vám.
 Operátorke odovzdaj: číslo preukazu, meno a ktorého operátora sa to týka. Treba overiť platnosť a prípadne nahlásiť predĺženie partnerovi.
 Prišlo mi nové číslo karty — ako ho dostanem do aplikácie?
@@ -1033,8 +1064,8 @@ V hre boli 13 €, 26 € a 25,30 € za čipový preukaz cez školu. Cenník na
 V archíve 3,69 € aj 3,79 €, na starom článku isic.sk z roku 2019 dokonca 3 €. Cenník Ubianu, ktorý poplatok určuje, uvádza 3,69 € — „Predĺženie platnosti pre dopravu 3,69 €", rovnako pre oba typy preukazu žiaka (ubian.sk/preukaz-studenta, overené 25. 8. 2026). Agent: uvedie 3,69 € a zároveň druhý krok — priloženie preukazu k UNIterminálu. → článok 4
 11. Dá sa zrušiť uhradená objednávka? (3 prípady) — doriešené
 Support raz odmietne, inokedy zruší a vráti peniaze. Agent: zrušenie a vrátenie peňazí sľúbi len v troch prípadoch — nesprávne zakúpený duplikát preukazu, ten istý produkt omylom kúpený pre jedného držiteľa dvakrát, alebo prestup držiteľa na inú školu (vtedy sa vracia poplatok za licenciu). Mimo týchto prípadov sa platba nevracia podľa platných členských podmienok ktoré sú zverejnené v našom eshope na objednaj-preukaz.sk . Prijme žiadosť aj je to jeden z tych hore pripadov a eskaluje. → článok 21
-12. Preukaz vydaný školou bez fotky (2 prípady) — doriešené
-isic.sk: „Preukaz bez fotografie je neplatný", náhradou je ISIC klasik alebo ISIC v mobile za 13 €. Nie je potvrdené, že je to štandardný postup. Agent: potvrdí, že fyzický aj v aplikácii zobrazený preukaz musí mať fotografiu — bez nej sa ISIC v aplikácii nezobrazí. Ako riešenie ponúkne ISIC v mobile alebo klasik; pri čipových preukazoch cez ubian.sk sa fotografia nahráva už online pri objednávke alebo to rieši priamo škola. → článok 25
+12. Preukaz vydaný školou bez fotky (2 prípady) — doriešené, CKM potvrdilo 27. 8. 2026
+isic.sk: „Preukaz bez fotografie je neplatný", náhradou je ISIC klasik alebo ISIC v mobile za 13 €. CKM toto potvrdilo ako štandardný postup. Agent: fyzický aj v aplikácii zobrazený preukaz musí mať fotografiu — bez nej sa ISIC v aplikácii nezobrazí. Ako riešenie ponúkne ISIC v mobile alebo klasik; pri čipových preukazoch cez ubian.sk sa fotografia nahráva už online pri objednávke alebo to rieši priamo škola. → článok 25
 13. Zľava cez SheerID (Spotify a podobné) (1 prípad) — doriešené
 Klientova škola nebola v zozname SheerID, systémová odpoveď v archíve nie je. Agent: potvrdí, že ak škola nie je v zozname SheerID, nárok nie je — ide o medzinárodnú zľavu, ktorej podmienky CKM neurčuje; stredné školy v SheerID väčšinou ani nie sú, zľava je určená najmä vysokoškolákom. Zľava na Spotify je navyše v databáze vedená len pre ISIC a len pre vysokoškolákov — pri ITIC a EURO<26 na ňu nárok nie je.
 Nové z revízie webov 25. 8. 2026
@@ -1044,7 +1075,7 @@ isic.sk/akceptacia-isic-vo-verejnej-doprave/ a isic.sk/doprava-mhd-vlaky-autobus
 15. Rozmer fotografie na preukaz ITIC klasik — doriešené
 itic.sk/itic-klasik/ uvádza 28 × 34 mm, eshop pri tom istom produkte 25 × 32 mm. (ISIC 26 × 32 mm a EURO<26 20 × 33 mm sú jednotné.) Agent: pri ITIC uvádza rozmer 26 × 32 mm — rovnaký ako pri ISIC; oba pôvodné údaje (28 × 34 aj 25 × 32) boli nesprávne. → článok 14, článok 0
 16. Prenesie sa nové číslo preukazu do Orangeu samo? — doriešené
-Archív: nové číslo treba nahlásiť vždy. itic.sk/itic-v-mobile-caste-otazky/ aj euro26.sk/karta-euro/26-pre-deti/: ak si klient obnovil platnosť pred skončením platnosti súčasného preukazu, informácia sa prenesie automaticky. Agent: potvrdí, že ak sa preukaz obnoví pred vypršaním platnosti pôvodného, číslo sa do Orangeu prenesie automaticky a paušál pokračuje. Ak preukaz skončí a nový sa kúpi až po vypršaní platnosti, systém ho v Orangei nerozpozná — klient si číslo musí nahlásiť sám. Od 1. 9. 2027 CKM prechádza na spoluprácu s novým operátorom O2 namiesto Orangeu — pri otázke na Orange agent oznámi túto zmenu a odkáže na aktuálne podmienky na webe CKM. → článok 23
+Archív: nové číslo treba nahlásiť vždy. itic.sk/itic-v-mobile-caste-otazky/ aj euro26.sk/karta-euro/26-pre-deti/: ak si klient obnovil platnosť pred skončením platnosti súčasného preukazu, informácia sa prenesie automaticky. Agent: potvrdí, že ak sa preukaz obnoví pred vypršaním platnosti pôvodného, číslo sa do Orangeu prenesie automaticky a paušál pokračuje. Ak preukaz skončí a nový sa kúpi až po vypršaní platnosti, systém ho v Orangei nerozpozná — klient si číslo musí nahlásiť sám. ⚠️ OPRAVA (29. 8. 2026): dátum prechodu na O2 nie je 1. 9. 2027, ale **1. 9. 2026** — a do 31. 8. 2026 vrátane sa o tom nemá hovoriť vôbec. Presné znenie je v opravenom článku 23 a v sekcii "AKTUALIZÁCIA 1" nižšie — tie platia, toto pôvodné dátum je zastaraný preklep. → článok 23
 17. Veková hranica pre Yoxo paušál — doriešené
 Databáza zliav: „Ponuka platí pre držiteľov platných preukazov … vo veku od 16 rokov." euro26.sk/karta-euro/26-pre-deti/: „Paušál je podmienený platnou kartou EURO<26, nie vekom." Agent: potvrdí, že Yoxo paušál nemá vekovú hranicu — platí pre všetkých držiteľov platného preukazu ISIC, ITIC alebo EURO<26 vydaného na Slovensku, vrátane maloletých. → článok 23
 18. Platí karta EURO<26 po zmene priezviska? — doriešené
@@ -1113,13 +1144,108 @@ Keď CKM niečo z časti A rozhodne, odpoveď sa zapíše do príslušného čl�
 
 ---
 
-# AKTUALIZÁCIA — overené naživo na isic.sk, itic.sk, euro26.sk a ubian.sk (29. 8. 2026)
+# AKTUALIZÁCIA 1 — finálne rozhodnutia CKM SYTS (dokument "Otázky pre CKM final 27-8-26" +
+# komentáre v "Zmeny v článkoch", 27.–29. 8. 2026)
 
-Toto som dodatočne overila priamym načítaním webov (nie len z interných dokumentov CKM). Väčšina
+Toto nahrádza všetky staré odkazy na "otvorené otázky" vyššie v tomto súbore — CKM medzičasom na
+všetkých 18 pôvodných otvorených otázok odpovedalo. Register "A. Otvorené otázky — čo agent
+netvrdí" (niekde vyššie v tomto súbore) je už **neplatný v celom rozsahu** — nižšie sú finálne,
+záväzné odpovede. Kde je nižšie uvedená odpoveď v rozpore s vetou vyššie v článkoch, platí VŽDY
+odpoveď tu.
+
+## ⛔ Najdôležitejšie — časovo podmienené pravidlo o Orangei/O2 (pozri aj opravený článok 23 vyššie)
+
+Toto je presne to, čo sa nedávno stalo zle v nasadenom chate, tak nech je to úplne jasné:
+
+- **Prechod je 1. 9. 2026, nie 1. 9. 2027.** Spolupráca s Orangeom končí 31. 8. 2026 o 23:59.
+- **Do 31. 8. 2026 vrátane agent o O2 ani o prechode z Orangeu nesmie hovoriť vôbec** — ani
+  nepriamo, ani na priamu otázku. Odpovedá neutrálne ("na paušále sa z našej strany nič nemení,
+  o zmenách budeme informovať vopred") a v prípade potreby eskaluje.
+- **Od 1. 9. 2026 ráno** už agent komunikuje voľne — landing page je `isic.sk/o2`, existujúce
+  paušály Orange/Yoxo dobehnú do konca platobného obdobia/viazanosti a CKM ich ďalej nespravuje;
+  platnosť preukazu sa zmenou partnera nemení. Orientačné ceny O2 ponuky sú priamo v článku 23.
+- K 31. 8. 2026 23:59 CKM zároveň vypína Orangeu online overovanie platnosti preukazov.
+
+**Pre webchat, ktorý beží nepretržite, to znamená:** ak má chat aj systémový dátum (nie len tento
+súbor), musí si vedieť porovnať dnešný dátum s 31. 8. 2026 a podľa toho prepnúť správanie. Ak taký
+mechanizmus Lovable/AI vrstva nevie zaručiť spoľahlivo, bezpečnejšie je **do 1. 9. 2026 ručne
+vypnúť v chate akúkoľvek zmienku o Orangei/O2** (napr. dočasne odstrániť príslušnú vetvu z
+promptu) a až po 1. 9. 2026 ju vrátiť naspäť s opraveným dátumom.
+
+## Ostatné finálne odpovede CKM (nahrádzajú predchádzajúce "otvorené otázky")
+
+- **Starý bankový účet** (SK21 1100 0000 0026 6308 0127) **je zrušený** — prechod na inú banku.
+  Platba naň sa vždy vráti odosielateľovi, nikdy k nám nepríde. Agent posiela vždy len nový účet
+  (SK07 1111 0000 0018 7848 5012, UNCRSKBX).
+- **Nové číslo preukazu do aplikácie**: ak už má klient v appke registráciu, nahráva nové číslo
+  **deň pred vypršaním platnosti** starého (nie skôr, inak príde o zvyšok platnosti). Nový
+  používateľ, ktorý číslo práve dostal, sa môže zaregistrovať hneď.
+- **Lehota vrátenia platby: 10 pracovných dní** na účet alebo kartu držiteľa — záväzné, ostatné
+  lehoty v archíve (14/15 dní, "2 týždne") už neplatia.
+- **Zľava v Lidli**: definitívne skončila k 31. 7. 2026, z isic.sk je už odstránená. Ako náhradu
+  agent ponúka Kosik.sk, Terno alebo Kraj potraviny.
+- **Aplikácia my EYC (EURO<26)** — potvrdený postup: fotka sa mení v profile (nahratie z galérie
+  alebo priame odfotenie v appke); zabudnuté heslo cez profil → Zmena hesla, alebo na úvodnej
+  obrazovke cez "Zabudnuté heslo" (obnova príde na registračný e‑mail); nepotvrdená registrácia
+  sa rieši kontrolou spamu a potvrdením na zadanom e‑maile. **Tento postup je iný než v aplikácii
+  ISIC** — kroky z appky ISIC sa do my EYC nepoužívajú. Chat už teda držiteľov EURO<26 pri fotke,
+  hesle a registrácii nemusí automaticky eskalovať.
+- **Nezaevidovaná prolongácia zo školy**: keď klient tvrdí, že známku má, a systém ju napriek
+  tomu nevidí, agent ho má **najprv poslať overiť u školy** (niektoré tzv. hotovostné školy
+  objednávajú známky cez Edupage a môžu zabudnúť zakliknúť prolongáciu, čo sa k nám neprenesie).
+  Najlepšie je, ak klient vie povedať, kde a u koho si známku objednal — až potom eskalácia.
+- **Faktúra na zamestnávateľa**: CKM ju vystavuje na vyžiadanie. Agent si vypýta číslo objednávky,
+  číslo preukazu a fakturačné údaje, na ktoré má byť faktúra vystavená, a odovzdá operátorke.
+- **Zrušenie uhradenej objednávky** — vracia sa len v troch prípadoch: nesprávne zakúpený duplikát
+  preukazu, ten istý produkt omylom kúpený pre jedného držiteľa dvakrát, alebo prestup na inú
+  školu (vtedy sa vracia len poplatok za licenciu). Mimo týchto troch sa uhradená objednávka
+  nezrušuje.
+- **Preukaz vydaný školou bez fotky**: fyzický aj v aplikácii zobrazený preukaz musí mať
+  fotografiu, inak sa v appke nezobrazí. Náhrada je ISIC klasik alebo ISIC v mobile za 13 €.
+- **Zľava cez SheerID (napr. Spotify)**: platí len pre ISIC a len pre vysokoškolákov — stredné
+  školy v SheerID prevažne nie sú, ITIC a EURO<26 na túto zľavu nárok nemajú.
+- **Jednorazové zľavnené cestovné s nečipovým/mobilným ISIC**: platí na 100 %, oficiálne
+  stanovisko `isic.sk/akceptacia-isic-vo-verejnej-doprave/` je záväzné a úplné.
+- **Rozmer fotografie ITIC klasik: 26 × 32 mm** (rovnaký ako ISIC) — záväzne potvrdené.
+- **Prenos čísla do Orangeu/O2**: automaticky sa prenesie len vtedy, ak sa preukaz obnoví **pred**
+  vypršaním platnosti pôvodného. Ak preukaz najprv vyprší a nový sa kúpi až potom, systém ho
+  nerozpozná — číslo treba operátorovi nahlásiť ručne.
+- **Yoxo/O2 paušál nemá vekovú hranicu** — údaj "od 16 rokov" v databáze zliav je chybný, platí
+  len požiadavka na platný preukaz (ISIC už od 6 rokov).
+- **Karta EURO<26 po zmene priezviska naďalej platí** — priezvisko si držiteľ upraví sám v
+  aplikácii. Pri ISIC a ITIC klient zmenu nahlási CKM, tá údaje upraví a zmena sa prenesie aj do
+  aplikácie. (Stránka `euro26.sk/caste-otazky-2/` toto ešte na webe tvrdí opačne — pozri nižšie.)
+- **Duplikát čipového preukazu ISIC/EURO<26 zo ZŠ/SŠ cez Ubian: 12,30 €** — potvrdená finálna
+  cena duplikátu (nie cena nového preukazu s vizuálom Ubian, ako bola predtým pochybnosť).
+- **Duplikát čipového ITIC zo ZŠ/SŠ vybavuje priamo UBIAN.** Duplikát čipového ITIC z VŠ vybavuje
+  daná univerzita, kde pedagóg pracuje — nie UBIAN.
+- **`reklamacia@ckmsyts.sk` OSTÁVA samostatná adresa** (na reklamácie u dopravcov) — nezjednocuje
+  sa pod `klientskyservis@ckmsyts.sk`. V `2_Smerovanie_dopytov_a_emaily.md` sa teda nič nemení,
+  táto adresa ostáva presne tak, ako je.
+- **`sspreukazy@` a `VSpreukazy@` ostávajú tiež oddelené** ako interné smerovanie pre otázky o
+  zapojení školy — aj tu teda platí pôvodná smerovacia tabuľka bez zmeny.
+- **Duplikát preukazu**: vyrába sa s platnosťou pôvodného preukazu (nie s novou). Na vytlačenej
+  známke môže byť ešte pôvodný dátum, čo však nemení nič na skutočnej platnosti preukazu — držiteľ
+  sa vie preukázať v ISIC aplikácii. Na aktiváciu dopravnej časti treba duplikát priložiť k
+  terminálu (rovnako ako pri bežnom predĺžení).
+- **Dobierka** (platba do rúk kuriéra) **existuje, ale len pri telefonickom predaji** (keď CKM
+  klienta obvoláva) — **na eshope táto možnosť nie je**. Na eshope sú len platba kartou alebo
+  bankovým prevodom, obe za 16,15 € (13 € preukaz + 3,15 € kuriér). Pri telefonickom predaji na
+  dobierku je cena 13 € + poštovné/dobierkový poplatok cca 5 € = **18 €** spolu.
+- **Vyzdvihnutie známky/preukazu na škole**: možné v júni, septembri a októbri (na vybraných
+  školách). Preukazy aj známky sa doručujú buď na školu, alebo domov — podľa toho, ako si to škola
+  nastaví v portáli UBIAN. Kupónové knižky sa doručujú na školy, kde ich kontaktné osoby odovzdajú
+  žiakom spolu so známkou alebo preukazom.
+- **Ceny predĺženia dopravy (3,69 €) aj rozdiel Ubian‑vizuál (12,30 €) vs. ISIC/EURO<26‑vizuál
+  (25,30 €)** — obe potvrdené ako záväzné, cenu určuje UBIAN/škola, nie CKM.
+
+Toto som dodatočne overila aj priamym načítaním webov (nie len z interných dokumentov CKM). Väčšina
 faktov v tejto dátovej banke sedí s tým, čo je aktuálne naživo. Nižšie sú ale konkrétne miesta,
 kde sa **živý web ešte líši od toho, čo má AI chat tvrdiť** — chat sa má vždy riadiť touto dátovou
 bankou (vyššie), nie tým, čo prípadne "vie" o obsahu týchto stránok, lebo časť z nich je
 preukázateľne neaktuálna.
+
+# AKTUALIZÁCIA 2 — overené naživo na isic.sk, itic.sk, euro26.sk a ubian.sk (29. 8. 2026)
 
 ## ⚠️ Rozpory medzi živým webom a správnou odpoveďou — chat nemá preberať text z webu
 
@@ -1153,11 +1279,11 @@ preukázateľne neaktuálna.
    (09/2027, resp. 12/2027) a aj sprievodný obrázok súboru je už pomenovaný "09-2027". Ide o
    preklep/zabudnutú opravu jednej vety. → Chat vysokoškolákovi hovorí sezónu 09/2027, nie 09/2024.
 
-5. **`itic.sk/itic-klasik/` stále uvádza cenu cestovného poistenia "Istotka!" 13,5 €.** Interná
-   revízia CKM eviduje toto ako vec na opravu (má byť iná suma), no k 29. 8. 2026 CKM presnú
-   finálnu sumu ešte nepotvrdilo. → Chat cenu poistenia radšej neuvádza ako istú a odkáže rovno na
-   poisťovňu Union (`union.sk/poistenie-pre-studentov-ISIC-ITIC-Euro26/`) alebo na kontaktný
-   formulár, ak sa naň niekto spýta.
+5. **`itic.sk/itic-klasik/`, `itic.sk/univerzitny-itic/` a `itic.sk/stredoskolsky-itic/` stále
+   uvádzajú cenu cestovného poistenia "Istotka!" 13,5 €.** CKM už toto potvrdilo ako chybu — **správna
+   cena je 44 €** (variant ŠPORT 67 €), presne tak, ako je to v častých otázkach, v eshope a v
+   databáze zliav. → Chat pri otázke na cenu poistenia Istotka! uvádza **44 € (ŠPORT 67 €)**, nikdy
+   nie 13,5 €, aj keby to tak ešte videl na `itic.sk/itic-klasik/`.
 
 6. **Staré formuláre na návrh zľavy sú stále živé a nesmerujú na nový kontaktný formulár:**
    `isic.sk/navrh-na-zlavu/` aj `euro26.sk/navrh-na-zlavu/` fungujú ako samostatné formuláre.
@@ -1171,12 +1297,31 @@ preukázateľne neaktuálna.
 
 ## 🔒 Bezpečnostné zistenie — netýka sa obsahu chatu, treba nahlásiť IT/CKM
 
-`objednaj-preukaz.sk/overenie/` **nie je 404**, ako predpokladal interný dokument CKM — stránka sa
-načíta a obsahuje pôvodný formulár na overenie platnosti preukazu, ale za ním je vložený rozsiahly
-propagačný text o online kasíne ("Zodiac Casino"), ktorý s ISIC/CKM nijako nesúvisí. To vyzerá na
-vloženie cudzieho spamového obsahu (napr. kompromitovaný plugin/cache alebo zneužitá stránka), nie
-na legitímny obsah CKM. **Odporúčam dať to čo najskôr skontrolovať niekomu, kto spravuje
-objednaj-preukaz.sk** — nezávisle od tejto úlohy s Lovable formulárom.
+CKM vo finálnom dokumente potvrdzuje, že `objednaj-preukaz.sk/overenie/` bola **zámerne odstránená**
+z webu (aby overenie platnosti na tomto mieste už nebolo možné, kvôli GDPR) a že vracia 404 — treba
+už len opraviť odkazy, ktoré na ňu ešte vedú (navigácia na itic.sk, časté otázky na isic.sk). Pri
+mojom vlastnom načítaní tejto adresy 29. 8. 2026 sa mi ale **nezobrazila chyba 404** — stránka sa
+načítala aj s pôvodným formulárom na overenie preukazu, ale hneď za ním bol vložený rozsiahly
+propagačný text o online kasíne ("Zodiac Casino"), ktorý s ISIC/CKM nijako nesúvisí. To je v
+rozpore s tým, čo CKM eviduje (že stránka je mŕtva), a vyzerá to na vložený cudzí/spamový obsah
+(napr. kompromitovaný plugin, cache, alebo znovu-oživená zabudnutá URL adresa zneužitá niekým
+iným). **Odporúčam dať to čo najskôr priamo skontrolovať niekomu, kto spravuje
+objednaj-preukaz.sk** — nezávisle od tejto úlohy s Lovable formulárom, ideálne čo najskôr.
+
+## ⚠️ Čísla, ktoré chat nemá citovať ako isté
+
+CKM vo finálnom dokumente výslovne hovorí, že **počty partnerov a zliav sa na jednotlivých weboch
+nezhodujú** (rôzne podstránky uvádzajú 700/1 300/2 100/2 200 miest a 50 000/110 000/150 000 zliav)
+a že **agent tieto čísla zámerne necituje**. Jediné číslo, ktoré CKM považuje za spoľahlivé, je
+interné: k 25. 8. 2026 databáza zliav obsahuje **190 partnerov, 229 aktívnych zliav a 1 333
+prevádzok** (je to už v článku "Zľavy u partnerov" vyššie) — toto chat môže použiť, ale žiadne iné
+"okrúhle" marketingové číslo z jednotlivých landing pages (napr. "40 000 držiteľov", "2200+ miest")
+nepoužívaj ako fakt, ani na hero sekciu novej stránky.
+
+## Ďalšia vec na opravu na weboch (netýka sa chatu)
+
+Doména `ckmsyts.sk` má podľa CKM nesprávny SSL certifikát (server posiela `*.r2.websupport.sk`) a
+nenačíta sa v prehliadači — stojí za nahlásenie IT, nezávisle od tejto úlohy.
 
 ## ✅ Fakty, ktoré overenie naživo len potvrdilo (žiadna zmena netreba)
 
@@ -1188,10 +1333,10 @@ objednaj-preukaz.sk** — nezávisle od tejto úlohy s Lovable formulárom.
 - Rozdiel preukazu žiaka s vizuálom Ubian (12,30 €, len doprava a škola) vs. s vizuálom
   ISIC/EURO<26 (25,30 €, aj komerčné zľavy) — potvrdené priamo na `ubian.sk/preukaz-studenta`
   tabuľkou s rovnakými sumami ako v tejto dátovej banke.
-- ITIC klasik: fotografia 26×32 mm, cena 13 €, viac ako 700 zliav na Slovensku — potvrdené na
-  `itic.sk/itic-klasik/`.
-- EURO<26: 2200+ miest zliav na Slovensku, platí v 36 krajinách Európy, viac ako 40 000 držiteľov
-  na Slovensku — dobré čísla na hero sekciu novej stránky, ak ich chceš použiť.
+- ITIC klasik: fotografia 26×32 mm, cena 13 € — potvrdené na `itic.sk/itic-klasik/` (počet zliav
+  na tejto aj ďalších stránkach sa medzi webmi líši — pozri nižšie, prečo ho chat nemá citovať).
+- EURO<26 platí v 36 krajinách Európy — táto informácia sa medzi stránkami zhoduje, na rozdiel od
+  počtu miest/partnerov a počtu držiteľov, ktoré sa líšia (pozri nižšie).
 - Kontakt na zľavy cez preukaz zo školy (Ubian): `sspreukazy@ckmsyts.sk` / `VSpreukazy@ckmsyts.sk`,
   telefóny +421 948 884 304 / +421 948 827 097 — presne sedí s tabuľkou kontaktov v tejto banke.
 - Egocard (zľavová karta pre preukaz s vizuálom Ubian): potvrdené, že je automatická,
