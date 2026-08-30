@@ -58,7 +58,7 @@ export function Faq({
         </div>
 
         {items.length === 0 ? (
-          <p className="mt-8 rounded-lg border border-brand-teal/25 bg-background p-5 text-sm">
+          <p className="mt-8 rounded-2xl bg-background p-5 text-sm">
             Na „{query}" sme nič nenašli.{" "}
             <button
               type="button"
@@ -83,7 +83,7 @@ export function Faq({
               <AccordionItem
                 key={item.question}
                 value={`faq-${index}`}
-                 className="mb-4 rounded-lg border border-brand-teal/25 bg-card px-5 shadow-[5px_5px_0_var(--brand-teal)]"
+                 className="mb-4 rounded-2xl bg-card px-5"
               >
                  <AccordionTrigger className="text-left font-display text-lg font-bold hover:no-underline">
                   {item.question}
@@ -105,7 +105,7 @@ export function Faq({
           </Accordion>
         )}
 
-        <p className="mt-8 rounded-lg border border-brand-teal/25 bg-brand-yellow p-5 text-sm shadow-[6px_6px_0_var(--brand-teal)]">
+        <p className="mt-8 rounded-2xl bg-brand-yellow p-5 text-sm">
           Nenašli ste odpoveď?{" "}
           <button
             type="button"

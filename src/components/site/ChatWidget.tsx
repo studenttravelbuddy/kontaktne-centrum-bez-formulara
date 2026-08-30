@@ -134,7 +134,7 @@ export function ChatWidget({ open, onOpenChange, onGoToForm }: Props) {
           type="button"
           onClick={() => onOpenChange(true)}
           aria-label="Otvoriť chat s asistentkou"
-          className="fixed right-4 bottom-4 z-50 inline-flex items-center gap-2 rounded-lg border border-brand-teal/25 bg-brand-yellow px-5 py-3 font-bold text-foreground shadow-[6px_6px_0_var(--brand-teal)] transition-colors hover:bg-brand-teal"
+          className="fixed right-4 bottom-4 z-50 inline-flex items-center gap-2 rounded-2xl bg-brand-yellow px-5 py-3 font-bold text-foreground transition-colors hover:bg-brand-teal"
         >
           <MessageCircle className="h-5 w-5" aria-hidden="true" />
           Opýtať sa
@@ -145,9 +145,9 @@ export function ChatWidget({ open, onOpenChange, onGoToForm }: Props) {
         <div
           role="dialog"
           aria-label="Chat s asistentkou CKM SYTS"
-          className="fixed inset-x-3 bottom-3 z-50 flex max-h-[80vh] flex-col overflow-hidden rounded-lg border border-brand-teal/25 bg-card shadow-[8px_8px_0_var(--brand-teal)] sm:inset-x-auto sm:right-4 sm:bottom-4 sm:w-[400px]"
+          className="fixed inset-x-3 bottom-3 z-50 flex max-h-[80vh] flex-col overflow-hidden rounded-2xl bg-card sm:inset-x-auto sm:right-4 sm:bottom-4 sm:w-[400px]"
         >
-           <div className="flex items-center justify-between border-b border-brand-teal/25 bg-brand-teal px-4 py-3 text-foreground">
+           <div className="flex items-center justify-between bg-brand-teal px-4 py-3 text-foreground">
              <p className="font-display text-base font-black text-foreground">Asistentka CKM SYTS</p>
             <button
               type="button"
@@ -165,8 +165,8 @@ export function ChatWidget({ open, onOpenChange, onGoToForm }: Props) {
                 key={i}
                 className={
                   m.role === "user"
-                     ? "ml-auto max-w-[85%] rounded-lg border border-brand-teal/25 bg-brand-yellow px-4 py-2 text-sm"
-                     : "mr-auto max-w-[90%] rounded-lg border-2 border-brand-teal bg-brand-teal-light px-4 py-2 text-sm whitespace-pre-wrap"
+                     ? "ml-auto max-w-[85%] rounded-2xl bg-brand-yellow px-4 py-2 text-sm"
+                     : "mr-auto max-w-[90%] rounded-2xl border-2 border-brand-teal bg-brand-teal-light px-4 py-2 text-sm whitespace-pre-wrap"
                 }
               >
                 {m.content || (loading ? "…" : "")}
@@ -180,7 +180,7 @@ export function ChatWidget({ open, onOpenChange, onGoToForm }: Props) {
                     key={s}
                     type="button"
                     onClick={() => send(s)}
-                    className="rounded-lg border border-brand-teal/25 px-3 py-1.5 text-xs font-bold hover:bg-brand-yellow"
+                    className="rounded-2xl px-3 py-1.5 text-xs font-bold hover:bg-brand-yellow"
                   >
                     {s}
                   </button>
@@ -189,14 +189,14 @@ export function ChatWidget({ open, onOpenChange, onGoToForm }: Props) {
             )}
           </div>
 
-          <div className="border-t border-brand-teal/25 p-3">
+          <div className="border-t border-brand-teal/20 p-3">
             <button
               type="button"
               onClick={() => {
                 onOpenChange(false);
                 onGoToForm(guessTopic(lastUser));
               }}
-              className="mb-3 w-full rounded-lg border border-brand-teal/25 px-3 py-2 text-xs font-bold text-foreground hover:bg-brand-teal-light"
+              className="mb-3 w-full rounded-2xl px-3 py-2 text-xs font-bold text-foreground hover:bg-brand-teal-light"
             >
               Prejsť na kontaktný formulár
             </button>
@@ -215,13 +215,13 @@ export function ChatWidget({ open, onOpenChange, onGoToForm }: Props) {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Napíšte svoju otázku…"
-                className="h-10 flex-1 rounded-lg border-2 border-brand-teal px-3 text-sm outline-none focus:ring-2 focus:ring-ring"
+                className="h-10 flex-1 rounded-2xl border-2 border-brand-teal px-3 text-sm outline-none focus:ring-2 focus:ring-ring"
               />
               <button
                 type="submit"
                 disabled={loading}
                 aria-label="Odoslať otázku"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-brand-teal/25 bg-brand-yellow text-foreground disabled:opacity-60"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-yellow text-foreground disabled:opacity-60"
               >
                 <Send className="h-4 w-4" aria-hidden="true" />
               </button>
