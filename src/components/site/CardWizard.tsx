@@ -168,6 +168,45 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
             {result.title}
           </p>
           <p className="mt-3 text-sm text-brand-gray">{result.text}</p>
+
+          {(result.school || result.shop) && (
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              {result.school && (
+                <div className="rounded-2xl bg-brand-teal-light p-4">
+                  <p className="kicker text-brand-teal-deep">Cez školu (co-brand)</p>
+                  <p className="mt-2 text-sm text-brand-gray">{result.school.text}</p>
+                  <a
+                    href={result.school.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-brand-teal-deep underline decoration-brand-pink decoration-2 underline-offset-4"
+                  >
+                    {result.school.label}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                </div>
+              )}
+              {result.shop && (
+                <div className="rounded-2xl bg-brand-teal-light p-4">
+                  <p className="kicker text-brand-teal-deep">
+                    {result.card === "EURO<26" ? "Plynulý prechod" : "Klasik z e-shopu"}
+                  </p>
+                  <p className="mt-2 text-sm text-brand-gray">{result.shop.text}</p>
+                  <a
+                    href={result.shop.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-brand-teal-deep underline decoration-brand-pink decoration-2 underline-offset-4"
+                  >
+                    {result.shop.label}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                </div>
+              )}
+            </div>
+          )}
+
+          {result.note && <p className="mt-4 text-xs text-brand-gray">{result.note}</p>}
           <div className="mt-6 flex flex-wrap gap-3">
             <a
               href={result.href}
