@@ -1,33 +1,40 @@
 # Pätička: prelinkované sociálne siete a kompaktnejší layout
 
 ## Cieľ
+
 Sociálne siete v pätičke doplniť podľa dodaného zoznamu odkazov, rozdeliť ZŠ a SŠ, dať ISIC (VŠ) na prvé miesto a rozložiť skupiny vedľa seba, aby footer nebol taký dlhý.
 
 ## Odkazy, ktoré sa použijú
 
-**ISIC (VŠ + SŠ, spoločné profily)** — prvá skupina
-- Instagram: https://www.instagram.com/isic.slovakia/
-- TikTok: https://www.tiktok.com/@isic_slovakia
+**ISIC VŠ** — prvá skupina
+
+- Instagram: [https://www.instagram.com/isic.slovakia/](https://www.instagram.com/isic.slovakia/)
+- TikTok: [https://www.tiktok.com/@isic_slovakia](https://www.tiktok.com/@isic_slovakia)
 - (Facebook neexistuje — nebude uvedený)
 
 **ISIC / EURO<26 — ZŠ**
-- Facebook: https://www.facebook.com/ISICEURO26/
-- Instagram: https://www.instagram.com/isic.sk_zs/
+
+- Facebook: [https://www.facebook.com/ISICEURO26/](https://www.facebook.com/ISICEURO26/)
+- Instagram: [https://www.instagram.com/isic.sk_zs/](https://www.instagram.com/isic.sk_zs/)
 
 **ISIC / EURO<26 — SŠ**
-- Facebook: https://www.facebook.com/preukazisiceuro26
-- Instagram: https://www.instagram.com/isic_euro26/
+
+- Facebook: [https://www.facebook.com/preukazisiceuro26](https://www.facebook.com/preukazisiceuro26)
+- Instagram: [https://www.instagram.com/isic_euro26/](https://www.instagram.com/isic_euro26/)
 
 **EURO<26**
-- Facebook: https://www.facebook.com/Kartamladycheuro26/
-- Instagram: https://www.instagram.com/euro_26/
+
+- Facebook: [https://www.facebook.com/Kartamladycheuro26/](https://www.facebook.com/Kartamladycheuro26/)
+- Instagram: [https://www.instagram.com/euro_26/](https://www.instagram.com/euro_26/)
 
 **ITIC**
-- Facebook: https://www.facebook.com/ITICSlovakia/
+
+- Facebook: [https://www.facebook.com/ITICSlovakia/](https://www.facebook.com/ITICSlovakia/)
 
 **CKM SYTS**
-- LinkedIn: https://sk.linkedin.com/company/isic-slovakia
-- YouTube: https://www.youtube.com/@isiciticeuro26preukazy81
+
+- LinkedIn: [https://sk.linkedin.com/company/isic-slovakia](https://sk.linkedin.com/company/isic-slovakia)
+- YouTube: [https://www.youtube.com/@isiciticeuro26preukazy81](https://www.youtube.com/@isiciticeuro26preukazy81)
 
 Vynechané (v podklade neúplné/chýbajúce): Campsite bio odkaz, ITIC Instagram, EURO<26 TikTok. Doplníme, keď pošleš správne URL.
 
@@ -40,4 +47,5 @@ Vynechané (v podklade neúplné/chýbajúce): Campsite bio odkaz, ITIC Instagra
 5. **Štýl** — zachová sa existujúci brand vzhľad (tyrkysové linky, kruhové ikonové tlačidlá, žltý hover).
 
 ## Overenie
+
 Typecheck a Playwright kontrola: každá ikona v pätičke má platný `href` a footer je viditeľne kratší.
