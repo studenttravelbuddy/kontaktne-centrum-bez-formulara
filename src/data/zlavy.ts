@@ -109,7 +109,7 @@ export const ZLAVY: Zlava[] = [
   {
     top: true,
     partner: 'Starbucks',
-    nazov: '50% zľava na Frappuccinos',
+    nazov: 'Upsizing akéhokoľvek nápoja zdarma',
     kategoria: 'Jedlo a káva',
     preukazy: 'ISIC | ITIC | EYCA',
     ctaApple: 'https://apps.apple.com/app/isic/id886109982',
@@ -2502,17 +2502,6 @@ export const ZLAVY: Zlava[] = [
     ctaApple: 'https://apps.apple.com/app/isic/id886109982',
     ctaAndroid: 'https://play.google.com/store/apps/details?id=nl.jool.isic',
     partnerUrl: 'http://www.slovakpub.sk/',
-    potrebujeKontrolu: false,
-  },
-  {
-    top: false,
-    partner: 'Starbucks',
-    nazov: 'Upsizing akéhokoľvek nápoja zdarma',
-    kategoria: 'Jedlo a káva',
-    preukazy: 'ISIC | ITIC | EYCA',
-    ctaApple: 'https://apps.apple.com/app/isic/id886109982',
-    ctaAndroid: 'https://play.google.com/store/apps/details?id=nl.jool.isic',
-    partnerUrl: '',
     potrebujeKontrolu: false,
   },
   {
