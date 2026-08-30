@@ -356,9 +356,9 @@ Súvisiace: 05 (je moja škola zapojená) · 25 (preukaz vydaný školou) — ak
 Ako sa pýtajú
 „nefunguje mi preukaz v autobuse" · „dopravca mi ho neuznal" · „ako si predĺžim zľavu na dopravu" · „nejde mi poslať SMS na predĺženie" · „v Ubian mi končí ISIC zľava"
 Odpoveď
-Kľúčová vec, ktorú si klienti mýlia: známka a doprava sú dve samostatné veci. Zakúpená známka dopravnú zľavu nepredĺži.
+Kľúčová vec, ktorú si klienti mýlia: známka predlžuje platnosť licencie, na ktorú máte zľavu v doprave, ale nepredlžuje platnosť čipu. Samotnú dopravnú funkciu treba predĺžiť samostatne.
 Dobrý deň,
-radi Vám poradíme — známka slúži na predĺženie platnosti preukazu a na komerčné zľavy, doprava sa však predlžuje samostatne, a sú na to dva kroky:
+radi Vám poradíme — známka predlžuje platnosť licencie pre komerčné zľavy aj zľavu v doprave, platnosť čipu a aktiváciu zľavy v doprave však predlžujete samostatne, a sú na to dva kroky:
 1. zaplatíte poplatok 3,69 € cez Ubian alebo SMS,
 2. priložíte preukaz k UNIterminálu — až tým sa zľava aktivuje.
 Postup nájdete tu: https://www.ubian.sk/preukaz-studenta#renew
