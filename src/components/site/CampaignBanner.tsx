@@ -36,12 +36,6 @@ export function CampaignBanner() {
                     Získať kupóny
                     <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                   </a>
-                  <a
-                    href="#formular"
-                    className="inline-flex h-12 items-center gap-2 rounded-full bg-background px-7 font-bold text-foreground transition-colors hover:bg-brand-yellow"
-                  >
-                    Otázka ku kampani
-                  </a>
                 </div>
               </div>
 
