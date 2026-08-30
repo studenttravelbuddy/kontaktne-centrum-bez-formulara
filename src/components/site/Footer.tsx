@@ -105,12 +105,16 @@ export function Footer() {
                 { src: iticLogo.url, alt: "ITIC" },
                 { src: eycaLogo.url, alt: "European Youth Card / EURO<26" },
               ].map((logo) => (
-                <img
+                <div
                   key={logo.alt}
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-auto w-28 shrink-0"
-                />
+                  className="rounded-lg bg-white p-2 shadow-sm"
+                >
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="h-auto w-24 shrink-0 sm:w-28"
+                  />
+                </div>
               ))}
             </div>
           </div>
