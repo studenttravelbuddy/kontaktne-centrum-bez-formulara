@@ -44,7 +44,7 @@ export function CampaignBanner() {
                 <img
                   src={readyForMoreKv.url}
                   alt="Kampaň Ready for More: ľudia s preukazmi ISIC, ITIC a EURO<26"
-                  className="aspect-[4/3] w-full object-cover object-right"
+                  className="mx-auto w-full max-w-md rounded-3xl"
                   loading="lazy"
                 />
               </div>
