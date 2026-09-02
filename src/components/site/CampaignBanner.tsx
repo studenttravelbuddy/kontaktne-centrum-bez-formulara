@@ -44,7 +44,7 @@ export function CampaignBanner() {
                 <p className="mt-3 text-sm text-primary-foreground">
                   Kupóny platia s platným preukazom ISIC / ITIC / EURO&lt;26.
                 </p>
-                <p className="kicker mt-5 text-primary-foreground/80">isic.sk/readyformore</p>
+                <p className="kicker mt-5 text-primary-foreground/80">readyformore.isic.sk</p>
               </div>
             </div>
           </div>
