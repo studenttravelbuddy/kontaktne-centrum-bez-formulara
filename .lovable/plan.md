@@ -17,7 +17,7 @@ Reálne pokazené odkazy zobrazené na stránke:
 
 | Kde                                    | Terajší odkaz                            | Stav        | Oprava                                          |
 | -------------------------------------- | ---------------------------------------- | ----------- | ----------------------------------------------- |
-| Kampaň (`discounts.ts` CAMPAIGN_URL)   | `www.isic.sk/readyformore`               | 404         | ponechať tlačidlo, ale smerovať na `https://isic.sk/` kým nebude kampaňová stránka (spúšťa sa 1. 9.); alebo pošli správnu URL |
+| Kampaň (`discounts.ts` CAMPAIGN_URL)   | `www.isic.sk/readyformore`               | 404         | `https://readyformore.isic.sk/` (otestované, 200; verzia s `www.` má chybný certifikát) |
 | RegioJet (`zlavy.ts`)                  | `http://www.regojet.sk` (preklep)        | neexistuje  | `https://regiojet.sk/`                          |
 | Považské muzeum, 8 záznamov            | `pmza.sk/<podstránky>`                   | všetky 404  | `https://pmza.sk/`                              |
 | Kysucké muzeum                         | `http://kysuckemuzeum@vuczilina.sk`      | neplatná URL| `https://www.kysuckemuzeum.sk/sk/`              |
