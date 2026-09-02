@@ -29,10 +29,7 @@ function parseCards(preukazy: string): CardType[] {
   for (const value of raw) {
     if (value.includes("ISIC") && !cards.includes("ISIC")) cards.push("ISIC");
     else if (value.includes("ITIC") && !cards.includes("ITIC")) cards.push("ITIC");
-    else if (
-      (value.includes("EYCA") || value.includes("EURO")) &&
-      !cards.includes("EURO<26")
-    ) {
+    else if ((value.includes("EYCA") || value.includes("EURO")) && !cards.includes("EURO<26")) {
       cards.push("EURO<26");
     }
   }

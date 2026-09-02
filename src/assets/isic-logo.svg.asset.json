@@ -1,11 +1,11 @@
 {
+  "version": 1,
   "asset_id": "bcad6e78-96c2-4385-81f1-1e41dff94a3c",
-  "content_type": "image/svg+xml",
-  "created_at": "2026-08-30T12:18:32Z",
-  "original_filename": "isic-logo.svg",
-  "project_id": "6045dcc1-b3ee-4b72-9fd8-9e43d7d021f3",
-  "r2_key": "a/v1/6045dcc1-b3ee-4b72-9fd8-9e43d7d021f3/bcad6e78-96c2-4385-81f1-1e41dff94a3c/isic-logo.svg",
-  "size": 23128,
+  "project_id": "1ae06ee6-49cd-4fed-b1d0-4a93718e01b2",
   "url": "/__l5e/assets-v1/bcad6e78-96c2-4385-81f1-1e41dff94a3c/isic-logo.svg",
-  "version": 1
+  "r2_key": "a/v1/1ae06ee6-49cd-4fed-b1d0-4a93718e01b2/bcad6e78-96c2-4385-81f1-1e41dff94a3c/isic-logo.svg",
+  "original_filename": "isic-logo.svg",
+  "size": 23128,
+  "content_type": "image/svg+xml",
+  "created_at": "2026-08-30T12:18:32Z"
 }

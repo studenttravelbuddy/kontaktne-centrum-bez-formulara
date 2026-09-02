@@ -1,6 +1,7 @@
 # Presná výmena log za dodané SVG
 
 ## Čo upravím
+
 1. Znovu nahradím všetky tri logo assety presne dodanými súbormi, bez editácie ich obsahu, farieb, viewBoxu alebo formátu:
    - `isic-logo-3.svg` — ISIC, pôvodný rozmer 420.41333 × 167.34666
    - `itic-logo-3.svg` — ITIC, pôvodný rozmer 420.95999 × 167.34666
@@ -11,6 +12,7 @@
 5. Logá nebudem vkladať do bielych kartičiek ani ich vizuálne upravovať. Zostanú presne také, ako sú v dodaných SVG.
 
 ## Overenie
+
 - Porovnám použité assety s tromi uploadmi podľa veľkosti a kontrolného súčtu.
 - V prehliadači skontrolujem hlavičku, hlavnú sekciu aj pätičku na desktopovej aj mobilnej šírke.
 - Overím, že každý obrázok zobrazuje celý SVG, má správny pomer strán a nikde nie je orezaný alebo deformovaný.

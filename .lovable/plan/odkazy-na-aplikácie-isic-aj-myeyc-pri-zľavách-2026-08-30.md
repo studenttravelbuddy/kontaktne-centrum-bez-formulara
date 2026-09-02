@@ -11,6 +11,7 @@ Pri každej zľave sa odkazy rozdelia podľa preukazu:
 - Zľavy platné pre oba typy preukazov zobrazia oba riadky pod sebou.
 
 Overené odkazy na myEYC:
+
 - App Store: https://apps.apple.com/app/myeyc-european-youth-card/id6478585702
 - Google Play: https://play.google.com/store/apps/details?id=com.eyca.mobileapp
 

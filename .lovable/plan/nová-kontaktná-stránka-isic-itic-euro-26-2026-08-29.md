@@ -4,18 +4,18 @@ Jednostránková náhrada za `isic.sk/kontaktny-formular/` v dizajne CKM SYTS (�
 
 ## Farebné a typografické tokeny (presne podľa referencie)
 
-| Token | Hodnota | Použitie |
-|---|---|---|
-| `--primary` / `--brand-teal-deep` / `--brand-teal-dark` | `#006666` | nadpisy, hlavný text, primárne prvky |
-| `--brand-teal` (accent, ring) | `#40b8b8` | akcenty, focus ring |
-| `--brand-teal-light` / `--secondary` | `#e8f5f5` | pozadie sekcií a kariet |
-| `--muted` | `#f2f9f9` | jemné plochy |
-| `--border` | `#d5e9e9` | orámovanie |
-| `--brand-yellow` | `#ffc805` | hlavné CTA („Odoslať", „Poslať dopyt") |
-| `--brand-pink` / `--brand-pink-dark` | `#ec0578` / `#a80355` | badge, label |
-| `--brand-orange` / `--brand-orange-dark` | `#ff7314` / `#8c2f0d` | doplnkový akcent |
-| `--brand-gray` | `#6e6e6e` | sekundárny text |
-| pozadie stránky | `#ffffff` | karty biele alebo `#e8f5f5` |
+| Token                                                   | Hodnota               | Použitie                               |
+| ------------------------------------------------------- | --------------------- | -------------------------------------- |
+| `--primary` / `--brand-teal-deep` / `--brand-teal-dark` | `#006666`             | nadpisy, hlavný text, primárne prvky   |
+| `--brand-teal` (accent, ring)                           | `#40b8b8`             | akcenty, focus ring                    |
+| `--brand-teal-light` / `--secondary`                    | `#e8f5f5`             | pozadie sekcií a kariet                |
+| `--muted`                                               | `#f2f9f9`             | jemné plochy                           |
+| `--border`                                              | `#d5e9e9`             | orámovanie                             |
+| `--brand-yellow`                                        | `#ffc805`             | hlavné CTA („Odoslať", „Poslať dopyt") |
+| `--brand-pink` / `--brand-pink-dark`                    | `#ec0578` / `#a80355` | badge, label                           |
+| `--brand-orange` / `--brand-orange-dark`                | `#ff7314` / `#8c2f0d` | doplnkový akcent                       |
+| `--brand-gray`                                          | `#6e6e6e`             | sekundárny text                        |
+| pozadie stránky                                         | `#ffffff`             | karty biele alebo `#e8f5f5`            |
 
 - Nadpisy H1–H3: `Roboto Slab`, váha 900, farba `#006666`.
 - Text, formulár, navigácia: `Roboto`.
@@ -23,7 +23,6 @@ Jednostránková náhrada za `isic.sk/kontaktny-formular/` v dizajne CKM SYTS (�
 - Žiadny dark mode.
 
 Na referenčný preview link sa nedostanem (je za prihlásením), takže tokeny beriem 1:1 z hlavného promptu. Ak sa niektorá farba na tvojej stránke medzitým zmenila, pošli screenshot alebo hex a prepíšem tabuľku.
-
 
 ## Čo postavím
 
@@ -37,12 +36,14 @@ Nadpis, krátky úvod, 3 karty (ISIC / ITIC / EURO<26) s odkazmi na nárokomaty 
 Krokové karty KROK 01/02/03 (opýtaj sa chatu → nenašiel si odpoveď → vyplň formulár).
 
 **4. AI webchat (plávajúca bublina vpravo dole)**
+
 - Odpovedá výhradne zo znalostnej bázy z prílohy A (25 článkov + cenník), nikdy si nedomýšľa.
 - Rešpektuje sekciu „čo agent netvrdí" a opravy z „AKTUALIZÁCIA — overené naživo" (napr. Lidl, zmena priezviska pri EURO<26).
 - Nepýta sa na osobné údaje; pri čomkoľvek, čo si vyžaduje pohľad do účtu, ponúkne tlačidlo „Prejsť na formulár", ktoré scrolluje na formulár a predvyplní Oblasť dopytu, ak ju vie odhadnúť.
 - Úvodné chips s návrhmi otázok, ženský rod v odpovediach, streamované odpovede.
 
 **5. Kontaktný formulár (presne podľa prílohy B)**
+
 - Krok 1 Vaše údaje: meno (M), zastupujem organizáciu Áno/Nie (M) → názov organizácie (M), e-mail (M), telefón (M).
 - Krok 2 Oblasť dopytu (M) — všetky oblasti zoskupené: Preukaz a platba / Zľavy / Škola a vydávanie / Financie / GDPR a e-maily / Iné.
 - Krok 3 Typ preukazu (dynamicky len tam, kde ho oblasť vyžaduje): ISIC ZŠ, ISIC SŠ, ISIC VŠ, EURO<26, ITIC.

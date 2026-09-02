@@ -1,6 +1,7 @@
 # Sekcia „Ako si obnoviť platnosť preukazu“ priamo na stránku
 
 ## Cieľ
+
 Nahradiť externý odkaz v hornej lište (`isic.sk/ako-si-obnovit-platnost-preukazu`) vlastnou sekciou na kontaktnej stránke, ktorá vysvetlí obnovu/preďženie platnosti preukazov ISIC, ITIC a EURO<26.
 
 ## Čo sa vybuduje
@@ -23,10 +24,12 @@ Nahradiť externý odkaz v hornej lište (`isic.sk/ako-si-obnovit-platnost-preuk
    - Text bannera zostane: „Končí Vám platnosť preukazu? Pozrite si, ako si ju obnoviť".
 
 ## Zdroje obsahu
+
 - Článok #2 „Ako si predĺžim preukaz" zo `src/content/knowledge-base.md`.
 - Verejný článok `https://isic.sk/ako-si-obnovit-platnost-preukazu/` – pre doplnenie krokov a formulácií.
 
 ## Technické detaily
+
 - Použiť existujúce farby a komponenty (`Reveal`, `CardWizard` pattern, Tailwind tokeny).
 - Nepridávať nové závislosti.
 - Zachovať responzivitu a `prefers-reduced-motion`.

@@ -26,7 +26,6 @@ const ANSWERS: Answer[] = [
   { id: "mlady", label: "Mám do 27 rokov a neštudujem", Icon: Zap, result: "euro26" },
 ];
 
-
 interface ResultInfo {
   card: string;
   title: string;
@@ -118,7 +117,6 @@ const RESULTS: Record<ResultKey, ResultInfo> = {
   },
 };
 
-
 // Farby zodpovedajú preukazom v kartách nižšie: ISIC tyrkysová/žltá, ITIC oranžová, EURO<26 magenta
 const ANSWER_TONES: Record<string, string> = {
   "zs-ss": "bg-brand-teal text-brand-teal-deep",
@@ -134,8 +132,7 @@ const ANSWER_CHIPS: Record<string, string> = {
   mlady: "bg-background/95 text-brand-pink-dark",
 };
 
-
-export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
+export function CardWizard() {
   const [choice, setChoice] = useState<ResultKey | null>(null);
   const result = choice ? RESULTS[choice] : null;
 
@@ -166,7 +163,6 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
                   Zistiť viac
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </span>
-
               </button>
             ))}
           </div>
@@ -247,13 +243,14 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
               {result.cta}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
-            <button
-              type="button"
-              onClick={onGoToForm}
+            <a
+              href="https://isic.sk/kontaktny-formular/2"
+              target="_blank"
+              rel="noopener noreferrer"
               className="chip bg-brand-yellow px-5 py-2.5 text-foreground transition-colors hover:bg-brand-teal"
             >
               Mám otázku — napísať nám
-            </button>
+            </a>
             <button
               type="button"
               onClick={() => setChoice(null)}
@@ -268,4 +265,3 @@ export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
     </div>
   );
 }
-

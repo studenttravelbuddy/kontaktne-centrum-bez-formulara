@@ -103,7 +103,6 @@
     font-weight: 900;
     color: var(--brand-teal-deep);
   }
-
 }
 
 .ambassador-playful {
@@ -183,13 +182,18 @@
   border: 0;
 }
 
-
 @keyframes playful-route-flow {
-  from { stroke-dashoffset: 0; }
-  to { stroke-dashoffset: -36; }
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -36;
+  }
 }
 
-.playful-route path { animation: playful-route-flow 1.2s linear infinite; }
+.playful-route path {
+  animation: playful-route-flow 1.2s linear infinite;
+}
 
 html {
   scroll-behavior: smooth;
@@ -200,5 +204,7 @@ html {
   html {
     scroll-behavior: auto;
   }
-  .playful-route path { animation: none; }
+  .playful-route path {
+    animation: none;
+  }
 }

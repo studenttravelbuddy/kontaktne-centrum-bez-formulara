@@ -1,10 +1,5 @@
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
-import {
-  getCardTypeLabel,
-  getTopic,
-  resolveRecipients,
-  type CardType,
-} from "./inquiry-routing";
+import { getCardTypeLabel, getTopic, resolveRecipients, type CardType } from "./inquiry-routing";
 
 export interface InquiryInput {
   fullName: string;
