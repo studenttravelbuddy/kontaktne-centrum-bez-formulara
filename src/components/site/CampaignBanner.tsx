@@ -1,5 +1,6 @@
 import { ArrowUpRight, Ticket } from "lucide-react";
 
+import readyForMoreKv from "@/assets/readyformore-kv.png.asset.json";
 import { Reveal } from "@/components/site/Reveal";
 import { CAMPAIGN_URL } from "@/lib/discounts";
 
