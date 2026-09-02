@@ -8,14 +8,21 @@ const STEPS = [
     icon: Phone,
     title: "Zavolajte nám",
     text: "Najrýchlejšia cesta k odpovedi — kolegyne Vám poradia s preukazmi, platbami, dopravou aj zľavami na 02 2211 9963.",
+    href: "tel:+421222119963",
+    linkLabel: "02 2211 9963",
+    external: false,
   },
   {
     number: "02",
     icon: FileText,
     title: "Napíšte nám cez formulár",
     text: "Ak treba pozrieť do Vášho účtu, vyplňte formulár na isic.sk. Dopyt automaticky poputuje kolegyniam, ktoré danú oblasť riešia.",
+    href: "https://isic.sk/kontaktny-formular/2",
+    linkLabel: "Otvoriť formulár",
+    external: true,
   },
 ];
+
 
 export function Steps() {
   return (
@@ -32,7 +39,13 @@ export function Steps() {
             const Icon = step.icon;
             return (
               <Reveal key={step.number} delay={index * 120}>
-                <article className="relative h-full rounded-3xl bg-brand-teal-light p-7 transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0">
+                <a
+                  href={step.href}
+                  {...(step.external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : { target: "_top" })}
+                  className="relative flex h-full flex-col rounded-3xl bg-brand-teal-light p-7 transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0"
+                >
                   <span className="inline-flex size-12 items-center justify-center rounded-full bg-brand-yellow font-display text-lg font-black text-foreground">
                     {step.number}
                   </span>
@@ -41,8 +54,12 @@ export function Steps() {
                     {step.title}
                   </h3>
                   <p className="mt-2 text-sm text-muted-foreground">{step.text}</p>
-                </article>
+                  <span className="mt-4 inline-flex items-center gap-2 font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4">
+                    {step.linkLabel}
+                  </span>
+                </a>
               </Reveal>
+
             );
           })}
         </div>
