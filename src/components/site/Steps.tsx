@@ -8,14 +8,21 @@ const STEPS = [
     icon: Phone,
     title: "Zavolajte nám",
     text: "Najrýchlejšia cesta k odpovedi — kolegyne Vám poradia s preukazmi, platbami, dopravou aj zľavami na 02 2211 9963.",
+    href: "tel:+421222119963",
+    linkLabel: "02 2211 9963",
+    external: false,
   },
   {
     number: "02",
     icon: FileText,
     title: "Napíšte nám cez formulár",
     text: "Ak treba pozrieť do Vášho účtu, vyplňte formulár na isic.sk. Dopyt automaticky poputuje kolegyniam, ktoré danú oblasť riešia.",
+    href: "https://isic.sk/kontaktny-formular/2",
+    linkLabel: "Otvoriť formulár",
+    external: true,
   },
 ];
+
 
 export function Steps() {
   return (
