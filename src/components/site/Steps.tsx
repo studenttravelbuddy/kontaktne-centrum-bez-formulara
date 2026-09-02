@@ -1,25 +1,19 @@
-import { FileText, ListChecks, MessagesSquare } from "lucide-react";
+import { FileText, Phone } from "lucide-react";
 
 import { Reveal } from "@/components/site/Reveal";
 
 const STEPS = [
   {
     number: "01",
-    icon: MessagesSquare,
-    title: "Opýtajte sa chatu",
-    text: "Bublina vpravo dole odpovedá na bežné otázky o preukazoch, platbách, doprave a zľavách — 24/7 a bez čakania.",
+    icon: Phone,
+    title: "Zavolajte nám",
+    text: "Najrýchlejšia cesta k odpovedi — kolegyne Vám poradia s preukazmi, platbami, dopravou aj zľavami na 02 2211 9963.",
   },
   {
     number: "02",
-    icon: ListChecks,
-    title: "Prezrite si časté otázky",
-    text: "Najčastejšie riešené situácie sú spracované nižšie v prehľadnom zozname otázok a odpovedí.",
-  },
-  {
-    number: "03",
     icon: FileText,
     title: "Napíšte nám cez formulár",
-    text: "Ak treba pozrieť do Vášho účtu, vyplňte formulár. Dopyt automaticky poputuje kolegyniam, ktoré danú oblasť riešia.",
+    text: "Ak treba pozrieť do Vášho účtu, vyplňte formulár na isic.sk. Dopyt automaticky poputuje kolegyniam, ktoré danú oblasť riešia.",
   },
 ];
 
@@ -28,16 +22,12 @@ export function Steps() {
     <section className="relative overflow-hidden bg-background">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24">
         <Reveal>
-          <p className="kicker text-brand-pink">Tri jednoduché kroky</p>
+          <p className="kicker text-brand-pink">Dva jednoduché kroky</p>
           <h2 className="text-balance-tight mt-3 font-display text-4xl sm:text-5xl">
             Ako sa k odpovedi dostanete najrýchlejšie
           </h2>
         </Reveal>
-        <div className="relative mt-8 grid gap-5 md:grid-cols-3">
-          <div
-            aria-hidden="true"
-            className="absolute top-12 right-6 left-6 hidden border-t-4 border-dashed border-brand-teal/40 md:block"
-          />
+        <div className="relative mt-8 grid gap-5 md:grid-cols-2">
           {STEPS.map((step, index) => {
             const Icon = step.icon;
             return (

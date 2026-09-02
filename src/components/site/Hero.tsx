@@ -1,4 +1,4 @@
-import { ArrowRight, MessageCircle, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 import { CardWizard } from "@/components/site/CardWizard";
 import { Reveal } from "@/components/site/Reveal";
@@ -45,13 +45,7 @@ const CARDS = [
   },
 ];
 
-
-interface Props {
-  onOpenChat: () => void;
-  onGoToForm: () => void;
-}
-
-export function Hero({ onOpenChat, onGoToForm }: Props) {
+export function Hero() {
   return (
     <section id="preukazy" className="relative border-b border-brand-teal/25 bg-background">
       <div className="relative overflow-hidden bg-brand-teal">
@@ -81,21 +75,20 @@ export function Hero({ onOpenChat, onGoToForm }: Props) {
             zahraničí a pre ISIC aj zľavnené cestovné vo verejnej doprave.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-6">
-            <button
-              type="button"
-              onClick={onOpenChat}
+            <a
+              href="https://isic.sk/kontaktny-formular/2"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex h-14 items-center gap-2 rounded-full bg-brand-yellow px-8 font-bold text-foreground transition-transform hover:-translate-y-0.5 motion-reduce:hover:translate-y-0"
             >
-              <MessageCircle className="h-4 w-4" aria-hidden="true" />
-              Spýtať sa chatu
-            </button>
-            <button
-              type="button"
-              onClick={onGoToForm}
+              Napísať nám
+            </a>
+            <a
+              href="#formular"
               className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-8"
             >
-              Napísať nám
-            </button>
+              Kontaktovať kolegyne
+            </a>
             <a
               href="#zlavy"
               className="font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-8"
@@ -111,7 +104,7 @@ export function Hero({ onOpenChat, onGoToForm }: Props) {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6">
-        <CardWizard onGoToForm={onGoToForm} />
+        <CardWizard />
 
 
         <div className="mt-12 grid gap-5 md:grid-cols-3">

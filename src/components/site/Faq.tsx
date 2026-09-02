@@ -11,13 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Reveal } from "@/components/site/Reveal";
 import { FAQ_ITEMS } from "@/lib/faq";
 
-export function Faq({
-  onOpenChat,
-  onGoToForm,
-}: {
-  onOpenChat: () => void;
-  onGoToForm: () => void;
-}) {
+export function Faq() {
   const [query, setQuery] = useState("");
 
   const items = useMemo(() => {
@@ -60,21 +54,18 @@ export function Faq({
         {items.length === 0 ? (
           <p className="mt-8 rounded-2xl bg-background p-5 text-sm">
             Na „{query}" sme nič nenašli.{" "}
-            <button
-              type="button"
-              onClick={onOpenChat}
+            <a
+              href="https://isic.sk/kontaktny-formular/2"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-medium text-brand-teal-deep underline"
             >
-              Skúste chat
-            </button>{" "}
-            alebo{" "}
-            <button
-              type="button"
-              onClick={onGoToForm}
-              className="font-medium text-brand-teal-deep underline"
-            >
-              napíšte nám cez formulár
-            </button>
+              Napíšte nám cez formulár
+            </a>{" "}
+            alebo nám zavolajte na{" "}
+            <a href="tel:+421222119963" target="_top" className="font-medium text-brand-teal-deep underline">
+              02 2211 9963
+            </a>
             .
           </p>
         ) : (
@@ -91,13 +82,14 @@ export function Faq({
                  <AccordionContent className="text-sm text-muted-foreground">
                   {item.answer}
                   <div className="mt-3">
-                    <button
-                      type="button"
-                      onClick={onGoToForm}
+                    <a
+                      href="https://isic.sk/kontaktny-formular/2"
+                      target="_blank"
+                      rel="noopener noreferrer"
                        className="text-xs font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
                     >
                       Nepomohlo? Napíšte nám →
-                    </button>
+                    </a>
                   </div>
                 </AccordionContent>
               </AccordionItem>
@@ -107,22 +99,15 @@ export function Faq({
 
         <p className="mt-8 rounded-2xl bg-brand-yellow p-5 text-sm">
           Nenašli ste odpoveď?{" "}
-          <button
-            type="button"
-            onClick={onOpenChat}
+          <a
+            href="https://isic.sk/kontaktny-formular/2"
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-medium text-brand-teal-deep underline"
           >
-            Opýtajte sa nášho chatu vpravo dole
-          </button>
-          , vyplňte{" "}
-          <button
-            type="button"
-            onClick={onGoToForm}
-            className="font-medium text-brand-teal-deep underline"
-          >
-            formulár nižšie
-          </button>
-          , alebo nám rovno zavolajte na{" "}
+            Vyplňte kontaktný formulár
+          </a>{" "}
+          alebo nám rovno zavolajte na{" "}
           <a href="tel:+421222119963" target="_top" className="font-medium text-brand-teal-deep underline">
             02 2211 9963
           </a>
