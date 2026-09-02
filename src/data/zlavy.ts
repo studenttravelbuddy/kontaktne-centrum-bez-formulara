@@ -204,7 +204,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "http://www.regojet.sk",
+    partnerUrl: "https://regiojet.sk/",
     potrebujeKontrolu: false,
   },
   {
@@ -897,7 +897,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC | ITIC | EYCA",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "https://pmza.sk/budatinsky-hrad/",
+    partnerUrl: "https://pmza.sk/",
     potrebujeKontrolu: false,
   },
   {
@@ -908,7 +908,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC | ITIC | EYCA",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "https://pmza.sk/budatinsky-hrad/",
+    partnerUrl: "https://pmza.sk/",
     potrebujeKontrolu: false,
   },
   {
@@ -919,7 +919,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC | ITIC | EYCA",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "https://pmza.sk/budatinsky-hrad/",
+    partnerUrl: "https://pmza.sk/",
     potrebujeKontrolu: false,
   },
   {
@@ -1007,7 +1007,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC | ITIC | EYCA",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "http://www.novascena.sk",
+    partnerUrl: "https://www.novascena.sk/",
     potrebujeKontrolu: false,
   },
   {
@@ -1029,7 +1029,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC | ITIC | EYCA",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "https://pmza.sk/terchova/",
+    partnerUrl: "https://pmza.sk/",
     potrebujeKontrolu: false,
   },
   {
@@ -1129,7 +1129,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC | ITIC | EYCA",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "https://pmza.sk/hrad-strecno/",
+    partnerUrl: "https://pmza.sk/",
     potrebujeKontrolu: false,
   },
   {
@@ -1140,7 +1140,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "http://kysuckemuzeum@vuczilina.sk",
+    partnerUrl: "https://www.kysuckemuzeum.sk/sk/",
     potrebujeKontrolu: false,
   },
   {
@@ -1415,7 +1415,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC | ITIC | EYCA",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "http://www.múzeumsnp.sk",
+    partnerUrl: "https://muzeumsnp.sk/",
     potrebujeKontrolu: false,
   },
   {
@@ -1437,7 +1437,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC | ITIC | EYCA",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "https://pmza.sk/muzeum-dopravy/",
+    partnerUrl: "https://pmza.sk/",
     potrebujeKontrolu: false,
   },
   {
@@ -1448,7 +1448,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "http://www.kysuckemuzeum.sk",
+    partnerUrl: "https://www.kysuckemuzeum.sk/sk/",
     potrebujeKontrolu: false,
   },
   {
@@ -1525,7 +1525,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC | ITIC | EYCA",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "https://pmza.sk/cicmany/",
+    partnerUrl: "https://pmza.sk/",
     potrebujeKontrolu: false,
   },
   {
@@ -1723,7 +1723,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC | ITIC",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "https://pmza.sk/sobasny-palac/",
+    partnerUrl: "https://pmza.sk/",
     potrebujeKontrolu: false,
   },
   {
@@ -1955,7 +1955,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC | ITIC",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "https://www.baddyfitness.eu/sk",
+    partnerUrl: "https://baddyfitness.eu/",
     potrebujeKontrolu: false,
   },
   {
@@ -2583,7 +2583,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC | ITIC | EYCA",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "https://www.ugo.sk/sk/blog/karta-isic-sk",
+    partnerUrl: "https://www.ugo.sk/sk",
     potrebujeKontrolu: false,
   },
   {
@@ -2594,7 +2594,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC | ITIC | EYCA",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "https://www.ugo.sk/sk/blog/karta-isic-sk",
+    partnerUrl: "https://www.ugo.sk/sk",
     potrebujeKontrolu: false,
   },
   {
@@ -2605,7 +2605,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC | ITIC | EYCA",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
-    partnerUrl: "https://www.ugo.sk/sk/blog/karta-isic-sk",
+    partnerUrl: "https://www.ugo.sk/sk",
     potrebujeKontrolu: false,
   },
   {
