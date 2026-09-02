@@ -43,7 +43,11 @@ export function Header() {
         </a>
       </div>
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
-        <a href="#preukazy" className="flex items-center gap-3" aria-label="Preukazy ISIC, ITIC a EYC">
+        <a
+          href="#preukazy"
+          className="flex items-center gap-3"
+          aria-label="Preukazy ISIC, ITIC a EYC"
+        >
           {[
             { src: isicLogo.url, alt: "ISIC" },
             { src: iticLogo.url, alt: "ITIC" },
@@ -73,7 +77,8 @@ export function Header() {
             </a>
           ))}
           <a
-            href="tel:+421222119963" target="_top"
+            href="tel:+421222119963"
+            target="_top"
             className="inline-flex items-center gap-2 rounded-full bg-brand-teal px-5 py-2 font-bold text-foreground transition-colors hover:bg-brand-yellow"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
@@ -84,4 +89,3 @@ export function Header() {
     </header>
   );
 }
-

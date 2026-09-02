@@ -30,42 +30,97 @@ const SOCIAL_GROUPS: SocialGroup[] = [
   {
     brand: "ISIC VŠ",
     links: [
-      { name: "Instagram", label: "Instagram ISIC VŠ", href: "https://www.instagram.com/isic.slovakia", icon: Instagram },
-      { name: "TikTok", label: "TikTok ISIC VŠ", href: "https://www.tiktok.com/@isic_slovakia", icon: TikTokIcon },
+      {
+        name: "Instagram",
+        label: "Instagram ISIC VŠ",
+        href: "https://www.instagram.com/isic.slovakia",
+        icon: Instagram,
+      },
+      {
+        name: "TikTok",
+        label: "TikTok ISIC VŠ",
+        href: "https://www.tiktok.com/@isic_slovakia",
+        icon: TikTokIcon,
+      },
     ],
   },
   {
     brand: "ISIC SŠ",
     links: [
-      { name: "Facebook", label: "Facebook ISIC SŠ", href: "https://www.facebook.com/preukazisiceuro26", icon: Facebook },
-      { name: "Instagram", label: "Instagram ISIC SŠ", href: "https://www.instagram.com/isic_euro26", icon: Instagram },
+      {
+        name: "Facebook",
+        label: "Facebook ISIC SŠ",
+        href: "https://www.facebook.com/preukazisiceuro26",
+        icon: Facebook,
+      },
+      {
+        name: "Instagram",
+        label: "Instagram ISIC SŠ",
+        href: "https://www.instagram.com/isic_euro26",
+        icon: Instagram,
+      },
     ],
   },
   {
     brand: "ISIC ZŠ",
     links: [
-      { name: "Facebook", label: "Facebook ISIC ZŠ", href: "https://www.facebook.com/ISICEURO26", icon: Facebook },
-      { name: "Instagram", label: "Instagram ISIC ZŠ", href: "https://www.instagram.com/isic.sk_zs", icon: Instagram },
+      {
+        name: "Facebook",
+        label: "Facebook ISIC ZŠ",
+        href: "https://www.facebook.com/ISICEURO26",
+        icon: Facebook,
+      },
+      {
+        name: "Instagram",
+        label: "Instagram ISIC ZŠ",
+        href: "https://www.instagram.com/isic.sk_zs",
+        icon: Instagram,
+      },
     ],
   },
   {
     brand: "EURO<26",
     links: [
-      { name: "Facebook", label: "Facebook EURO<26", href: "https://www.facebook.com/Kartamladycheuro26", icon: Facebook },
-      { name: "Instagram", label: "Instagram EURO<26", href: "https://www.instagram.com/euro_26", icon: Instagram },
+      {
+        name: "Facebook",
+        label: "Facebook EURO<26",
+        href: "https://www.facebook.com/Kartamladycheuro26",
+        icon: Facebook,
+      },
+      {
+        name: "Instagram",
+        label: "Instagram EURO<26",
+        href: "https://www.instagram.com/euro_26",
+        icon: Instagram,
+      },
     ],
   },
   {
     brand: "ITIC",
     links: [
-      { name: "Facebook", label: "Facebook ITIC", href: "https://www.facebook.com/ITICSlovakia", icon: Facebook },
+      {
+        name: "Facebook",
+        label: "Facebook ITIC",
+        href: "https://www.facebook.com/ITICSlovakia",
+        icon: Facebook,
+      },
     ],
   },
   {
     brand: "CKM SYTS",
     links: [
-      { name: "LinkedIn", label: "LinkedIn CKM SYTS", href: "https://sk.linkedin.com/company/isic-slovakia", icon: Linkedin },
-      { name: "YouTube", label: "YouTube CKM SYTS", href: "https://www.youtube.com/@isiciticeuro26preukazy81", icon: Youtube },
+      {
+        name: "LinkedIn",
+        label: "LinkedIn CKM SYTS",
+        href: "https://sk.linkedin.com/company/isic-slovakia",
+        icon: Linkedin,
+      },
+      {
+        name: "YouTube",
+        label: "YouTube CKM SYTS",
+        href: "https://www.youtube.com/@isiciticeuro26preukazy81",
+        icon: Youtube,
+      },
     ],
   },
 ];
@@ -105,15 +160,8 @@ export function Footer() {
                 { src: iticLogo.url, alt: "ITIC" },
                 { src: eycaLogo.url, alt: "European Youth Card / EURO<26" },
               ].map((logo) => (
-                <div
-                  key={logo.alt}
-                  className="rounded-lg bg-white p-2 shadow-sm"
-                >
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="h-auto w-20 shrink-0 sm:w-24"
-                  />
+                <div key={logo.alt} className="rounded-lg bg-white p-2 shadow-sm">
+                  <img src={logo.src} alt={logo.alt} className="h-auto w-20 shrink-0 sm:w-24" />
                 </div>
               ))}
             </div>
@@ -124,7 +172,12 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-sm text-primary-foreground">
               {SITES.map((site) => (
                 <li key={site.href}>
-                  <a className="hover:underline" href={site.href} target="_blank" rel="noopener noreferrer">
+                  <a
+                    className="hover:underline"
+                    href={site.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {site.label}
                   </a>
                 </li>
@@ -167,7 +220,12 @@ export function Footer() {
 
         <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t-2 border-brand-teal pt-6 text-xs text-primary-foreground">
           <p>© {new Date().getFullYear()} CKM SYTS. Všetky práva vyhradené.</p>
-          <a className="hover:underline" href="https://isic.sk/cookies-policy/" target="_blank" rel="noopener noreferrer">
+          <a
+            className="hover:underline"
+            href="https://isic.sk/cookies-policy/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Cookies policy
           </a>
         </div>

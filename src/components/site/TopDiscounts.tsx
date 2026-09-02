@@ -43,14 +43,14 @@ const TONES: Record<Discount["tone"], string> = {
 const CATEGORY_ICONS: Record<string, typeof Bus> = {
   Doprava: Bus,
   "Tech a mobil": Smartphone,
-  "Nákupy": ShoppingBag,
+  Nákupy: ShoppingBag,
   Cestovanie: Plane,
   "Kultúra a zábava": Ticket,
-  "Šport": Dumbbell,
-  "Vzdelávanie": GraduationCap,
+  Šport: Dumbbell,
+  Vzdelávanie: GraduationCap,
   "Zdravie a krása": Heart,
   "Jedlo a káva": Coffee,
-  "Služby": Briefcase,
+  Služby: Briefcase,
 };
 
 const PAGE_SIZE = 24;
@@ -209,13 +209,13 @@ export function TopDiscounts() {
       />
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24">
         <Reveal>
-           <p className="kicker text-brand-pink">NAŠE ZĽAVY</p>
+          <p className="kicker text-brand-pink">NAŠE ZĽAVY</p>
           <h2 className="text-balance-tight mt-3 font-display text-4xl sm:text-5xl">
-             Zľava z každej kategórie
+            Zľava z každej kategórie
           </h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-             Výhody pre držiteľov ISIC, ITIC a EURO&lt;26 — jedna z každej kategórie. Zľavy
-             uplatníte cez naše aplikácie, kompletný katalóg si rozbalíte nižšie.
+            Výhody pre držiteľov ISIC, ITIC a EURO&lt;26 — jedna z každej kategórie. Zľavy uplatníte
+            cez naše aplikácie, kompletný katalóg si rozbalíte nižšie.
           </p>
         </Reveal>
 
@@ -234,9 +234,7 @@ export function TopDiscounts() {
             aria-expanded={showAll}
             className="inline-flex h-12 items-center gap-2 rounded-full bg-brand-teal px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
           >
-            {showAll
-              ? "Skryť katalóg zliav"
-              : `Zobraziť katalóg zliav (${DISCOUNTS.length})`}
+            {showAll ? "Skryť katalóg zliav" : `Zobraziť katalóg zliav (${DISCOUNTS.length})`}
             <ChevronDown
               className={`h-4 w-4 transition-transform ${showAll ? "rotate-180" : ""}`}
               aria-hidden="true"

@@ -1,15 +1,19 @@
 # Zapracovanie spresnenia čipových preukazov v RenewSection
 
 ## Cieľ
+
 V sekcii **Ako si obnoviť platnosť preukazu** (#obnovit-preukaz) jasne uviesť, ktoré preukazy môžu byť čipové a ktoré sa predlžujú známkou:
+
 - **ISIC** — pre vysoké školy (VŠ)
 - **ISIC / EURO<26** — pre základné a stredné školy (ZŠ a SŠ)
 - **ITIC** — môže byť čipový (vlastná známka, vlastná sezóna)
 
 ## Súbor
+
 `src/components/site/RenewSection.tsx`
 
 ## Zmeny
+
 1. **Nadpis prvej karty** (`title` v TABS[0]) — z aktuálneho „ISIC / EURO<26 alebo ITIC vydaný školou“ na explicitné rozdelenie, napr.:
    „ISIC (VŠ), ISIC / EURO<26 (ZŠ a SŠ) alebo ITIC vydaný školou“
 
@@ -23,5 +27,6 @@ V sekcii **Ako si obnoviť platnosť preukazu** (#obnovit-preukaz) jasne uviesť
 5. **Tlačidlo prvej známky** — skontrolovať, či popis „Známka ISIC/EURO<26“ zodpovedá novej formulácii; ponechať, prípadne doplniť do labelu „(ZŠ a SŠ)“ len ak to nebude príliš dlhé.
 
 ## Overenie
+
 - `bunx tsc --noEmit` bez chýb.
 - Playwright: sekcia #obnovit-preukaz zobrazuje nový nadpis a texty, prepínanie záložiek funguje, konzola bez chýb.

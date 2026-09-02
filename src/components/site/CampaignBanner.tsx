@@ -47,7 +47,6 @@ export function CampaignBanner() {
                 <p className="kicker mt-5 text-primary-foreground/80">isic.sk/readyformore</p>
               </div>
             </div>
-
           </div>
         </Reveal>
       </div>

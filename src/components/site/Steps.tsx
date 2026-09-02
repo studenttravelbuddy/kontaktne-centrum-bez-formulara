@@ -41,7 +41,6 @@ export function Steps() {
                     {step.title}
                   </h3>
                   <p className="mt-2 text-sm text-muted-foreground">{step.text}</p>
-
                 </article>
               </Reveal>
             );

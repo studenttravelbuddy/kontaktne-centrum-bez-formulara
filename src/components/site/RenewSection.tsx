@@ -36,7 +36,10 @@ const TABS: Tab[] = [
       "Na preukazy s vizuálom Ubian a bez vizuálu ISIC nie je možné pridať ISIC známku. Je však možné dokúpiť si ISIC klasik — digitálny alebo fyzický — z nášho e-shopu.",
     ],
     ctas: [
-      { label: "Známka ISIC/EURO<26", href: "https://objednaj-preukaz.sk/produkt/znamka-isiceuro/" },
+      {
+        label: "Známka ISIC/EURO<26",
+        href: "https://objednaj-preukaz.sk/produkt/znamka-isiceuro/",
+      },
       { label: "Známka ITIC", href: "https://objednaj-preukaz.sk/produkt/znamka-itic/" },
       { label: "Predĺženie čipu (Ubian)", href: "https://www.ubian.sk/preukaz-studenta" },
     ],
@@ -81,7 +84,9 @@ const TABS: Tab[] = [
       "Platnosť EURO<26 vyprší deň pred 27. narodeninami a ďalej sa nepredlžuje.",
       "Zľavy sú rovnaké ako komerčné ISIC zľavy, aplikácia sa volá my EYC.",
     ],
-    ctas: [{ label: "Kúpiť EURO<26", href: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/" }],
+    ctas: [
+      { label: "Kúpiť EURO<26", href: "https://objednaj-preukaz.sk/kategoria-produktu/som-mlady/" },
+    ],
   },
 ];
 

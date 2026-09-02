@@ -70,9 +70,9 @@ export function Hero() {
             </span>
           </h1>
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
-            Preukazy vydáva združenie CKM SYTS. Fungujú ako medzinárodne uznávaný doklad o
-            štatúte študenta, mladého človeka či učiteľa. Prinášajú zľavy na Slovensku aj v
-            zahraničí a pre ISIC aj zľavnené cestovné vo verejnej doprave.
+            Preukazy vydáva združenie CKM SYTS. Fungujú ako medzinárodne uznávaný doklad o štatúte
+            študenta, mladého človeka či učiteľa. Prinášajú zľavy na Slovensku aj v zahraničí a pre
+            ISIC aj zľavnené cestovné vo verejnej doprave.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-6">
             <a
@@ -106,11 +106,12 @@ export function Hero() {
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6">
         <CardWizard />
 
-
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {CARDS.map((card, index) => (
             <Reveal key={card.name} delay={index * 80}>
-              <article className={`group flex h-full flex-col rounded-lg border border-brand-teal/25 bg-card p-6 shadow-[8px_8px_0_var(--card-accent)] transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 ${card.accent}`}>
+              <article
+                className={`group flex h-full flex-col rounded-lg border border-brand-teal/25 bg-card p-6 shadow-[8px_8px_0_var(--card-accent)] transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 ${card.accent}`}
+              >
                 <img
                   src={card.logo}
                   alt={`Logo ${card.name}`}

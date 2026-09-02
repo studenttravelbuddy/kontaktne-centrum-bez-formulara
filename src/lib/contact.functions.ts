@@ -6,7 +6,11 @@ import { submitInquiry, type InquiryInput } from "./contact.server";
 const attachmentSchema = z.object({
   name: z.string().min(1).max(255),
   type: z.string().min(1).max(120),
-  size: z.number().int().positive().max(5 * 1024 * 1024),
+  size: z
+    .number()
+    .int()
+    .positive()
+    .max(5 * 1024 * 1024),
   data: z.string().min(1),
 });
 

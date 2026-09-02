@@ -147,13 +147,13 @@ export function ChatWidget({ open, onOpenChange, onGoToForm }: Props) {
           aria-label="Chat s asistentkou CKM SYTS"
           className="fixed inset-x-3 bottom-3 z-50 flex max-h-[80vh] flex-col overflow-hidden rounded-2xl bg-card sm:inset-x-auto sm:right-4 sm:bottom-4 sm:w-[400px]"
         >
-           <div className="flex items-center justify-between bg-brand-teal px-4 py-3 text-foreground">
-             <p className="font-display text-base font-black text-foreground">Asistentka CKM SYTS</p>
+          <div className="flex items-center justify-between bg-brand-teal px-4 py-3 text-foreground">
+            <p className="font-display text-base font-black text-foreground">Asistentka CKM SYTS</p>
             <button
               type="button"
               onClick={() => onOpenChange(false)}
               aria-label="Zavrieť chat"
-               className="rounded-md p-1 hover:bg-brand-yellow"
+              className="rounded-md p-1 hover:bg-brand-yellow"
             >
               <X className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -165,8 +165,8 @@ export function ChatWidget({ open, onOpenChange, onGoToForm }: Props) {
                 key={i}
                 className={
                   m.role === "user"
-                     ? "ml-auto max-w-[85%] rounded-2xl bg-brand-yellow px-4 py-2 text-sm"
-                     : "mr-auto max-w-[90%] rounded-2xl border-2 border-brand-teal bg-brand-teal-light px-4 py-2 text-sm whitespace-pre-wrap"
+                    ? "ml-auto max-w-[85%] rounded-2xl bg-brand-yellow px-4 py-2 text-sm"
+                    : "mr-auto max-w-[90%] rounded-2xl border-2 border-brand-teal bg-brand-teal-light px-4 py-2 text-sm whitespace-pre-wrap"
                 }
               >
                 {m.content || (loading ? "…" : "")}

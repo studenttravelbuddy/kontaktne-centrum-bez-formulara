@@ -26,7 +26,6 @@ const ANSWERS: Answer[] = [
   { id: "mlady", label: "Mám do 27 rokov a neštudujem", Icon: Zap, result: "euro26" },
 ];
 
-
 interface ResultInfo {
   card: string;
   title: string;
@@ -118,7 +117,6 @@ const RESULTS: Record<ResultKey, ResultInfo> = {
   },
 };
 
-
 // Farby zodpovedajú preukazom v kartách nižšie: ISIC tyrkysová/žltá, ITIC oranžová, EURO<26 magenta
 const ANSWER_TONES: Record<string, string> = {
   "zs-ss": "bg-brand-teal text-brand-teal-deep",
@@ -133,7 +131,6 @@ const ANSWER_CHIPS: Record<string, string> = {
   ucitel: "bg-background/95 text-brand-orange-dark",
   mlady: "bg-background/95 text-brand-pink-dark",
 };
-
 
 export function CardWizard() {
   const [choice, setChoice] = useState<ResultKey | null>(null);
@@ -166,7 +163,6 @@ export function CardWizard() {
                   Zistiť viac
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </span>
-
               </button>
             ))}
           </div>
@@ -269,4 +265,3 @@ export function CardWizard() {
     </div>
   );
 }
-

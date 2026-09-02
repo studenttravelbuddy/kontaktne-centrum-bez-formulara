@@ -18,8 +18,7 @@ export function Faq() {
     const q = query.trim().toLowerCase();
     if (!q) return FAQ_ITEMS;
     return FAQ_ITEMS.filter(
-      (item) =>
-        item.question.toLowerCase().includes(q) || item.answer.toLowerCase().includes(q),
+      (item) => item.question.toLowerCase().includes(q) || item.answer.toLowerCase().includes(q),
     );
   }, [query]);
 
@@ -34,7 +33,6 @@ export function Faq() {
           <p className="mt-4 text-muted-foreground">
             Najčastejšie otázky držiteľov preukazov ISIC, ITIC a EURO&lt;26.
           </p>
-
         </Reveal>
 
         <div className="relative mt-6">
@@ -63,7 +61,11 @@ export function Faq() {
               Napíšte nám cez formulár
             </a>{" "}
             alebo nám zavolajte na{" "}
-            <a href="tel:+421222119963" target="_top" className="font-medium text-brand-teal-deep underline">
+            <a
+              href="tel:+421222119963"
+              target="_top"
+              className="font-medium text-brand-teal-deep underline"
+            >
               02 2211 9963
             </a>
             .
@@ -74,19 +76,19 @@ export function Faq() {
               <AccordionItem
                 key={item.question}
                 value={`faq-${index}`}
-                 className="mb-4 rounded-2xl bg-card px-5"
+                className="mb-4 rounded-2xl bg-card px-5"
               >
-                 <AccordionTrigger className="text-left font-display text-lg font-bold hover:no-underline">
+                <AccordionTrigger className="text-left font-display text-lg font-bold hover:no-underline">
                   {item.question}
                 </AccordionTrigger>
-                 <AccordionContent className="text-sm text-muted-foreground">
+                <AccordionContent className="text-sm text-muted-foreground">
                   {item.answer}
                   <div className="mt-3">
                     <a
                       href="https://isic.sk/kontaktny-formular/2"
                       target="_blank"
                       rel="noopener noreferrer"
-                       className="text-xs font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+                      className="text-xs font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
                     >
                       Nepomohlo? Napíšte nám →
                     </a>
@@ -108,7 +110,11 @@ export function Faq() {
             Vyplňte kontaktný formulár
           </a>{" "}
           alebo nám rovno zavolajte na{" "}
-          <a href="tel:+421222119963" target="_top" className="font-medium text-brand-teal-deep underline">
+          <a
+            href="tel:+421222119963"
+            target="_top"
+            className="font-medium text-brand-teal-deep underline"
+          >
             02 2211 9963
           </a>
           .
