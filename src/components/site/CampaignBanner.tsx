@@ -1,5 +1,6 @@
 import { ArrowUpRight, Ticket } from "lucide-react";
 
+import readyForMoreKv from "@/assets/readyformore-kv.png.asset.json";
 import { Reveal } from "@/components/site/Reveal";
 import { CAMPAIGN_URL } from "@/lib/discounts";
 
@@ -39,12 +40,13 @@ export function CampaignBanner() {
                 </div>
               </div>
 
-              <div className="relative rounded-3xl bg-brand-pink p-8 text-center">
-                <p className="font-display text-5xl text-primary-foreground">MORE</p>
-                <p className="mt-3 text-sm text-primary-foreground">
-                  Kupóny platia s platným preukazom ISIC / ITIC / EURO&lt;26.
-                </p>
-                <p className="kicker mt-5 text-primary-foreground/80">readyformore.isic.sk</p>
+              <div className="relative overflow-hidden rounded-3xl">
+                <img
+                  src={readyForMoreKv.url}
+                  alt="Kampaň Ready for More: ľudia s preukazmi ISIC, ITIC a EURO<26"
+                  className="aspect-[4/3] w-full object-cover object-right"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
