@@ -135,7 +135,7 @@ const ANSWER_CHIPS: Record<string, string> = {
 };
 
 
-export function CardWizard({ onGoToForm }: { onGoToForm: () => void }) {
+export function CardWizard() {
   const [choice, setChoice] = useState<ResultKey | null>(null);
   const result = choice ? RESULTS[choice] : null;
 
