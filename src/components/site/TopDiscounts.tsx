@@ -230,12 +230,12 @@ export function TopDiscounts() {
           ))}
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <button
             type="button"
             onClick={() => setShowAll((v) => !v)}
             aria-expanded={showAll}
-            className="inline-flex h-12 items-center gap-2 rounded-full bg-brand-teal px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
+            className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-brand-teal px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow sm:w-auto"
           >
             {showAll ? "Skryť katalóg zliav" : `Zobraziť katalóg zliav (${DISCOUNTS.length})`}
             <ChevronDown
@@ -243,43 +243,25 @@ export function TopDiscounts() {
               aria-hidden="true"
             />
           </button>
-          <a
-            href={TRANSPORT_INFO_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex h-12 items-center gap-2 rounded-full bg-background px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
-          >
-            Zľavy v doprave s ISIC
-            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-          </a>
-          <a
-            href={ALL_DISCOUNTS_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex h-12 items-center gap-2 rounded-full bg-background px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
-          >
-            Katalóg na isic.sk
-            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-          </a>
-          <a
-            href={ITIC_DISCOUNTS_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex h-12 items-center gap-2 rounded-full bg-background px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
-          >
-            Katalóg na itic.sk
-            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-          </a>
-          <a
-            href={EURO26_DISCOUNTS_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex h-12 items-center gap-2 rounded-full bg-background px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
-          >
-            Katalóg na euro26.sk
-            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-          </a>
+          {[
+            { href: TRANSPORT_INFO_URL, label: "Zľavy v doprave s ISIC" },
+            { href: ALL_DISCOUNTS_URL, label: "Katalóg na isic.sk" },
+            { href: ITIC_DISCOUNTS_URL, label: "Katalóg na itic.sk" },
+            { href: EURO26_DISCOUNTS_URL, label: "Katalóg na euro26.sk" },
+          ].map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-background px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow sm:w-auto"
+            >
+              {link.label}
+              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+          ))}
         </div>
+
 
         {showAll ? (
           <div className="mt-10">
