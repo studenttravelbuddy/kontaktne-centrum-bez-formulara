@@ -187,28 +187,30 @@ export function CardWizard() {
   const result = choice ? RESULTS[choice] : null;
 
   return (
-    <div className="rounded-[2rem] bg-brand-teal-light p-6 md:p-10">
+    <div className="rounded-3xl bg-brand-teal-light p-5 sm:rounded-[2rem] sm:p-6 md:p-10">
       <p className="kicker inline-flex items-center gap-2 text-brand-pink">
         <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
         Vyber si svoju výhodu
       </p>
-      <h2 className="mt-3 font-display text-4xl sm:text-5xl">Kto si?</h2>
+      <h2 className="mt-3 font-display text-3xl sm:text-5xl">Kto si?</h2>
+
 
       {!result ? (
         <>
           <p className="mt-3 text-sm text-brand-gray">Vyberte, čo o Vás platí:</p>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-5 grid gap-3 sm:mt-6 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
             {ANSWERS.map((answer) => (
               <button
                 key={answer.id}
                 type="button"
                 onClick={() => setChoice(answer.result)}
-                className={`group flex h-full flex-col items-start gap-4 rounded-3xl p-6 text-left transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 ${ANSWER_TONES[answer.id]}`}
+                className={`group flex h-full flex-col items-start gap-3 rounded-3xl p-5 text-left transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 sm:gap-4 sm:p-6 ${ANSWER_TONES[answer.id]}`}
               >
-                <answer.Icon className="h-7 w-7" aria-hidden="true" />
-                <span className="font-display text-2xl leading-tight font-black uppercase">
+                <answer.Icon className="h-6 w-6 sm:h-7 sm:w-7" aria-hidden="true" />
+                <span className="font-display text-xl leading-tight font-black uppercase sm:text-2xl">
                   {answer.label}
                 </span>
+
                 <span className={`chip mt-auto ${ANSWER_CHIPS[answer.id]}`}>
                   Zistiť viac
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -218,11 +220,12 @@ export function CardWizard() {
           </div>
         </>
       ) : (
-        <div className="mt-6 rounded-3xl bg-card p-6">
+        <div className="mt-5 rounded-3xl bg-card p-5 sm:mt-6 sm:p-6">
           <p className="kicker text-brand-pink">{result.card}</p>
-          <p className="mt-2 font-display text-3xl uppercase text-brand-teal-deep">
+          <p className="mt-2 font-display text-2xl uppercase text-brand-teal-deep sm:text-3xl">
             {result.title}
           </p>
+
           <p className="mt-3 text-sm text-brand-gray">{result.text}</p>
 
           {(result.school || result.shop) && (
