@@ -140,7 +140,7 @@ Akceptácia ISIC v doprave — oficiálne stanovisko | https://isic.sk/akceptaci
 Podmienky členstva | https://isic.sk/elc-eshop-online/
 Zľavy na Slovensku | https://isic.sk/zlavy-na-slovensku/
 Zľavy v zahraničí | https://www.isic.org/discounts/
-Návrh novej zľavy od klienta | https://isic.sk/kontaktny-formular/[DVCS1]
+Návrh novej zľavy od klienta | https://isic.sk/kontaktny-formular-2/[DVCS1]
 Aplikácia pre EURO26 | https://euro26.sk/euro-aplikacia/
 --TABLE END--
 Odkazy, ktoré agent neposiela (overené 25. 8. 2026):
@@ -1091,7 +1091,7 @@ ráda Vám poradím — nové číslo preukazu jednoducho nahráte v aplikácii 
     Nárok na ITIC pri úväzku presne 18 h | min. 18 h — nárok je, plus vetvy pre dôchodcov (1 h) a materskú | itic.sk/narok-na-preukaz-itic
     Sezóna prolongačnej známky | 09/2027, ITIC 12/2027 | eshop objednaj-preukaz.sk
     Je preukaz v mobile rovnocenný s plastom | áno | isic.sk
-    Podnet na nového zľavového partnera | formulár https://isic.sk/kontaktny-formular/ | isic.sk
+    Podnet na nového zľavového partnera | formulár https://isic.sk/kontaktny-formular-2/ | isic.sk
     (otázka 3) Transcard vs. Ubian | jedna služba — transcard.sk aj preukazstudenta.sk presmerúvajú na ubian.sk | ubian.sk
     (otázka 9) Cena čipového preukazu cez školu | 12,30 € vizuál Ubian / 25,30 € vizuál ISIC/EURO<26; 13 € je licencia ISIC | ubian.sk/preukaz-studenta
     (otázka 10) Cena predĺženia dopravy | 3,69 € | ubian.sk/preukaz-studenta
@@ -1138,7 +1138,7 @@ ráda Vám poradím — nové číslo preukazu jednoducho nahráte v aplikácii 
     • Platili ste kartou alebo prevodom? Rozhoduje pri nespárovanej platbe aj pri vrátení peňazí.
     Ako s týmto súborom pracovať
     Keď CKM niečo z časti A rozhodne, odpoveď sa zapíše do príslušného článku alebo do článku „Cenník a údaje" a položka sa odtiaľto presunie do tabuľky „Vyriešené". Časť A má vyprázdňovať, nie rásť. Časť B je trvalá.
-    [DVCS1]akekolvek podnety dostaneme a bot nevie odpovedat idealne vsetko smerovat na vyplnenie tohto formulara https://isic.sk/kontaktny-formular/ ziadny iny uz pouzivat nebudeme
+    [DVCS1]akekolvek podnety dostaneme a bot nevie odpovedat idealne vsetko smerovat na vyplnenie tohto formulara https://isic.sk/kontaktny-formular-2/ ziadny iny uz pouzivat nebudeme
     [KM2]Niekdy má študent zakúpenú červenú známku NO ISIC a vtedy nie je možné využívať aplikáciu ale aj napriek tomu sa tam snaží prihlásiť.
     [KM3]EURO<26 sa nikdy nepredlžuje známkou, vždy sa zakupuje nová virtuálna karta alebo plastová karta domov na adresu.
     [KM4]Do objednávky zadáte Vaše priezvisko, číslo súčasnej karty, systém Vás overí a vystaví kartu s nadväzujúcou platnosťou.
@@ -1293,12 +1293,12 @@ preukázateľne neaktuálna.
 6. **Staré formuláre na návrh zľavy sú stále živé a nesmerujú na nový kontaktný formulár:**
    `isic.sk/navrh-na-zlavu/` aj `euro26.sk/navrh-na-zlavu/` fungujú ako samostatné formuláre.
    Časť menu odkazov na weboch ("Chcem novú zľavu") na ne ešte odkazuje namiesto na
-   `isic.sk/kontaktny-formular/` — konkrétne stránka `isic.sk/zlavy-na-slovensku/`,
+   `isic.sk/kontaktny-formular-2/` — konkrétne stránka `isic.sk/zlavy-na-slovensku/`,
    `isic.sk/isic-demo-aplikacia/` a celý web euro26.sk stále vedú na starý formulár; stránky
    `isic.sk/narok-na-preukaz-isic/`, `isic.sk/akceptacia-isic-vo-verejnej-doprave/`,
    `isic.sk/ako-si-obnovit-platnost-preukazu/`, `isic.sk/yoxopausal/` a celý itic.sk už správne
    vedú na nový formulár. Toto je vec na opravu na weboch, nie na novej Lovable stránke — chat aj
-   nová stránka majú byť dôsledné a vždy smerovať len na `isic.sk/kontaktny-formular/`.
+   nová stránka majú byť dôsledné a vždy smerovať len na `isic.sk/kontaktny-formular-2/`.
 
 ## 🔒 Bezpečnostné zistenie — netýka sa obsahu chatu, treba nahlásiť IT/CKM
 
