@@ -275,7 +275,7 @@ export function TopDiscounts() {
                   resetLimit();
                 }}
                 aria-pressed={active === "all"}
-                className={`rounded-full px-4 py-2 text-sm font-bold transition-colors ${
+                className={`inline-flex min-h-11 items-center rounded-full px-4 py-2 text-sm font-bold transition-colors ${
                   active === "all"
                     ? "bg-brand-yellow text-foreground"
                     : "bg-card text-foreground hover:bg-brand-teal"
@@ -294,7 +294,7 @@ export function TopDiscounts() {
                       resetLimit();
                     }}
                     aria-pressed={isActive}
-                    className={`rounded-full px-4 py-2 text-sm font-bold transition-colors ${
+                    className={`inline-flex min-h-11 items-center rounded-full px-4 py-2 text-sm font-bold transition-colors ${
                       isActive
                         ? "bg-brand-yellow text-foreground"
                         : "bg-card text-foreground hover:bg-brand-teal"
@@ -332,7 +332,7 @@ export function TopDiscounts() {
                     resetLimit();
                   }}
                   aria-pressed={card === "all"}
-                  className={`rounded-full px-4 py-2 text-sm font-bold transition-colors ${
+                  className={`inline-flex min-h-11 items-center rounded-full px-4 py-2 text-sm font-bold transition-colors ${
                     card === "all"
                       ? "bg-brand-pink text-primary-foreground"
                       : "bg-card text-foreground hover:bg-brand-teal"
@@ -349,7 +349,7 @@ export function TopDiscounts() {
                       resetLimit();
                     }}
                     aria-pressed={card === type}
-                    className={`rounded-full px-4 py-2 text-sm font-bold transition-colors ${
+                    className={`inline-flex min-h-11 items-center rounded-full px-4 py-2 text-sm font-bold transition-colors ${
                       card === type
                         ? "bg-brand-pink text-primary-foreground"
                         : "bg-card text-foreground hover:bg-brand-teal"
