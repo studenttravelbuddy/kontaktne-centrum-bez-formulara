@@ -106,13 +106,13 @@ export function Hero() {
       <div className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16">
         <CardWizard />
 
-
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <div className="mt-8 grid gap-5 md:grid-cols-3 sm:mt-12">
           {CARDS.map((card, index) => (
             <Reveal key={card.name} delay={index * 80}>
               <article
-                className={`group flex h-full flex-col rounded-lg border border-brand-teal/25 bg-card p-6 shadow-[8px_8px_0_var(--card-accent)] transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 ${card.accent}`}
+                className={`group flex h-full flex-col rounded-lg border border-brand-teal/25 bg-card p-5 shadow-[8px_8px_0_var(--card-accent)] transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 sm:p-6 ${card.accent}`}
               >
+
                 <img
                   src={card.logo}
                   alt={`Logo ${card.name}`}
@@ -126,7 +126,7 @@ export function Hero() {
                     href={card.shopHref}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-brand-yellow px-4 py-2 text-sm font-bold text-foreground transition-colors hover:bg-brand-teal"
+                    className="inline-flex min-h-11 items-center gap-2 rounded-full bg-brand-yellow px-4 py-2 text-sm font-bold text-foreground transition-colors hover:bg-brand-teal"
                   >
                     {card.shopLabel}
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -135,12 +135,13 @@ export function Hero() {
                     href={card.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+                    className="inline-flex min-h-11 items-center gap-2 text-sm font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
                   >
                     {card.linkLabel}
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </a>
                 </div>
+
               </article>
             </Reveal>
           ))}
