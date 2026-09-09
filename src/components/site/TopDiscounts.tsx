@@ -264,8 +264,9 @@ export function TopDiscounts() {
 
 
         {showAll ? (
-          <div className="mt-10">
-            <h3 className="font-display text-3xl uppercase">Katalóg zliav</h3>
+          <div className="mt-8 sm:mt-10">
+            <h3 className="font-display text-2xl uppercase sm:text-3xl">Katalóg zliav</h3>
+
 
             <div className="mt-5 flex flex-wrap gap-2">
               <button
@@ -306,8 +307,9 @@ export function TopDiscounts() {
               })}
             </div>
 
-            <div className="mt-4 flex flex-wrap items-center gap-3">
-              <label className="relative flex-1 min-w-[240px]">
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+              <label className="relative w-full sm:min-w-[240px] sm:flex-1">
+
                 <Search
                   className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
                   aria-hidden="true"
