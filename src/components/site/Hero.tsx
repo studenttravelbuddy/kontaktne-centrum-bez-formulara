@@ -104,16 +104,8 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16">
-
-
-          <p className="mt-14 text-sm font-black tracking-[0.18em] uppercase text-foreground">
-            ISIC · ITIC · EURO&lt;26
-          </p>
-        </div>
-      </div>
-
-      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6">
         <CardWizard />
+
 
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {CARDS.map((card, index) => (
