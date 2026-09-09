@@ -73,7 +73,7 @@ function AppRow({
         href={appleUrl}
         target="_blank"
         rel="noreferrer"
-        className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-bold transition-colors ${base}`}
+        className={`inline-flex min-h-11 items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-bold transition-colors ${base}`}
       >
         <Apple className="h-3.5 w-3.5" aria-hidden="true" />
         App Store
@@ -82,11 +82,12 @@ function AppRow({
         href={androidUrl}
         target="_blank"
         rel="noreferrer"
-        className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-bold transition-colors ${base}`}
+        className={`inline-flex min-h-11 items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-bold transition-colors ${base}`}
       >
         <Smartphone className="h-3.5 w-3.5" aria-hidden="true" />
         Google Play
       </a>
+
     </div>
   );
 }
@@ -139,15 +140,16 @@ function TopCard({ discount }: { discount: Discount }) {
   const Icon = CATEGORY_ICONS[discount.category] ?? Ticket;
   return (
     <div
-      className={`flex h-full flex-col rounded-3xl p-7 transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 ${TONES[discount.tone]}`}
+      className={`flex h-full flex-col rounded-3xl p-5 transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 sm:p-7 ${TONES[discount.tone]}`}
     >
       <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide opacity-90">
         <Icon className="h-4 w-4" aria-hidden="true" />
         {discount.category}
       </div>
-      <h3 className="mt-3 font-display text-2xl leading-tight font-black uppercase [color:inherit]">
+      <h3 className="mt-3 font-display text-xl leading-tight font-black uppercase [color:inherit] sm:text-2xl">
         {discount.partner}
       </h3>
+
       <p className="mt-2 flex-1 text-sm opacity-90">{discount.name}</p>
       <CardBadges cards={discount.cards} className="mt-4" />
       <p className="mt-4 text-xs opacity-80">Zľavu uplatníte v aplikácii:</p>
