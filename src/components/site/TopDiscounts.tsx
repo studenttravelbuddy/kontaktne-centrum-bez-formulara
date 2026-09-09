@@ -380,7 +380,7 @@ export function TopDiscounts() {
               <button
                 type="button"
                 onClick={() => setLimit((v) => v + PAGE_SIZE)}
-                className="mt-6 inline-flex h-12 items-center gap-2 rounded-full bg-background px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow"
+                className="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-background px-7 text-sm font-bold text-foreground transition-colors hover:bg-brand-yellow sm:w-auto"
               >
                 Zobraziť ďalšie zľavy
                 <ChevronDown className="h-4 w-4" aria-hidden="true" />
