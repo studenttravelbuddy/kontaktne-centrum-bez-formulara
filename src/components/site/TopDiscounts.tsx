@@ -161,7 +161,7 @@ function TopCard({ discount }: { discount: Discount }) {
 
 function CatalogCard({ discount }: { discount: Discount }) {
   return (
-    <div className="flex h-full flex-col rounded-3xl bg-card p-6">
+    <div className="flex h-full flex-col rounded-3xl bg-card p-5 sm:p-6">
       <p className="text-xs font-bold uppercase tracking-wide text-brand-pink">
         {discount.category}
       </p>
@@ -174,7 +174,7 @@ function CatalogCard({ discount }: { discount: Discount }) {
           href={discount.partnerUrl}
           target="_blank"
           rel="noreferrer"
-          className="mt-3 inline-flex items-center gap-1 text-xs text-muted-foreground underline underline-offset-2"
+          className="mt-3 inline-flex min-h-11 items-center gap-1 text-xs text-muted-foreground underline underline-offset-2"
         >
           web partnera
           <ArrowUpRight className="h-3 w-3" aria-hidden="true" />
