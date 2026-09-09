@@ -76,7 +76,7 @@ export function Hero() {
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-6">
             <a
-              href="https://isic.sk/kontaktny-formular/2"
+              href="https://isic.sk/kontaktny-formular-2/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-14 items-center gap-2 rounded-full bg-brand-yellow px-8 font-bold text-foreground transition-transform hover:-translate-y-0.5 motion-reduce:hover:translate-y-0"

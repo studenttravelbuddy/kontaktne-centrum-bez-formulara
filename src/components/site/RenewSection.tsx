@@ -29,7 +29,7 @@ const TABS: Tab[] = [
         Zvoľte správnu známku podľa typu preukazu — ISIC (VŠ), ISIC/EURO&lt;26 (ZŠ a SŠ) alebo ITIC
         — v našom e-shope{" "}
         <a
-          href="https://objednaj-preukaz.sk/kategoria-produktu/znamky/"
+          href="https://objednaj-preukaz.sk/"
           target="_top"
           className="font-bold text-brand-teal-deep underline decoration-brand-pink decoration-2 underline-offset-4"
         >

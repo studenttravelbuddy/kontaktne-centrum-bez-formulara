@@ -296,7 +296,7 @@ export function CardWizard() {
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
             <a
-              href="https://isic.sk/kontaktny-formular/2"
+              href="https://isic.sk/kontaktny-formular-2/"
               target="_blank"
               rel="noopener noreferrer"
               className="chip bg-brand-yellow px-5 py-2.5 text-foreground transition-colors hover:bg-brand-teal"
