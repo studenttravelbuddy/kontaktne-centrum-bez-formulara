@@ -245,7 +245,9 @@ export function CardWizard() {
               {result.shop && (
                 <div className="rounded-2xl bg-brand-teal-light p-4">
                   <p className="kicker text-brand-teal-deep">
-                    {result.card === "EURO<26" ? "Plynulý prechod" : "Klasik z e-shopu"}
+                    {result.card === "EURO<26"
+                      ? "Plynulý prechod"
+                      : "Klasik z e-shopu (bez čipu)"}
                   </p>
                   <p className="mt-2 text-sm text-brand-gray">{result.shop.text}</p>
                   <a
