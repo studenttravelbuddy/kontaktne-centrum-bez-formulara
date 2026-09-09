@@ -112,12 +112,13 @@ export function RenewSection() {
 
   return (
     <section id="obnovit-preukaz" className="relative overflow-hidden bg-brand-teal-light">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 md:py-24">
         <Reveal>
           <p className="kicker text-brand-pink">Končí Vám platnosť?</p>
-          <h2 className="text-balance-tight mt-3 font-display text-4xl sm:text-5xl">
+          <h2 className="text-balance-tight mt-3 font-display text-3xl sm:text-5xl">
             Ako si obnoviť platnosť preukazu
           </h2>
+
           <p className="mt-4 max-w-2xl text-muted-foreground">
             Postup sa líši podľa toho, či máte čipový preukaz zo školy, alebo preukaz z nášho
             e-shopu. Vyberte si svoj prípad.
@@ -134,11 +135,12 @@ export function RenewSection() {
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setActiveId(tab.id)}
-                className={`rounded-full px-5 py-2.5 text-sm font-bold transition-colors ${
+                className={`inline-flex min-h-11 w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-bold transition-colors sm:w-auto ${
                   isActive
                     ? "bg-brand-yellow text-foreground"
                     : "bg-background text-foreground hover:bg-brand-teal"
                 }`}
+
               >
                 {tab.label}
               </button>
@@ -146,15 +148,16 @@ export function RenewSection() {
           })}
         </div>
 
-        <article className="mt-6 rounded-3xl bg-background p-7 shadow-sm md:p-10">
+        <article className="mt-6 rounded-3xl bg-background p-5 shadow-sm sm:p-7 md:p-10">
           <p className="kicker text-brand-pink">{active.kicker}</p>
-          <h3 className="mt-2 flex items-center gap-3 font-display text-2xl uppercase sm:text-3xl">
-            <ActiveIcon className="h-6 w-6 shrink-0 text-brand-pink" aria-hidden="true" />
+          <h3 className="mt-2 flex items-start gap-3 font-display text-xl uppercase sm:items-center sm:text-3xl">
+            <ActiveIcon className="mt-1 h-5 w-5 shrink-0 text-brand-pink sm:mt-0 sm:h-6 sm:w-6" aria-hidden="true" />
             {active.title}
           </h3>
+
           <p className="mt-3 max-w-3xl text-muted-foreground">{active.intro}</p>
 
-          <div className="mt-7 grid gap-7 md:grid-cols-2">
+          <div className="mt-6 grid gap-6 sm:mt-7 sm:gap-7 md:grid-cols-2">
             <ol className="space-y-4">
               {active.steps.map((step, index) => (
                 <li key={`${active.id}-step-${index}`} className="flex gap-3">
@@ -176,13 +179,13 @@ export function RenewSection() {
             </ul>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             {active.ctas.map((cta, index) => (
               <a
                 key={cta.href}
                 href={cta.href}
                 target="_top"
-                className={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-bold transition-colors ${
+                className={`inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold transition-colors sm:w-auto ${
                   index === 0
                     ? "bg-brand-yellow text-foreground hover:bg-brand-teal"
                     : "bg-brand-teal-light text-foreground hover:bg-brand-teal"
@@ -193,6 +196,7 @@ export function RenewSection() {
               </a>
             ))}
           </div>
+
 
           <p className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
             <Gift className="h-4 w-4 shrink-0 text-brand-pink" aria-hidden="true" />

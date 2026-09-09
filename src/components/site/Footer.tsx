@@ -136,17 +136,18 @@ const SITES = [
 export function Footer() {
   return (
     <footer className="bg-brand-teal-deep text-white">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-        <div className="grid gap-10 md:grid-cols-3">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
+        <div className="grid gap-8 md:grid-cols-3 sm:gap-10">
           <div>
             <h2 className="font-display">
-              <span className="block text-3xl text-brand-yellow sm:text-4xl">
+              <span className="block text-2xl text-brand-yellow sm:text-4xl">
                 CKM SYTS - student, youth and teacher services
               </span>
-              <span className="mt-1 block text-lg text-primary-foreground">
+              <span className="mt-1 block text-base text-primary-foreground sm:text-lg">
                 CKM združenie pre mládež, študentov a učiteľov
               </span>
             </h2>
+
             <address className="mt-3 text-sm not-italic text-primary-foreground">
               Vysoká 32, 811 06 Bratislava
               <br />
@@ -154,26 +155,28 @@ export function Footer() {
                 02 2211 9963
               </a>
             </address>
-            <div className="mt-5 flex flex-nowrap items-center gap-3">
+            <div className="mt-5 flex flex-nowrap items-center gap-2 sm:gap-3">
               {[
                 { src: isicLogo.url, alt: "ISIC" },
                 { src: iticLogo.url, alt: "ITIC" },
                 { src: eycaLogo.url, alt: "European Youth Card / EURO<26" },
               ].map((logo) => (
-                <div key={logo.alt} className="rounded-lg bg-white p-2 shadow-sm">
-                  <img src={logo.src} alt={logo.alt} className="h-auto w-20 shrink-0 sm:w-24" />
+                <div key={logo.alt} className="rounded-lg bg-white p-1.5 shadow-sm sm:p-2">
+                  <img src={logo.src} alt={logo.alt} className="h-auto w-16 shrink-0 sm:w-24" />
                 </div>
               ))}
             </div>
+
           </div>
 
           <div>
             <h2 className="font-display text-xl text-primary-foreground">Naše weby</h2>
-            <ul className="mt-3 space-y-2 text-sm text-primary-foreground">
+            <ul className="mt-3 space-y-1 text-sm text-primary-foreground">
               {SITES.map((site) => (
                 <li key={site.href}>
                   <a
-                    className="hover:underline"
+                    className="inline-flex min-h-11 items-center hover:underline"
+
                     href={site.href}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -186,9 +189,10 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 text-left">
+        <div className="mt-10 text-left sm:mt-12">
           <h2 className="font-display text-xl text-primary-foreground">Sociálne siete</h2>
-          <div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-6 lg:grid-cols-6">
+
             {SOCIAL_GROUPS.map((group) => (
               <div key={group.brand}>
                 <p className="text-xs font-bold uppercase tracking-wide text-brand-yellow">
@@ -204,7 +208,7 @@ export function Footer() {
                           target="_top"
                           aria-label={link.label}
                           title={link.label}
-                          className="inline-flex items-center gap-2 rounded-full border-2 border-primary-foreground px-3 py-1 text-sm whitespace-nowrap text-primary-foreground transition-colors hover:bg-brand-yellow hover:text-foreground"
+                          className="inline-flex min-h-11 items-center gap-2 rounded-full border-2 border-primary-foreground px-3 py-1 text-sm whitespace-nowrap text-primary-foreground transition-colors hover:bg-brand-yellow hover:text-foreground"
                         >
                           <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
                           <span>{link.name}</span>

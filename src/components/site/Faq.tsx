@@ -24,12 +24,13 @@ export function Faq() {
 
   return (
     <section id="faq" className="bg-brand-teal-light">
-      <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 md:py-24">
+      <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16 md:py-24">
         <Reveal>
           <p className="kicker text-brand-pink">Časté otázky</p>
-          <h2 className="text-balance-tight mt-3 font-display text-4xl sm:text-5xl">
+          <h2 className="text-balance-tight mt-3 font-display text-3xl sm:text-5xl">
             Pýtate sa? Odpovedáme.
           </h2>
+
           <p className="mt-4 text-muted-foreground">
             Najčastejšie otázky držiteľov preukazov ISIC, ITIC a EURO&lt;26.
           </p>
@@ -76,11 +77,12 @@ export function Faq() {
               <AccordionItem
                 key={item.question}
                 value={`faq-${index}`}
-                className="mb-4 rounded-2xl bg-card px-5"
+                className="mb-3 rounded-2xl bg-card px-4 sm:mb-4 sm:px-5"
               >
-                <AccordionTrigger className="text-left font-display text-lg font-bold hover:no-underline">
+                <AccordionTrigger className="min-h-12 text-left font-display text-base font-bold hover:no-underline sm:text-lg">
                   {item.question}
                 </AccordionTrigger>
+
                 <AccordionContent className="text-sm text-muted-foreground">
                   {item.answer}
                   <div className="mt-3">
@@ -88,11 +90,12 @@ export function Faq() {
                       href="https://isic.sk/kontaktny-formular-2/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
+                      className="inline-flex min-h-11 items-center text-xs font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
                     >
                       Nepomohlo? Napíšte nám →
                     </a>
                   </div>
+
                 </AccordionContent>
               </AccordionItem>
             ))}

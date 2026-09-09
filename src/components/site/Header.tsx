@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Phone } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 
 import eycaLogo from "@/assets/eyca-logo.svg.asset.json";
 import isicLogo from "@/assets/isic-logo.svg.asset.json";
@@ -13,8 +13,15 @@ const NAV = [
   { href: "#formular", label: "Napíšte nám" },
 ];
 
+const LOGOS = [
+  { src: isicLogo.url, alt: "ISIC" },
+  { src: iticLogo.url, alt: "ITIC" },
+  { src: eycaLogo.url, alt: "European Youth Card / EURO<26" },
+];
+
 export function Header() {
   const [active, setActive] = useState("#preukazy");
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const sections = NAV.map((item) => document.getElementById(item.href.slice(1))).filter(
@@ -36,32 +43,54 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 bg-background/95 backdrop-blur">
-      <div className="bg-brand-teal-deep px-4 py-2 text-center text-sm font-bold text-primary-foreground">
-        Končí Vám platnosť preukazu? Pozrite si, ako si ju obnoviť —{" "}
+      <div className="bg-brand-teal-deep px-4 py-1.5 text-center text-xs font-bold text-primary-foreground sm:py-2 sm:text-sm">
+        <span className="hidden sm:inline">Končí Vám platnosť preukazu? Pozrite si, </span>
         <a className="underline underline-offset-2" href="#obnovit-preukaz">
           ako si obnoviť platnosť preukazu
         </a>
       </div>
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-2 sm:flex-wrap sm:gap-3 sm:px-6 sm:py-3">
         <a
           href="#preukazy"
-          className="flex items-center gap-3"
+          className="flex min-w-0 items-center gap-1.5 sm:gap-3"
           aria-label="Preukazy ISIC, ITIC a EYC"
         >
-          {[
-            { src: isicLogo.url, alt: "ISIC" },
-            { src: iticLogo.url, alt: "ITIC" },
-            { src: eycaLogo.url, alt: "European Youth Card / EURO<26" },
-          ].map((logo) => (
+          {LOGOS.map((logo) => (
             <img
               key={logo.alt}
               src={logo.src}
               alt={logo.alt}
-              className="h-auto w-24 shrink-0 sm:w-28"
+              className="h-auto w-16 shrink-0 sm:w-28"
             />
           ))}
         </a>
-        <nav className="flex flex-wrap items-center gap-1 text-sm md:gap-2">
+
+        <div className="flex shrink-0 items-center gap-2 sm:hidden">
+          <a
+            href="tel:+421222119963"
+            target="_top"
+            aria-label="Zavolať na 02 2211 9963"
+            className="inline-flex size-11 items-center justify-center rounded-full bg-brand-teal text-foreground"
+          >
+            <Phone className="h-5 w-5" aria-hidden="true" />
+          </a>
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            aria-label={open ? "Zavrieť menu" : "Otvoriť menu"}
+            className="inline-flex size-11 items-center justify-center rounded-full bg-brand-yellow text-foreground"
+          >
+            {open ? (
+              <X className="h-5 w-5" aria-hidden="true" />
+            ) : (
+              <Menu className="h-5 w-5" aria-hidden="true" />
+            )}
+          </button>
+        </div>
+
+        <nav className="hidden flex-wrap items-center gap-1 text-sm sm:flex md:gap-2">
           {NAV.map((item) => (
             <a
               key={item.href}
@@ -86,6 +115,39 @@ export function Header() {
           </a>
         </nav>
       </div>
+
+      {open ? (
+        <nav
+          id="mobile-nav"
+          className="border-t border-brand-teal/25 bg-background px-4 pb-3 sm:hidden"
+        >
+          <ul className="flex flex-col py-1">
+            {NAV.map((item) => (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  aria-current={active === item.href ? "true" : undefined}
+                  className={`flex min-h-11 items-center rounded-xl px-3 text-sm font-bold ${
+                    active === item.href ? "bg-brand-yellow text-foreground" : "text-foreground"
+                  }`}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a
+                href="#obnovit-preukaz"
+                onClick={() => setOpen(false)}
+                className="flex min-h-11 items-center rounded-xl px-3 text-sm font-bold text-foreground"
+              >
+                Obnoviť platnosť
+              </a>
+            </li>
+          </ul>
+        </nav>
+      ) : null}
     </header>
   );
 }
