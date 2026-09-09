@@ -27,12 +27,13 @@ const STEPS = [
 export function Steps() {
   return (
     <section className="relative overflow-hidden bg-background">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 md:py-24">
         <Reveal>
           <p className="kicker text-brand-pink">Dva jednoduché kroky</p>
-          <h2 className="text-balance-tight mt-3 font-display text-4xl sm:text-5xl">
+          <h2 className="text-balance-tight mt-3 font-display text-3xl sm:text-5xl">
             Ako sa k odpovedi dostanete najrýchlejšie
           </h2>
+
         </Reveal>
         <div className="relative mt-8 grid gap-5 md:grid-cols-2">
           {STEPS.map((step, index) => {
@@ -44,19 +45,20 @@ export function Steps() {
                   {...(step.external
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : { target: "_top" })}
-                  className="relative flex h-full flex-col rounded-3xl bg-brand-teal-light p-7 transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0"
+                  className="relative flex h-full flex-col rounded-3xl bg-brand-teal-light p-5 transition-transform duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 sm:p-7"
                 >
                   <span className="inline-flex size-12 items-center justify-center rounded-full bg-brand-yellow font-display text-lg font-black text-foreground">
                     {step.number}
                   </span>
-                  <h3 className="mt-5 flex items-center gap-2 font-display text-xl uppercase">
-                    <Icon className="h-5 w-5 text-brand-pink" aria-hidden="true" />
+                  <h3 className="mt-4 flex items-center gap-2 font-display text-lg uppercase sm:mt-5 sm:text-xl">
+                    <Icon className="h-5 w-5 shrink-0 text-brand-pink" aria-hidden="true" />
                     {step.title}
                   </h3>
                   <p className="mt-2 text-sm text-muted-foreground">{step.text}</p>
-                  <span className="mt-4 inline-flex items-center gap-2 font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4">
+                  <span className="mt-4 inline-flex min-h-11 items-center gap-2 font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4">
                     {step.linkLabel}
                   </span>
+
                 </a>
               </Reveal>
 

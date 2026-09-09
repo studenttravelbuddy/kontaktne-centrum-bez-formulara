@@ -3,9 +3,10 @@ import { Mail, Phone } from "lucide-react";
 export function ContactForm() {
   return (
     <section id="formular" className="bg-brand-teal-light">
-      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 md:py-24">
+      <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16 md:py-24">
         <p className="text-sm font-black tracking-wider text-brand-pink uppercase">Napíšte nám</p>
-        <h2 className="text-balance-tight mt-3 text-4xl sm:text-5xl">Kontaktný formulár</h2>
+        <h2 className="text-balance-tight mt-3 text-3xl sm:text-5xl">Kontaktný formulár</h2>
+
         <p className="mt-4 text-muted-foreground">
           Vyberte, ako nás chcete kontaktovať. Kolegyne Vám poradia s preukazmi ISIC, ITIC a
           EURO&lt;26, zľavami aj dopravou.
