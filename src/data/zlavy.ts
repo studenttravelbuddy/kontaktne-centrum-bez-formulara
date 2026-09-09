@@ -565,6 +565,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC | ITIC | EYCA",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
+    partnerUrl: "",
     potrebujeKontrolu: true,
   },
   {
@@ -575,6 +576,7 @@ export const ZLAVY: Zlava[] = [
     preukazy: "ISIC | ITIC | EYCA",
     ctaApple: "https://apps.apple.com/app/isic/id886109982",
     ctaAndroid: "https://play.google.com/store/apps/details?id=nl.jool.isic&hl=en",
+    partnerUrl: "",
     potrebujeKontrolu: true,
   },
   {
