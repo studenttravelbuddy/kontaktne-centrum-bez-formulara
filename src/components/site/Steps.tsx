@@ -17,7 +17,7 @@ const STEPS = [
     icon: FileText,
     title: "Napíšte nám cez formulár",
     text: "Ak treba pozrieť do Vášho účtu, vyplňte formulár na isic.sk. Dopyt automaticky poputuje kolegyniam, ktoré danú oblasť riešia.",
-    href: "https://isic.sk/kontaktny-formular/2",
+    href: "https://isic.sk/kontaktny-formular-2/",
     linkLabel: "Otvoriť formulár",
     external: true,
   },

@@ -53,7 +53,7 @@ export function Faq() {
           <p className="mt-8 rounded-2xl bg-background p-5 text-sm">
             Na „{query}" sme nič nenašli.{" "}
             <a
-              href="https://isic.sk/kontaktny-formular/2"
+              href="https://isic.sk/kontaktny-formular-2/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-brand-teal-deep underline"
@@ -85,7 +85,7 @@ export function Faq() {
                   {item.answer}
                   <div className="mt-3">
                     <a
-                      href="https://isic.sk/kontaktny-formular/2"
+                      href="https://isic.sk/kontaktny-formular-2/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-xs font-bold text-foreground underline decoration-brand-pink decoration-2 underline-offset-4"
@@ -102,7 +102,7 @@ export function Faq() {
         <p className="mt-8 rounded-2xl bg-brand-yellow p-5 text-sm">
           Nenašli ste odpoveď?{" "}
           <a
-            href="https://isic.sk/kontaktny-formular/2"
+            href="https://isic.sk/kontaktny-formular-2/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium text-brand-teal-deep underline"

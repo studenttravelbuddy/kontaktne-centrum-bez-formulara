@@ -32,7 +32,7 @@ export function ContactForm() {
           </a>
 
           <a
-            href="https://isic.sk/kontaktny-formular/2"
+            href="https://isic.sk/kontaktny-formular-2/"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex flex-col items-start gap-4 rounded-2xl bg-card p-6 shadow-sm ring-1 ring-brand-teal/20 transition-transform duration-200 hover:-translate-y-0.5 motion-reduce:hover:translate-y-0"
