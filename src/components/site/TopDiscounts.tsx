@@ -207,14 +207,15 @@ export function TopDiscounts() {
     <section id="zlavy" className="relative overflow-hidden bg-brand-teal-light">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-16 top-14 h-36 w-36 rounded-full border-[22px] border-brand-pink"
+        className="pointer-events-none absolute -right-16 top-14 h-24 w-24 rounded-full border-[14px] border-brand-pink opacity-60 sm:h-36 sm:w-36 sm:border-[22px] sm:opacity-100"
       />
-      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24">
+      <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 md:py-24">
         <Reveal>
           <p className="kicker text-brand-pink">NAŠE ZĽAVY</p>
-          <h2 className="text-balance-tight mt-3 font-display text-4xl sm:text-5xl">
+          <h2 className="text-balance-tight mt-3 font-display text-3xl sm:text-5xl">
             Zľava z každej kategórie
           </h2>
+
           <p className="mt-4 max-w-2xl text-muted-foreground">
             Výhody pre držiteľov ISIC, ITIC a EURO&lt;26 — jedna z každej kategórie. Zľavy uplatníte
             cez naše aplikácie, kompletný katalóg si rozbalíte nižšie.
