@@ -157,7 +157,7 @@ export function RenewSection() {
           <div className="mt-7 grid gap-7 md:grid-cols-2">
             <ol className="space-y-4">
               {active.steps.map((step, index) => (
-                <li key={step} className="flex gap-3">
+                <li key={`${active.id}-step-${index}`} className="flex gap-3">
                   <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-brand-teal font-display text-sm font-black text-foreground">
                     {index + 1}
                   </span>
@@ -167,8 +167,8 @@ export function RenewSection() {
             </ol>
 
             <ul className="space-y-3 rounded-2xl bg-brand-teal-light p-5">
-              {active.notes.map((note) => (
-                <li key={note} className="flex gap-3 text-sm">
+              {active.notes.map((note, index) => (
+                <li key={`${active.id}-note-${index}`} className="flex gap-3 text-sm">
                   <Info className="mt-0.5 h-4 w-4 shrink-0 text-brand-pink" aria-hidden="true" />
                   <span>{note}</span>
                 </li>
