@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { BadgeCheck, CreditCard, Gift, Info, Smartphone, Ticket } from "lucide-react";
 
 import { Reveal } from "@/components/site/Reveal";
@@ -10,8 +10,8 @@ type Tab = {
   icon: typeof Ticket;
   title: string;
   intro: string;
-  steps: string[];
-  notes: string[];
+  steps: ReactNode[];
+  notes: ReactNode[];
   ctas: { label: string; href: string }[];
 };
 
@@ -25,14 +25,27 @@ const TABS: Tab[] = [
     intro:
       "Čipový preukaz zo školy sa nekupuje nanovo — jeho platnosť predĺžite prolongačnou známkou. ISIC na VŠ, ISIC/EURO<26 na ZŠ a SŠ aj ITIC môžu byť čipové; ITIC má vlastnú známku s vlastnou sezónou.",
     steps: [
-      "Zvoľte správnu známku podľa typu preukazu: ISIC (VŠ), ISIC/EURO<26 (ZŠ a SŠ) alebo ITIC.",
-      "V objednávke zadajte priezvisko a číslo preukazu (ITIC v tvare T421… aj s koncovým písmenom).",
+      <>
+        Zvoľte správnu známku podľa typu preukazu — ISIC (VŠ), ISIC/EURO&lt;26 (ZŠ a SŠ) alebo ITIC
+        — v našom e-shope{" "}
+        <a
+          href="https://objednaj-preukaz.sk/kategoria-produktu/znamky/"
+          target="_top"
+          className="font-bold text-brand-teal-deep underline decoration-brand-pink decoration-2 underline-offset-4"
+        >
+          objednaj-preukaz.sk
+        </a>
+        .
+      </>,
+      "V objednávke zadajte priezvisko a číslo preukazu — napr. ISIC S421…, ITIC T421… (aj s koncovým písmenom).",
       "Zaplaťte — elektronické predĺženie platí ihneď po zakúpení, ešte pred doručením fyzickej známky.",
-      "Fyzická známka sa distribuuje koncom augusta a začiatkom septembra, prípadne si ju vyzdvihnete na svojej škole.",
+      "Na stredných školách sa platí buď v hotovosti v škole, alebo online — riaďte sa inštrukciami svojej školy. Fyzickú známku dostanete zo školy, prípadne poštou.",
     ],
     notes: [
+      "Prolongáciu ISIC si cez e-shop kupujú iba študenti Univerzity Konštantína Filozofa v Nitre, Katolíckej univerzity v Ružomberku a Univerzity J. Selyeho v Komárne. Študenti ostatných vysokých škôl postupujú podľa pokynov svojej školy.",
+      "Vysokoškolská ISIC známka predlžuje platnosť ISIC licencie. Po spracovaní prolongácie môže byť pre funkcie dopravy potrebná aktivácia čipu na univerzitnom termináli. Postup sa líši podľa vysokej školy — riaďte sa jej aktuálnymi pokynmi.",
+      "Pri preukazoch ZŠ a SŠ známka predlžuje platnosť licencie, na ktorú máte zľavu v doprave. Známka nepredlžuje platnosť čipu — tú si predĺžite samostatne na ubian.sk.",
       "V čase kupónovej kampane dostanete pri predĺžení aj kupónovú knižku — fyzicky alebo elektronicky.",
-      "Známka predlžuje platnosť licencie, na ktorú máte zľavu v doprave. Známka nepredlžuje platnosť čipu — tú si predĺžite samostatne na ubian.sk.",
       "Na preukazy s vizuálom Ubian a bez vizuálu ISIC nie je možné pridať ISIC známku. Je však možné dokúpiť si ISIC klasik — digitálny alebo fyzický — z nášho e-shopu.",
     ],
     ctas: [
@@ -144,7 +157,7 @@ export function RenewSection() {
           <div className="mt-7 grid gap-7 md:grid-cols-2">
             <ol className="space-y-4">
               {active.steps.map((step, index) => (
-                <li key={step} className="flex gap-3">
+                <li key={`${active.id}-step-${index}`} className="flex gap-3">
                   <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-brand-teal font-display text-sm font-black text-foreground">
                     {index + 1}
                   </span>
@@ -154,8 +167,8 @@ export function RenewSection() {
             </ol>
 
             <ul className="space-y-3 rounded-2xl bg-brand-teal-light p-5">
-              {active.notes.map((note) => (
-                <li key={note} className="flex gap-3 text-sm">
+              {active.notes.map((note, index) => (
+                <li key={`${active.id}-note-${index}`} className="flex gap-3 text-sm">
                   <Info className="mt-0.5 h-4 w-4 shrink-0 text-brand-pink" aria-hidden="true" />
                   <span>{note}</span>
                 </li>

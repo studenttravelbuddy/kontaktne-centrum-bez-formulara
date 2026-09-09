@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import {
   ArrowRight,
   Backpack,
@@ -32,10 +32,10 @@ interface ResultInfo {
   text: string;
   href: string;
   cta: string;
-  school?: { label: string; href: string; text: string };
-  shop?: { label: string; href: string; text: string };
+  school?: { label: string; href: string; text: ReactNode };
+  shop?: { label: string; href: string; text: ReactNode };
   options?: { kicker: string; label: string; href: string; text: string }[];
-  note?: string;
+  note?: ReactNode;
 }
 
 const RESULTS: Record<ResultKey, ResultInfo> = {
@@ -48,14 +48,29 @@ const RESULTS: Record<ResultKey, ResultInfo> = {
     school: {
       label: "Zoznam zapojených ZŠ a SŠ",
       href: "https://isic.sk/zoznam-skol-ss-a-zs/",
-      text: "Školský (co-brand) preukaz s čipom vydáva Vaša škola — slúži aj na dopravu, stravu a vstupy. Overte si, či je škola zapojená.",
+      text: (
+        <>
+          Školský (co-brand) preukaz <strong>s čipom</strong> vydáva Vaša škola — slúži aj na
+          dopravu, stravu a vstupy. Overte si, či je škola zapojená.
+        </>
+      ),
     },
     shop: {
-      label: "Objednať ISIC klasik",
+      label: "Objednať ISIC klasik (bez čipu)",
       href: "https://objednaj-preukaz.sk/produkt/isic-klasik/",
-      text: "Ak škola v zozname nie je alebo chcete preukaz hneď, objednajte si ISIC klasik z nášho e-shopu.",
+      text: (
+        <>
+          Ak škola v zozname nie je alebo chcete preukaz hneď, objednajte si ISIC klasik{" "}
+          <strong>bez čipu</strong> z nášho e-shopu.
+        </>
+      ),
     },
-    note: "Klasik nemá čip (nedá sa naň nabiť kredit ani električenka), no je plnohodnotným dokladom o statuse študenta a platia s ním všetky komerčné zľavy.",
+    note: (
+      <>
+        Klasik je <strong>bez čipu</strong> (nedá sa naň nabiť kredit ani električenka), no je
+        plnohodnotným dokladom o statuse študenta a platia s ním všetky komerčné zľavy.
+      </>
+    ),
   },
   "isic-vs": {
     card: "ISIC",
@@ -66,14 +81,29 @@ const RESULTS: Record<ResultKey, ResultInfo> = {
     school: {
       label: "Zoznam VŠ vydávajúcich ISIC",
       href: "https://isic.sk/zoznam-vs-kde-vybavis-isic/",
-      text: "Školský (co-brand) preukaz s čipom vydáva Vaša vysoká škola a platnosť si predlžujete známkou.",
+      text: (
+        <>
+          Školský (co-brand) preukaz <strong>s čipom</strong> vydáva Vaša vysoká škola a platnosť si
+          predlžujete známkou.
+        </>
+      ),
     },
     shop: {
-      label: "Objednať ISIC klasik",
+      label: "Objednať ISIC klasik (bez čipu)",
       href: "https://objednaj-preukaz.sk/produkt/isic-klasik/",
-      text: "Nie ste na zapojenej škole? ISIC klasik alebo ISIC do mobilu kúpite priamo v našom e-shope.",
+      text: (
+        <>
+          Nie ste na zapojenej škole? ISIC klasik <strong>bez čipu</strong> alebo ISIC do mobilu
+          kúpite priamo v našom e-shope.
+        </>
+      ),
     },
-    note: "Klasik nemá čip (bez kreditu a električenky), ale je plnohodnotným dokladom o statuse študenta so všetkými komerčnými zľavami.",
+    note: (
+      <>
+        Klasik je <strong>bez čipu</strong> (bez kreditu a električenky), ale je plnohodnotným
+        dokladom o statuse študenta so všetkými komerčnými zľavami.
+      </>
+    ),
   },
   itic: {
     card: "ITIC",
@@ -84,14 +114,29 @@ const RESULTS: Record<ResultKey, ResultInfo> = {
     school: {
       label: "Zapojené stredné školy ITIC",
       href: "https://itic.sk/zapojene-stredne-skoly-itic/",
-      text: "Školský (co-brand) preukaz ITIC vydávajú zapojené školy. Zoznam vysokých škôl nájdete tu: itic.sk/zapojene-vysoke-skoly-itic.",
+      text: (
+        <>
+          Školský (co-brand) preukaz ITIC <strong>s čipom</strong> vydávajú zapojené školy. Zoznam
+          vysokých škôl nájdete tu: itic.sk/zapojene-vysoke-skoly-itic.
+        </>
+      ),
     },
     shop: {
-      label: "Objednať ITIC",
+      label: "Objednať ITIC (bez čipu)",
       href: "https://objednaj-preukaz.sk/kategoria-produktu/som-ucitel/",
-      text: "Ak škola preukazy nevydáva, ITIC klasik alebo ITIC do mobilu objednáte v našom e-shope.",
+      text: (
+        <>
+          Ak škola preukazy nevydáva, ITIC klasik <strong>bez čipu</strong> alebo ITIC do mobilu
+          objednáte v našom e-shope.
+        </>
+      ),
     },
-    note: "ITIC klasik nemá čip, no všetky komerčné zľavy a medzinárodné potvrdenie statusu učiteľa platia rovnako.",
+    note: (
+      <>
+        ITIC klasik je <strong>bez čipu</strong>, no všetky komerčné zľavy a medzinárodné potvrdenie
+        statusu učiteľa platia rovnako.
+      </>
+    ),
   },
   euro26: {
     card: "EURO<26",
@@ -113,7 +158,12 @@ const RESULTS: Record<ResultKey, ResultInfo> = {
         text: "Máte 6–27 rokov? Objednajte si EURO<26 priamo v našom e-shope a využívajte tisíce zliav na Slovensku aj v zahraničí.",
       },
     ],
-    note: "EURO<26 nemá čip, takže nenahrádza dopravnú funkciu školského preukazu.",
+    note: (
+      <>
+        EURO&lt;26 je <strong>bez čipu</strong>, takže nenahrádza dopravnú funkciu školského
+        preukazu.
+      </>
+    ),
   },
 };
 
@@ -195,7 +245,9 @@ export function CardWizard() {
               {result.shop && (
                 <div className="rounded-2xl bg-brand-teal-light p-4">
                   <p className="kicker text-brand-teal-deep">
-                    {result.card === "EURO<26" ? "Plynulý prechod" : "Klasik z e-shopu"}
+                    {result.card === "EURO<26"
+                      ? "Plynulý prechod"
+                      : "Klasik z e-shopu (bez čipu)"}
                   </p>
                   <p className="mt-2 text-sm text-brand-gray">{result.shop.text}</p>
                   <a

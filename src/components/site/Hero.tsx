@@ -147,7 +147,8 @@ export function Hero() {
 
         <p className="mt-10 rounded-lg border border-brand-teal/25 bg-brand-yellow p-5 text-sm shadow-[6px_6px_0_var(--brand-teal)]">
           <strong>Cena:</strong> preukaz aj známka na predĺženie stoja 13 €, doručenie kuriérom
-          +3,15 €.{" "}
+          +3,15 €. Cenu a spôsob úhrady univerzitného čipového preukazu aj jeho predĺženia určuje
+          príslušná vysoká škola.{" "}
           <a className="font-medium text-brand-teal-deep underline" href="#faq">
             Kompletné časté otázky nižšie ↓
           </a>

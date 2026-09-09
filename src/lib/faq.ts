@@ -18,7 +18,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Zaplatil som, ale nič sa nedeje",
     answer:
-      "Platba medzi bankami sa spracováva zvyčajne 1 až 2 pracovné dni, pri víkende dlhšie. Kým sa neprihlási na náš účet, systém o nej nevie a preukaz sa netvári ako predĺžený. Ak od úhrady prešlo viac ako pár pracovných dní, pošlite nám cez formulár nižšie potvrdenie o úhrade.",
+      "Platba medzi bankami sa spracováva zvyčajne 1 až 2 pracovné dni, pri víkende dlhšie. Kým sa neprihlási na náš účet, systém o nej nevie a preukaz sa netvári ako predĺžený. Ak od úhrady prešlo viac ako pár pracovných dní, pošlite nám cez formulár nižšie potvrdenie o úhrade. Ak ste platili cez svoju vysokú školu alebo jej informačný systém, spracovanie platby a odoslanie údajov zabezpečuje škola. Stav si preto najskôr overte priamo na škole.",
   },
   {
     question: "Nestihol som zaplatiť do termínu, platia ešte platobné údaje?",
